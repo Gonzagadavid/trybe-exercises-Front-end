@@ -5,10 +5,9 @@ import TicTacToe from './TicTacToe';
 afterEach(cleanup);
 
 // Alguns describe já possuem a orientação do que precisa ser testado.
-// Pode modifica-lós mas lembre que os teste precisam testar todo o comportamento,
-// Das casas. 
-// Funcionalidade não está pronta portanto esse teste não passará,
-// necessário criar a funcionalidade também.
+// Pode modifica-los mas lembre que os testes precisam testar todo o comportamento,
+// das casas. 
+// A funcionalidade não está pronta, portanto esse teste não passará. Crie-a.
 
 describe("Comportamento de cada casa", () => {
   test('Ao clicar em um casa deve adicionar o símbolo apenas naquele lugar', () => {
