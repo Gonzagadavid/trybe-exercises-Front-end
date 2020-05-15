@@ -2,7 +2,7 @@ Esse é um projeto para o conteúdo da semana 16, sobre `RTL`.
 
 ### Antes de iniciar
 
-Crie um fork desse projeto e para isso siga esse [tutorial de como realizar um fork](https://github.com/facebook/create-react-app).
+Crie um fork desse projeto e para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
 Após feito o fork, clone o repositório criado para o seu computador.
 
@@ -22,7 +22,7 @@ Verifique se as seguintes branchs apareceram:
 
 Observe o que deve ser feito nas instruções para cada exercício.
 
-Após a solução dos exercícios, abra um PR no repositório e se quiser mergear para a master, sinta-se a vontade!
+Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a master, sinta-se a vontade!
 
 **Atenção!** Quando for criar o PR você irá se deparar com essa tela:
 
@@ -44,43 +44,43 @@ Para cada PR realize esse processo.
 
 #### Exercício 1
 
-Teste as configurações iniciais do jogo, como ele começa:
+Escreva os testes para as configurações iniciais do jogo:
 
 - Campos vazios;
 - Sem mensagem de Fim de jogo;
 - 9 Casas renderizadas.
 
-Fique livre para adicionar novos testes.
+Fique livre para adicionar novos testes. **Após escrever os testes**, crie as funcionalidades testadas para que os testes passem.
 
 ---
 
-#### Exercício 2
+#### Exercício 2 (Bônus)
 
-Agora além de realizar alguns testes será necessário realizar algumas funcionalidades.
+Agora, além de realizar alguns testes, será necessário implementar algumas funcionalidades.
 O arquivo TicTacToe.js possuí algumas informações de como o jogo deve funcionar.
-  - Dois jogadores jogaram o jogo;
+  - Dois jogadores jogam o jogo;
   - A cada clique em uma casa o jogador deve ser mudado;
-  - Para cada jogador deverá possuir uma marcação (as imagens que estão no repositório, x.png, o.svg);
-  - Ao clicar na casa escolhida, a casa deve ser modificada e possuir a marcação do jogador, X ou O;
+  - Cada jogador deverá possuir uma marcação (as imagens que estão no repositório, x.png, o.svg);
+  - Ao clicar na casa escolhida, a casa deve ser modificada para possuir a marcação do jogador, X ou O;
   - Ao clicar em uma casa já marcada, nada deve acontecer;
   - AS casas marcadas não podem ser modificadas;
 
 Teste o comportamento de cada casa, alguns exemplos:
 
 - O símbolo mudar quando clica em uma e depois em outra, mostrando a troca do jogador;
-- Casa não pode ser mudada depois de escolhida por algum jogador;
+- Casa não pode ser mudada depois de clicada em por algum jogador;
 
 Caso tenha dúvida volte no conteúdo ou olhe na documentação, lembre que abordamos apenas algumas querys, tem outras que podem ser utilizadas.
 
 ---
 
-#### Exercício 3 
+#### Exercício 3 (Bônus)
 
-Agora você fará funcionalidade de acordo com o teste já criado para ela. A funcionalidade deve ser criada no arquivo TicTacToe.js, boa parte dele já está criado, fique atento com as instruções passadas
+Agora você fará uma funcionalidade de acordo com o teste já criado para ela. Fique atento às instruções passadas.
 
-Precisamos saber quando que o jogo acaba, os testes já foram realizados, mas se roda-lós verá que nenhum passa. Essa funcionalidade ainda não está pronta e precisa ser criada.
+Precisamos saber quando que o jogo acaba! Os testes já foram implementados, mas se roda-los verá que nenhum passa. Essa funcionalidade ainda não está pronta e precisa ser criada.
 
-Crie a aplicação observando os teste, eles te guiaram para realiza-lá. 
+Crie a aplicação observando os teste, eles te guiarão.
 
 Bônus - Nossos testes não cobrem caso de empate ou quem foi o ganhador.
 
