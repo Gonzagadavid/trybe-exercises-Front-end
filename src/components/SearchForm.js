@@ -9,7 +9,7 @@ class SearchForm extends React.Component {
     super(props);
     this.state = {
       inputText: '',
-      inputChar: '',
+      characterSearched: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitName = this.submitName.bind(this);
@@ -18,7 +18,7 @@ class SearchForm extends React.Component {
 handleChange(e) {
   this.setState({
     inputText: e.target.value,
-    inputChar: '',
+    characterSearched: '',
   })
 }
 
@@ -29,7 +29,7 @@ submitName(e) {
 
   this.setState({
     inputText: '',
-    inputChar: inputText,
+    characterSearched: inputText,
   })
   // insira a action a ser despachada para o thunk
 

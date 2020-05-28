@@ -1,7 +1,7 @@
 import React from 'react';
 // importe o connect do 'react-redux';
 
-class CharInfo extends React.Component {
+class CharacterInfo extends React.Component {
   render() {
     //faça a desestruturação das props aqui
 
@@ -26,15 +26,4 @@ class CharInfo extends React.Component {
 
 // conecte este componente ao redux aqui
 
-
-CharInfo.propTypes = {
-  loading: propTypes.bool.isRequired,
-  character: propTypes.arrayOf(propTypes.object),
-  error: propTypes.string,
-};
-
-CharInfo.defaultProps = {
-  character: null,
-  error: null,
-};
-
+//faça as propTypes
