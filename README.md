@@ -11,11 +11,7 @@ Rode o `npm install`.
 Vá para a branch master do seu projeto e execute o comando:
 - `git branch` 
 
-Verifique se as seguinte branch aparece:
-
-  `exercise-GOT`
-
-- Mude para a branch `exercise-GOT` com o comando `git checkout exercise-GOT`. É nessa branch que você realizará a solução para o exercício.
+- Mude para a branch `exercise-GOT` com o comando `git checkout -b exercise-GOT`. É nessa branch que você realizará a solução para o exercício.
 
 Observe o que deve ser feito nas instruções.
 
