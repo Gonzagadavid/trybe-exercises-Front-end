@@ -42,48 +42,28 @@ Para cada PR realize esse processo.
 
 ### COMEÇANDO OS EXERCÍCIOS
 
+Dica: Use o Redux Devtools para ver o estado da sua aplicação em seu navegador.
+
 #### Exercício 1
 
-Escreva os testes para as configurações iniciais do jogo:
+Como primeira tarefa, você deve usar o **Redux** para gerenciar o estado do componente `TrafficSignal`. As funções `mapStateToProps` e `mapDispatchToProps` devem ser usadas para conectar o componente ao estado do **Redux**.
 
-- Campos vazios;
-- Sem mensagem de Fim de jogo;
-- 9 Casas renderizadas.
+A função `renderSignal` retorna o src da imagem do sinal de trânsito e recebe como parâmetro uma string que deve vir da store.
 
-Fique livre para adicionar novos testes. **Após escrever os testes**, crie as funcionalidades testadas para que os testes passem.
+O componente `TrafficSignal` tem três botões e ao clique de cada um deles, a sua respectiva luz deve acender.
 
 ---
 
-#### Exercício 2 (Bônus)
+#### Exercício 2
 
-Agora, além de realizar alguns testes, será necessário implementar algumas funcionalidades.
-O arquivo TicTacToe.js possuí algumas informações de como o jogo deve funcionar.
-  - Dois jogadores jogam o jogo;
-  - A cada clique em uma casa o jogador deve ser mudado;
-  - Cada jogador deverá possuir uma marcação (as imagens que estão no repositório, x.png, o.svg);
-  - Ao clicar na casa escolhida, a casa deve ser modificada para possuir a marcação do jogador, X ou O;
-  - Ao clicar em uma casa já marcada, nada deve acontecer;
-  - AS casas marcadas não podem ser modificadas;
+Como segunda tarefa, você deve usar o **Redux** para gerenciar o estado do componente `Cars`. As funções `mapStateToProps` e `mapDispatchToProps` devem ser usadas para conectar o componente ao estado do **Redux**.
 
-Teste o comportamento de cada casa, alguns exemplos:
-
-- O símbolo mudar quando clica em uma e depois em outra, mostrando a troca do jogador;
-- Casa não pode ser mudada depois de clicada em por algum jogador;
-
-Caso tenha dúvida volte no conteúdo ou olhe na documentação, lembre que abordamos apenas algumas querys, tem outras que podem ser utilizadas.
+Seu reducer deve ter 3 estados, `redCar`, `blueCar` e `yellowCar` e os 3 devem ser booleanos. Ao clicar no botão `Move`, o estado de seu respectivo carro deve mudar para que o carro ande. Já fizemos todo o CSS para que você se preocupe apenas com a lógica do exercício, ele encontra-se no arquivo `App.css`.
 
 ---
 
-#### Exercício 3 (Bônus)
+#### Exercício 3
 
-Agora você fará uma funcionalidade de acordo com o teste já criado para ela. Fique atento às instruções passadas.
+Como terceira tarefa, você deve juntar seus 2 reducers anteriores em um único reducer, usando o `combineReducers`. Talvez haja uma mudança 
+no estado de seu reduce, então certifique-se que ambos os componentes continuem funcionando após a união.
 
-Precisamos saber quando que o jogo acaba! Os testes já foram implementados, mas se roda-los verá que nenhum passa. Essa funcionalidade ainda não está pronta e precisa ser criada.
-
-Crie a aplicação observando os teste, eles te guiarão.
-
-Bônus - Nossos testes não cobrem caso de empate ou quem foi o ganhador.
-
-- Crie uma mensagem para ver quem é o vencedor ou quando acontecer o empate.
-- Crie os teste para essa nova funcionalidade.
-- Adicione um botão para recomeçar o jogo. Crie os teste para ele.
