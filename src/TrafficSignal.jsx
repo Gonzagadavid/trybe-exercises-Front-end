@@ -16,7 +16,7 @@ const renderSignal = (signalColor) => {
   return null;
 };
 
-export default function Trafficsignal({ signalColor, changeSignal }) {
+export default function TrafficSignal({ signalColor, changeSignal }) {
   return (
     <div>
       <div className="button-container">
