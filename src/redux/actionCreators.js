@@ -4,4 +4,3 @@ export const changeSignal = (payload) => ({
   type: CHANGE_SIGNAL,
   payload,
 });
-
