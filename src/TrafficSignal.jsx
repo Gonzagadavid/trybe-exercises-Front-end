@@ -36,4 +36,3 @@ const mapStateToProps = () => ({
 const mapDispatchToProps = () => ({
   changeSignal: /* Coloque seu código aqui... */
 });
-
