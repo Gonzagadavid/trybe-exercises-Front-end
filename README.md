@@ -36,7 +36,9 @@ Para cada PR realize esse processo.
 
 ### COMEÇANDO OS EXERCÍCIOS
 
-Hoje você vai incrementar a sua Pokedex utilizando Estado.
+Hoje você vai incrementar a sua Pokedex utilizando Estado. Caso você queira reutilizar a sua Pokedex de exercícios anteriores, basta substituir a pasta src desse repositório pela src da sua pokedex ja pronta após seguir os passos de `Antes de iniciar`.
+
+Se você não tiver feito, sem problemas, aqui você ja vai encontrar o comportamento esperado da sua Pokedex após os últimos exercícios.
 
 #### Exercício 1
 
