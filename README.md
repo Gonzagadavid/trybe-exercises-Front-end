@@ -40,6 +40,8 @@ Hoje você vai incrementar a sua Pokedex utilizando Router. Caso você queira re
 
 Se você não tiver feito, sem problemas, aqui você ja vai encontrar o comportamento esperado da sua Pokedex após os últimos exercícios.
 
+Nesse repositório ja foi instalado o `react-router-dom`, só é necessário executar `npm install` uma vez dentro da pasta raiz para utilizá-lo.
+
 #### Exercício 1
 
 Ao carregar a aplicação no caminho de _URL_ "/", é preciso que seja mostrada a Pokédex.
