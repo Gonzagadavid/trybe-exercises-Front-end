@@ -1,68 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse é um projeto para o conteúdo de `Ciclo de vida de componentes em React`.
 
-## Available Scripts
+### Antes de iniciar
 
-In the project directory, you can run:
+Crie um fork desse projeto e para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
-### `npm start`
+Após feito o fork, clone o repositório criado para o seu computador.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Rode o `npm install`.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Vá para a branch master do seu projeto e execute o comando:
 
-### `npm test`
+git branch
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Mude para a branch dog-image com o comando git checkout -b dog-image. É nessa branch que você realizará a solução para o exercício.
 
-### `npm run build`
+Observe o que deve ser feito nas instruções.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a master, sinta-se a vontade!
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Atenção!** Quando for criar o PR você irá se deparar com essa tela:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![PR do exercício](images/example-pr.png)
 
-### `npm run eject`
+É necessário realizar uma mudança. Clique no *base repository* como na imagem abaixo:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Mudando a base do repositório](images/change-base.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Mude para o seu repositório. Seu nome estará na frente do nome dele, por exemplo: `antonio/dog-image`. Depois desse passo a página deve ficar assim:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Após mudança](images/after-change.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Agora basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
-## Learn More
+Para cada PR realize esse processo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### COMEÇANDO OS EXERCÍCIOS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Exercício 1
 
-### Code Splitting
+Crie uma aplicação que consuma a API de fotos aleatórias de cachorros. Observe a estrutura de dados que ela retorna:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```bash 
+  {
+    "message": "https:\/\/images.dog.ceo/breeds/bulldog-french/n02108915_5306.jpg",
+    "status": "success"
+  }
+```
+  -  Assim que a página for montada, uma primeira requisição deve acontecer, e a imagem deve ser mostrada na tela;
 
-### Analyzing the Bundle Size
+  -  Enquanto a requisição é feita, o texto 'Loading...' deve ser a única coisa presente na tela;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  -  Deve existir um botão que, para cada clique, busque mais um doguinho.
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### Exercício 2
 
-### Advanced Configuration
+Com o código do exercício anterior, você irá implementar mais algumas funcionalidades:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+-  A cada tentativa de atualização do componente, verifique se o campo message tem a palavra terrier. Se sim, não atualize o componente. Pesquise pelo método includes;
 
-### Deployment
+-  Guarde a url da última imagem gerada no localStorage após cada atualização.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+-  Após a atualização do componente, exiba um alert com a raça do doguinho (verifique o campo message);
 
-### `npm run build` fails to minify
+#### Bônus
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Com o código do ultimo exercício, implemente:
+
+-  A cada foto que for baixada, através de um input, permita que quem usa dê um nome ao doguinho;
+
+-  Crie um botão que guarde o resultado, juntamente com o nome dado ao 'doguinho', em um array;
+
+-  Guarde o array no localStorage a cada atualização, e não mais a url da última imagem gerada;
+
+-  A cada inicialização da aplicação, verifique se existem dados prévios guardados no localStorage. Caso haja, ignore a instrução "assim que a página for renderizada, uma primeira requisição deve acontecer e a imagem deve ser mostrada na tela" e exiba a última imagem guardada.
