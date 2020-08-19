@@ -69,7 +69,7 @@ Adicione um conjunto *fixo* de links de navegação no topo de sua aplicação, 
 
 #### Exercício 5
 
-Crie um componente `About` para ser usado na visualização que explica brevemente o que é uma Pokédex, com alguma imagem ilustrativa. Use esta [página]("https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex") como inspiração. 🙂
+Crie um componente `About` para ser usado na visualização que explica brevemente o que é uma Pokédex, com alguma imagem ilustrativa. Use esta [página](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex) como inspiração. 🙂
 
 #### Exercício 6
 
