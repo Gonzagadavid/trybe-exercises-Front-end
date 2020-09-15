@@ -1,4 +1,4 @@
-Esse é um projeto para o conteúdo da semana 16, sobre `RTL`.
+Esse é um projeto para o conteúdo sobre `RTL`.
 
 ### Antes de iniciar
 
@@ -42,6 +42,10 @@ Para cada PR realize esse processo.
 
 ### COMEÇANDO OS EXERCÍCIOS
 
+Abaixo temos um _gif_ do comportamento da aplicação até a parte 1 do exercício 3:
+
+![TicTacToe](images/tictactoe.gif)
+
 #### Exercício 1
 
 Escreva os testes para as configurações iniciais do jogo:
@@ -76,13 +80,17 @@ Caso tenha dúvida volte no conteúdo ou olhe na documentação, lembre que abor
 
 #### Exercício 3 (Bônus)
 
+> Parte 1
+
 Agora você fará uma funcionalidade de acordo com o teste já criado para ela. Fique atento às instruções passadas.
 
 Precisamos saber quando que o jogo acaba! Os testes já foram implementados, mas se roda-los verá que nenhum passa. Essa funcionalidade ainda não está pronta e precisa ser criada.
 
 Crie a aplicação observando os teste, eles te guiarão.
 
-Bônus - Nossos testes não cobrem caso de empate ou quem foi o ganhador.
+> Parte 2
+
+Nossos testes não cobrem caso de empate ou quem foi o ganhador.
 
 - Crie uma mensagem para ver quem é o vencedor ou quando acontecer o empate.
 - Crie os teste para essa nova funcionalidade.
