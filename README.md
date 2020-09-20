@@ -38,7 +38,7 @@ Para cada PR realize esse processo.
 
 #### Exercício 1
 
-Crie uma aplicação que consuma a API de fotos aleatórias de cachorros. Use a [dog.ceo](https://dog.ceo/dog-api/). Para refrescar a memória acerca de como fazer requisições, revisite [o conteúdo sobre JS Assíncrono](https://app.betrybe.com/course/fundamentals/js-asynchronous/callbacks#fetch-api)!
+Crie uma aplicação que consuma a API de fotos aleatórias de cachorros. Use a [dog.ceo](https://dog.ceo/dog-api/). Para refrescar a memória acerca de como fazer requisições, revisite [o conteúdo sobre Promises](https://app.betrybe.com/course/fundamentals/js-asynchronous/promises)!
 
 Observe a estrutura de dados que a API retorna:
 
