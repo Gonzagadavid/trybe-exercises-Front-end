@@ -34,10 +34,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <input value={searchDigimon} type="text" onChange={this.inputValue} />
-        <button onClick={this.requestDigimon} type="button">Pesquisar Digimon</button>
+        <button onClick={this.requestDigimon} type="button">Search Digimon</button>
         { isFetching && !errorMessage
           ? <Digimon digimon={digimon} />
-          : <h1>{errorMessage || 'Faça uma pesquisa'}</h1>
+          : <h1>{errorMessage || 'Make a search'}</h1>
         }
       </div>
     );
