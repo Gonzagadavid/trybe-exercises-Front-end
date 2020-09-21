@@ -87,8 +87,14 @@ Segue uma sugestão de implementação da aplicação, que se baseia na soluçã
 
 Agora que você tem uma aplicação Pokédex navegável, que tal encarar estes bônus? 👀
 
-* Permita que um pokémon consiga ser favoritado dentro de sua visualização de mais detalhes. Uma vez favoritado, adicione algum indicativo visual, de forma que quem vir o pokémon saiba que ele foi favoritado. O indicativo de que o pokémon foi favoritado precisa também aparecer na página principal, que mostra a Pokédex;
+#### Exercício 8
 
-* Crie uma visualização que mostre somente os pokémons favoritados e torne-a acessível para quem a usar, criando um link para ela no conjunto **fixo** de links que você fez anteriormente;
+Permita que um pokémon consiga ser favoritado dentro de sua visualização de mais detalhes. Uma vez favoritado, adicione algum indicativo visual, de forma que quem vir o pokémon saiba que ele foi favoritado. O indicativo de que o pokémon foi favoritado precisa também aparecer na página principal, que mostra a Pokédex;
 
-* Salve os pokémons favoritados no local storage e recupere-os quando a aplicação for inicializada.
+#### Exercício 9
+
+Crie uma visualização que mostre somente os pokémons favoritados e torne-a acessível para quem a usar, criando um link para ela no conjunto **fixo** de links que você fez anteriormente;
+
+#### Exercício 10
+
+Salve os pokémons favoritados no local storage e recupere-os quando a aplicação for inicializada.
