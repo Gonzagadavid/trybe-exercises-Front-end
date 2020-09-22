@@ -8,10 +8,10 @@ class App extends React.Component {
     this.state = { digimon: { name: '' }, searchDigimon: '', isFetching: false, errorMessage: '' };
   }
 
-  inputValue = ({ target }) => {
+  inputValue = (value) => {
     this.setState((state) => ({
       ...state,
-      searchDigimon: target.value,
+      searchDigimon: value,
     }));
   }
 
@@ -33,8 +33,19 @@ class App extends React.Component {
     const { digimon, searchDigimon, isFetching, errorMessage } = this.state;
     return (
       <div className="App">
-        <input value={searchDigimon} type="text" onChange={this.inputValue} />
-        <button onClick={this.requestDigimon} type="button">Search Digimon</button>
+        <input
+          value={searchDigimon}
+          type="text"
+          onChange={({ target }) => this.inputValue(target.value)}
+          data-testid="input"
+        />
+        <button
+          data-testid="buttonSearch"
+          onClick={this.requestDigimon}
+          type="button"
+        >
+          Search Digimon
+        </button>
         { isFetching && !errorMessage
           ? <Digimon digimon={digimon} />
           : <h1>{errorMessage || 'Make a search'}</h1>
