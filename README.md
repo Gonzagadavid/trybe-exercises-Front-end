@@ -1,4 +1,4 @@
-Esse é um projeto para o conteúdo da semana 16, sobre `RTL`.
+Esse é um projeto para o conteúdo sobre `RTL`.
 
 ### Antes de iniciar
 
