@@ -1,4 +1,4 @@
-Esse é um projeto para o conteúdo sobre `RTL`.
+Esse é um projeto para o conteúdo sobre `RTL`, são exercícios **bônus**!
 
 ### Antes de iniciar
 
@@ -40,7 +40,7 @@ Agora basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
 Para cada PR realize esse processo.
 
-### COMEÇANDO OS EXERCÍCIOS
+### COMEÇANDO OS EXERCÍCIOS 
 
 Abaixo temos um _gif_ do comportamento da aplicação até a parte 1 do exercício 3:
 
@@ -58,7 +58,7 @@ Fique livre para adicionar novos testes. **Após escrever os testes**, crie as f
 
 ---
 
-#### Exercício 2 (Bônus)
+#### Exercício 2 
 
 Agora, além de realizar alguns testes, será necessário implementar algumas funcionalidades.
 O arquivo TicTacToe.js possuí algumas informações de como o jogo deve funcionar.
@@ -78,7 +78,7 @@ Caso tenha dúvida volte no conteúdo ou olhe na documentação, lembre que abor
 
 ---
 
-#### Exercício 3 (Bônus)
+#### Exercício 3 
 
 > Parte 1
 
