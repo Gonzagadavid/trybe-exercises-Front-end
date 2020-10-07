@@ -43,3 +43,15 @@ Este repositório contém uma aplicação funcional, ela utiliza a [Digimon API]
 ![Após mudança](images/relatorio.png)
 
 A seta azul mostra o local que deve estar com o valor de 100, o que indica a finalização do exercício com todas as linhas do código testadas.
+
+### INSTRUÇÕES
+
+* Ao rodar o comando `npm run test-coverage`, será gerada uma nova pasta na raiz do seu projeto chamada `coverage`, após criada, abra o arquivo `./coverage/Icov-report/index.html` usando a extensão `Live Server` do seu VSCode.
+
+![Resumo Coverage](images/coverage-resume.png)
+
+* Veja os detalhes sobre o quê a cobertura de testes está avaliando, clicando no link do arquivo:
+
+![Coverage Detail](images/coverage-detail.png)
+
+* Utilize essa lista como referência para programar seus testes. Cubra todos as linhas destacadas para ter 100% de cobertura!
