@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse é um exercício para o conteúdo de `React Testing Library`.
 
-## Available Scripts
+### Antes de iniciar
 
-In the project directory, you can run:
+Crie um fork desse projeto e para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
-### `yarn start`
+Após feito o fork, clone o repositório criado para o seu computador.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Rode o `npm install`.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Vá para a branch master do seu projeto e execute o comando:
 
-### `yarn test`
+git branch
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Mude para a branch  digimon-finders com o comando git checkout -b digimon-finders. É nessa branch que você realizará a solução para o exercício.
 
-### `yarn build`
+Observe o que deve ser feito nas instruções.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a master, sinta-se a vontade!
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Atenção!** Quando for criar o PR você irá se deparar com essa tela:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![PR do exercício](images/example-pr.png)
 
-### `yarn eject`
+É necessário realizar uma mudança. Clique no *base repository* como na imagem abaixo:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Mudando a base do repositório](images/change-base.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Mude para o seu repositório. Seu nome estará na frente do nome dele, por exemplo: `antonio/exercise-digimon-finders`. Depois desse passo a página deve ficar assim:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Após mudança](images/after-change.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Agora basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
-## Learn More
+Para cada PR realize esse processo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### O QUE SERÁ FEITO?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Lembra de quando montamos um portfólio usando CSS, JS e HTML lá no começo do curso, no bloco [3.1](https://app.betrybe.com/course/fundamentals/html-css/html-css-part-1)? Dessa vez faremos o mesmo exercício, porém agora usando o React e o deixaremos mais atrativo para os recrutadores ao mostrar que também sabemos programar testes automatizados :heart:
 
-### Code Splitting
+### COMEÇANDO OS EXERCÍCIOS
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+À primeira vista, pode parecer uma tarefa gigante construir o próprio Portfólio com React e testes, então, para ajudar, vamos deixar uma sequência do que fazer para que você possa seguir com mais confiança:
 
-### Analyzing the Bundle Size
+* Comece construindo as rotas com _React Router_ e os componentes base (que são componentes sem as funcionalidades completas, apenas com um texto pequeno dentro para renderizarem na tela), e após isso teste tudo. Exemplos de rotas para seu portfólio seriam: `Início`, `Projetos`, `Sobre mim` e `Contato`.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  * Teste que o clique em cada rota renderiza os textos esperados na tela.
+  * Teste com o histórico que as urls corretas são acessadas após cada clique.
+  * Teste que, ao clicar num componente, o texto do componente que estava renderizado some da tela!
 
-### Making a Progressive Web App
+* Daqui em diante, para cada um dos itens abaixo, você deve escrever os testes antes de ir para o próximo. Você pode fazer a funcionalidade dos itens primeiro e depois testar. Ou, você pode, também, fazer TDD, escrevendo os testes primeiro e depois a funcionalidade do item, que é necessária para passar nos testes. A escolha é sua, ok?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+###Inclua, no seu portfólio:
 
-### Advanced Configuration
+* Seu nome completo e uma foto atual sua, onde o texto alternativo deve ser a descrição da foto que você está exibindo;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+  * Teste o nome normalmente e na imagem, não esqueça de verificar o `src` e o `alt`
 
-### Deployment
+* Uma breve descrição sobre você, destacando algumas informações como nacionalidade e a cidade/estado onde mora;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+* Uma lista de habilidades que você possui e destacar a que você mais se orgulha;
 
-### `yarn build` fails to minify
+  * Para testar o destaque, você poderá usar a classe dele ou o tipo de tag que usou. Caso existam mais elementos com a mesma `classe` ou `tag`, você poderá usar o `datatest-id` para certificar que o elemento é o correto.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Um link externo para o seu github, que abra em uma nova aba;
+
+  * Teste se o link realmente direciona para a sua página do github. Importante buscar elementos na página que alteram pouco, como o seu próprio `nome` ou `apelido`.
+
+  * Utilize _mocks_ para testes em links externos.
+
+* Um índice com links internos para as diferentes seções do seu portfólio, agora separadas por páginas, utilizando _React Router_.
+
+  * Teste cada um separadamente, não se esqueça de usar o `history` para reiniciar o estado de cada teste.
+
+* Um formulário com campo de e-mail e mensagem para que as pessoas possam entrar em contato com você [EmailJS](href="https://www.emailjs.com/docs/introduction/how-does-emailjs-work/).
+
+  * Utilize _mocks_ para garantir o funcionamento desse teste, uma vez que essa aplicação comporta-se como uma API e é um link externo. 
+
+
+### Dicas gerais para os testes:
+
+  * Comece seus testes por algum elemento fixo e bem previsível na tela inicial, um título por exemplo é o ideal, pois assim você já verifica se seus testes estão funcionando devidamente.
+  
+  * Verifique antes de tudo se o elemento a ser testado existe, depois verifique seu conteúdo e por fim, verifique suas funcionalidades (caso existam).
+
+  * Faça um describe para organizar o conjunto de testes e mantenha os nomes dos `its` ou `tests` sempre coerente sobre o que está sendo testado.
+
+  * Use _mocks_ para o envio de e-mail, testes de rotas e de formulários.
+
+Divirta-se codando! :rocket:
