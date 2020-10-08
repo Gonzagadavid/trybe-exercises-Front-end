@@ -9,21 +9,8 @@ module.exports = {
     "src/App.js"
   ],
   commandRunner: {
-    "command": "CI=true npm test 'src/App.test.js'"
+    "command": "CI=true npm test"
   },
-  // excludedMutations: [
-  //   "ArithmeticOperator",
-  //   "ArrayDeclaration",
-  //   "ArrowFunction",
-  //   "BlockStatement",
-  //   "BooleanLiteral",
-  //   "ConditionalExpression",
-  //   "EqualityOperator",
-  //   "LogicalOperator",
-  //   "ObjectLiteral",
-  //   "UnaryOperator",
-  //   "UpdateOperator"
-  // ],
   reporters: ["progress", "clear-text", "html"],
   coverageAnalysis: "off",
   jest: {
