@@ -65,6 +65,7 @@ Esses bugs são chamados de "mutantes", e a nossa missão aqui é eliminá-los! 
 O Stryker irá gerar os mutantes automaticamente de acordo com a configuração passada pra ele, geralmente num arquivo `JS` podendo também ser num `JSON`. Se você acessar a raiz do nosso exercício, encontrará o arquivo `stryker.conf.js`. Abra-o e dê uma espiada! Se você tiver curiosidade sobre como funcionam as configurações, poderá acessar seu repositório e ler o [README](https://github.com/stryker-mutator/stryker/tree/master/packages/core#readme).
 
 ### Como usar o Stryker?
+
 Usar o Stryker é bastante fácil, basta rodar o comando `stryker run` nos projetos que têm ele configurado. Você pode também instalá-lo de forma global usando o comando `npm install -g stryker-cli`.
 
 ---
