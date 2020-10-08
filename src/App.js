@@ -48,7 +48,7 @@ class App extends React.Component {
         </button>
         { isFetching && !errorMessage
           ? <Digimon digimon={digimon} />
-          : <h1>{errorMessage || 'Make a search'}</h1>
+          : <h1>{errorMessage || 'Faça uma pesquisa'}</h1>
         }
       </div>
     );
