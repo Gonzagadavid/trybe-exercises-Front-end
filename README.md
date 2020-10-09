@@ -50,7 +50,7 @@ Lembra de quando montamos um portfólio usando CSS, JS e HTML lá no começo do 
 
 * Daqui em diante, para cada um dos itens abaixo, você deve escrever os testes antes de ir para o próximo. **É muito importante testar a sua aplicação aos poucos, ao longo do desenvolvimento.** Você pode fazer a funcionalidade dos itens primeiro e depois testar. Ou, você pode, também, fazer TDD, escrevendo os testes primeiro e depois a funcionalidade do item, que é necessária para passar nos testes. A escolha é sua, ok?
 
-### Escolha cinco itens para incluir no seu portfólio, e inclua os demais como bônus:
+### Escolha três itens para incluir no seu portfólio, e inclua os demais como bônus:
 
 * Seu nome completo e uma foto atual sua, onde o texto alternativo deve ser a descrição da foto que você está exibindo;
 
