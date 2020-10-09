@@ -10,7 +10,7 @@ Rode o `npm install`.
 
 Vá para a branch master do seu projeto e execute o comando:
 
-git branch
+`git branch`
 
 Mude para a branch  digimon-finders com o comando git checkout -b digimon-finders. É nessa branch que você realizará a solução para o exercício.
 
