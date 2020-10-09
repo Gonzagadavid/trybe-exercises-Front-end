@@ -12,9 +12,9 @@ Vá para a branch master do seu projeto e execute o comando:
 
 `git branch`
 
-Mude para a branch  digimon-finders com o comando git checkout -b digimon-finders. É nessa branch que você realizará a solução para o exercício.
+Mude para uma branch `portfolio-web` com o comando `git checkout -b portfolio-web`. É nessa branch que você realizará a solução para o exercício.
 
-Observe o que deve ser feito nas instruções.
+Observe o que deve ser feito nas instruções abaixo.
 
 Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a master, sinta-se a vontade!
 
@@ -26,7 +26,7 @@ Após a solução dos exercícios, abra um PR no seu repositório forkado e, se 
 
 ![Mudando a base do repositório](images/change-base.png)
 
-Mude para o seu repositório. Seu nome estará na frente do nome dele, por exemplo: `antonio/exercise-digimon-finders`. Depois desse passo a página deve ficar assim:
+Mude para o seu repositório. Seu nome estará na frente do nome dele, por exemplo: `antonio/exercise-portfolio-web`. Depois desse passo a página deve ficar assim:
 
 ![Após mudança](images/after-change.png)
 
@@ -36,11 +36,11 @@ Para cada PR realize esse processo.
 
 ### O QUE SERÁ FEITO?
 
-Lembra de quando montamos um portfólio usando CSS, JS e HTML lá no começo do curso, no bloco [3.1](https://app.betrybe.com/course/fundamentals/html-css/html-css-part-1)? Dessa vez faremos o mesmo exercício, porém agora usando o React e o deixaremos mais atrativo para os recrutadores ao mostrar que também sabemos programar testes automatizados :heart:
+Lembra de quando montamos um portfólio usando CSS, JS e HTML lá no começo do curso, no dia [3.1](https://app.betrybe.com/course/fundamentals/html-css/html-css-part-1)? Dessa vez faremos o mesmo exercício, porém agora usando o React e o deixaremos mais atrativo para pessoas recrutadoras ao mostrar que também sabemos programar testes automatizados :heart:
 
 ### COMEÇANDO OS EXERCÍCIOS
 
-À primeira vista, pode parecer uma tarefa gigante construir o próprio Portfólio com React e testes, então, para ajudar, vamos deixar uma sequência do que fazer para que você possa seguir com mais confiança:
+À primeira vista, pode parecer uma tarefa gigante construir o próprio Portfólio com React e testes. Então, para ajudar, vamos sugerir uma sequência do que fazer, passo a passo, para que você possa seguir com mais confiança:
 
 * Comece construindo as rotas com _React Router_ e os componentes base (que são componentes sem as funcionalidades completas, apenas com um texto pequeno dentro para renderizarem na tela), e após isso teste tudo. Exemplos de rotas para seu portfólio seriam: `Início`, `Projetos`, `Sobre mim` e `Contato`.
 
@@ -48,13 +48,13 @@ Lembra de quando montamos um portfólio usando CSS, JS e HTML lá no começo do 
   * Teste com o histórico que as urls corretas são acessadas após cada clique.
   * Teste que, ao clicar num componente, o texto do componente que estava renderizado some da tela!
 
-* Daqui em diante, para cada um dos itens abaixo, você deve escrever os testes antes de ir para o próximo. Você pode fazer a funcionalidade dos itens primeiro e depois testar. Ou, você pode, também, fazer TDD, escrevendo os testes primeiro e depois a funcionalidade do item, que é necessária para passar nos testes. A escolha é sua, ok?
+* Daqui em diante, para cada um dos itens abaixo, você deve escrever os testes antes de ir para o próximo. **É muito importante testar a sua aplicação aos poucos, ao longo do desenvolvimento.** Você pode fazer a funcionalidade dos itens primeiro e depois testar. Ou, você pode, também, fazer TDD, escrevendo os testes primeiro e depois a funcionalidade do item, que é necessária para passar nos testes. A escolha é sua, ok?
 
-### Inclua, no seu portfólio:
+### Escolha cinco itens para incluir no seu portfólio, e inclua os demais como bônus:
 
 * Seu nome completo e uma foto atual sua, onde o texto alternativo deve ser a descrição da foto que você está exibindo;
 
-  * Teste o nome normalmente e na imagem, não esqueça de verificar o `src` e o `alt`
+  * Teste o nome normalmente e, na imagem, não esqueça de verificar o `src` e o `alt`
 
 * Uma breve descrição sobre você, destacando algumas informações como nacionalidade e a cidade/estado onde mora;
 
