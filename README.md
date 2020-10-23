@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse é um projeto para o conteúdo sobre `Context API`.
 
-## Available Scripts
+### Antes de iniciar
 
-In the project directory, you can run:
+Crie um fork desse projeto e para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
-### `yarn start`
+Após feito o fork, clone o repositório criado para o seu computador.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Rode o `npm install`.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Vá para a branch master do seu projeto e execute o comando:
+- `git branch` 
 
-### `yarn test`
+Verifique se as seguintes branchs apareceram:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  `exercise-one`
+  `exercise-two`
 
-### `yarn build`
+- Cada branch dessas será um exercício.
+- Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Observe o que deve ser feito nas instruções para cada exercício.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a master, sinta-se a vontade!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Atenção!** Quando for criar o PR você irá se deparar com essa tela:
 
-### `yarn eject`
+![PR do exercício](images/example-pr.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+É necessário realizar uma mudança. Clique no *base repository* como na imagem abaixo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Mudando a base do repositório](images/change-base.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Mude para o seu repositório. Seu nome estará na frente do nome dele, por exemplo: `antonio/TicTacToe`. Depois desse passo a página deve ficar assim:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Após mudança](images/after-change.png)
 
-## Learn More
+Agora basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para cada PR realize esse processo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### COMEÇANDO OS EXERCÍCIOS
 
-### Code Splitting
+#### Exercício 1
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Refaça o exercício 2 do dia 16.2, descrito abaixo, substituindo o Redux pela Context API para gerenciar o estado da aplicação.
 
-### Analyzing the Bundle Size
+Nesse exercício temos três carros com as cores Red, Blue e Yellow. Cada um deles apresenta um botão que ao ser clicado passa um estado para o Redux com um booleano.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Esse estado irá ser utilizado para alterar o CSS com a imagem do carro, para que ele se mova ou não.
 
-### Making a Progressive Web App
+Nesse exercício toda a estrutura de Redux já está pronta. Utilize Context API em substituição ao Redux para armazenar todo o estado da aplicação.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+---
 
-### Advanced Configuration
+#### Exercício 2
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Refaça o exercício 3 do dia 16.2, descrito abaixo. Assim como no exercício anterior, refatore a aplicação para utilizar Context API para gerenciar estado no lugar do Redux.
 
-### Deployment
+Nesse exercício utilizaremos os códigos dos exercícios 1 e 2. Aqui foi feita a junção dos reducers dos dois primeiros exercícios para que eles possam ser carregados juntos na mesma página da aplicação.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+O funcionamento dos dois componentes DEVE se manter o mesmo.
 
-### `yarn build` fails to minify
+Nesse exercício toda a estrutura de Redux já está pronta, você precisará refatorar a estrutura dele para Context API.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
