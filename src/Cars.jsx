@@ -62,9 +62,9 @@ Cars.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  redCar: state.cars.red,
-  blueCar: state.cars.blue,
-  yellowCar: state.cars.yellow});
+  redCar: state.carReducer.cars.red,
+  blueCar: state.carReducer.cars.blue,
+  yellowCar: state.carReducer.cars.yellow});
 
 const mapDispatchToProps = { moveCar };
 
