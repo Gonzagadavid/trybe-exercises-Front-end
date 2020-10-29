@@ -32,7 +32,7 @@ class TrafficSignal extends Component {
       </div>
     );
   }
-};
+}
 
 TrafficSignal.contextType = CarsContext;
 

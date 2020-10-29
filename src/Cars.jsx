@@ -13,48 +13,27 @@ class Cars extends Component {
     return (
       <div>
         <div>
-          <img
-            className={redCar ? 'car-right' : 'car-left'}
-            src={carRed}
-            alt="red car"
-          />
-          <button
-            onClick={() => moveCar('redCar', !redCar)}
-            type="button"
-          >
+          <img className={redCar ? 'car-right' : 'car-left'} src={carRed} alt="red car" />
+          <button onClick={() => moveCar('redCar', !redCar)} type="button">
             Move
-        </button>
+          </button>
         </div>
         <div>
-          <img
-            className={blueCar ? 'car-right' : 'car-left'}
-            src={carBlue}
-            alt="blue car"
-          />
-          <button
-            onClick={() => moveCar('blueCar', !blueCar)}
-            type="button"
-          >
+          <img className={blueCar ? 'car-right' : 'car-left'} src={carBlue} alt="blue car" />
+          <button onClick={() => moveCar('blueCar', !blueCar)} type="button">
             Move
-        </button>
+          </button>
         </div>
         <div>
-          <img
-            className={yellowCar ? 'car-right' : 'car-left'}
-            src={carYellow}
-            alt="yellow car"
-          />
-          <button
-            onClick={() => moveCar('yellowCar', !yellowCar)}
-            type="button"
-          >
+          <img className={yellowCar ? 'car-right' : 'car-left'} src={carYellow} alt="yellow car" />
+          <button onClick={() => moveCar('yellowCar', !yellowCar)} type="button">
             Move
-        </button>
+          </button>
         </div>
       </div>
-    )
+    );
   }
-};
+}
 
 Cars.contextType = CarsContext;
 
