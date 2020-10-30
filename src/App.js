@@ -1,30 +1,52 @@
 import React from 'react'
 
-function Greeting({initialName = ''}) {
-  // 🐨 initialize the state to the value from localStorage
-  // 💰 window.localStorage.getItem('name') || initialName
-  const [name, setName] = React.useState(initialName)
-
-  // 🐨 Here's where you'll use `React.useEffect`.
-  // The callback should set the `name` in localStorage.
-  // 💰 window.localStorage.setItem('name', name)
-
-  function handleChange(event) {
-    setName(event.target.value)
-  }
+function Name({name, onNameChange}) {
   return (
     <div>
-      <form>
-        <label htmlFor="name">Name: </label>
-        <input onChange={handleChange} id="name" />
-      </form>
-      {name ? <strong>Hello {name}</strong> : 'Please type your name'}
+      <label htmlFor="name">Name: </label>
+      <input id="name" value={name} onChange={onNameChange} />
     </div>
   )
 }
 
+// 🐨 accept `animal` and `onAnimalChange` props to this component
+function FavoriteAnimal() {
+  // 💣 delete this, it's now managed by the App
+  const [animal, setAnimal] = React.useState('')
+  return (
+    <div>
+      <label htmlFor="animal">Favorite Animal: </label>
+      <input
+        id="animal"
+        value={animal}
+        onChange={event => setAnimal(event.target.value)}
+      />
+    </div>
+  )
+}
+
+// 🐨 uncomment this
+// function Display({name, animal}) {
+//   return <div>{`Hey ${name}, your favorite animal is: ${animal}!`}</div>
+// }
+
+// 💣 remove this component in favor of the new one
+function Display({name}) {
+  return <div>{`Hey ${name}, you are great!`}</div>
+}
+
 function App() {
-  return <Greeting />
+  // 🐨 add a useState for the animal
+  const [name, setName] = React.useState('')
+  return (
+    <form>
+      <Name name={name} onNameChange={event => setName(event.target.value)} />
+      {/* 🐨 pass the animal and onAnimalChange prop here (similar to the Name component above) */}
+      <FavoriteAnimal />
+      {/* 🐨 pass the animal prop here */}
+      <Display name={name} />
+    </form>
+  )
 }
 
 export default App
