@@ -42,6 +42,6 @@ Para cada PR realize esse processo.
 
 #### Exercício 1
 
-Refaça o exercicio do dia 18.1, disponibilizado na branch `exercise-one`, utilizando Hooks. Transforme todos os componentes de classe em componente funcionais.
+Refaça o exercicio bônus do dia 18.1 sobre Reddit, disponibilizado na branch `exercise-one`, utilizando Hooks. Transforme todos os componentes de classe em componente funcionais.
 
 ---
