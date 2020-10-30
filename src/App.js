@@ -1,14 +1,17 @@
+import React from 'react'
 
-import React from 'react';
+function Greeting({initialName = ''}) {
+  // 🐨 initialize the state to the value from localStorage
+  // 💰 window.localStorage.getItem('name') || initialName
+  const [name, setName] = React.useState(initialName)
 
-function Greeting() {
-  // 💣 delete this variable declaration and replace it with a React.useState call
-  const name = '';
+  // 🐨 Here's where you'll use `React.useEffect`.
+  // The callback should set the `name` in localStorage.
+  // 💰 window.localStorage.setItem('name', name)
 
   function handleChange(event) {
-    // 🐨 update the name here based on event.target.value
+    setName(event.target.value)
   }
-
   return (
     <div>
       <form>
@@ -17,11 +20,11 @@ function Greeting() {
       </form>
       {name ? <strong>Hello {name}</strong> : 'Please type your name'}
     </div>
-  );
+  )
 }
 
 function App() {
-  return <Greeting />;
+  return <Greeting />
 }
 
-export default App;
+export default App
