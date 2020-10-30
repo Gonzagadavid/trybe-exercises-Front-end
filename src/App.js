@@ -1,64 +1,27 @@
-import React, { Component } from 'react';
 
-import Posts from './components/Posts';
-import Selector from './components/Selector';
-import { Context } from './components/RedditContext';
+import React from 'react';
 
-class App extends Component {
-  componentDidMount() {
-    const { fetchPosts } = this.context;
-    fetchPosts();
+function Greeting() {
+  // 💣 delete this variable declaration and replace it with a React.useState call
+  const name = '';
+
+  function handleChange(event) {
+    // 🐨 update the name here based on event.target.value
   }
 
-  renderLastUpdatedAt() {
-    const { selectedSubreddit, postsBySubreddit } = this.context;
-    const { lastUpdated } = postsBySubreddit[selectedSubreddit];
-
-    if (!lastUpdated) return null;
-
-    return (
-      <span>
-        {`Last updated at ${new Date(lastUpdated).toLocaleTimeString()}.`}
-      </span>
-    );
-  }
-
-  renderRefreshButton() {
-    const { isFetching, refreshSubreddit } = this.context;
-
-    if (isFetching) return null;
-
-    return (
-      <button
-        type="button"
-        onClick={(event) => refreshSubreddit(event)}
-        disabled={isFetching}
-      >
-        Refresh
-      </button>
-    );
-  }
-
-  render() {
-    const { selectedSubreddit, postsBySubreddit, isFetching } = this.context;
-    const { items: posts = [] } = postsBySubreddit[selectedSubreddit];
-    const isEmpty = posts.length === 0;
-
-    return (
-      <div>
-        <Selector />
-        <div>
-          {this.renderLastUpdatedAt()}
-          {this.renderRefreshButton()}
-        </div>
-        {isFetching && <h2>Loading...</h2>}
-        {!isFetching && isEmpty && <h2>Empty.</h2>}
-        {!isFetching && !isEmpty && <Posts />}
-      </div>
-    );
-  }
+  return (
+    <div>
+      <form>
+        <label htmlFor="name">Name: </label>
+        <input onChange={handleChange} id="name" />
+      </form>
+      {name ? <strong>Hello {name}</strong> : 'Please type your name'}
+    </div>
+  );
 }
 
-App.contextType = Context;
+function App() {
+  return <Greeting />;
+}
 
 export default App;
