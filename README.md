@@ -15,6 +15,7 @@ Verifique se as seguintes branchs apareceram:
 
   `exercise-one`
   `exercise-two`
+  `exercise-three`
 
 - Cada branch dessas será um exercício.
 - Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
@@ -62,5 +63,11 @@ Nesse exercício utilizaremos os códigos dos exercícios 1 e 2. Aqui foi feita 
 O funcionamento dos dois componentes DEVE se manter o mesmo.
 
 Nesse exercício toda a estrutura de Redux já está pronta, você precisará refatorar a estrutura dele para Context API.
+
+---
+
+### Exercício 3 
+
+Refatore o exercício sobre o Reddit que está na branch `exercise-three` do repositório {{< extlink text="exercise-contextAPI-refactoring" href="https://github.com/tryber/exercise-contextAPI-refactoring/tree/master">}} Mofique a aplicação para utilizar Context API para gerenciar o estado no lugar de Redux.
 
 ---
