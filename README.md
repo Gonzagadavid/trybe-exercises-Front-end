@@ -15,6 +15,7 @@ Verifique se as seguintes branchs apareceram:
 
   `exercise-one`
   `exercise-two`
+  `exercise-three`
 
 - Cada branch dessas será um exercício.
 - Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
@@ -54,5 +55,11 @@ Nesse exercício toda a estrutura de Context API já está pronta. Utilize React
 Refaça o exercício 2 do dia 18.1. Assim como no exercício anterior, refatore a aplicação para utilizar **React Hooks** para gerenciar estado no lugar do Redux.
 
 Nesse exercício toda a estrutura de Context API já está pronta, você precisará refatorar a estrutura dele para React Hooks.
+
+---
+
+#### Exercício 3
+
+Refatore o exercício da branch `exercise three`, referente à aplicação Tic Tac Toe, também substituindo toda a lógica de classes para a lógica de _React Hooks_, deixando todos os componentes funcionais. Aproveite que ele possui testes e veja como é prático refatorar uma aplicação que já foi testada! Lembre-se de acessar a branch `exercise-three`, a estrutura da aplicação estará pronta para ser utilizada.
 
 ---
