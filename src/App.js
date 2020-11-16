@@ -2,11 +2,11 @@
 import React from 'react';
 
 function Greeting() {
-  // 💣 delete this variable declaration and replace it with a React.useState call
+  // substitua essa variável por uma variável no estado, utilizando useState
   const name = '';
 
   function handleChange(event) {
-    // 🐨 update the name here based on event.target.value
+    // atualize o valor do estado com base no que está em event.target.value
   }
 
   return (

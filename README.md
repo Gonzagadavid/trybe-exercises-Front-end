@@ -51,6 +51,10 @@ Refaça o exercicio bônus do dia 18.1 sobre Reddit, disponibilizado na branch `
 
 #### Exercício 2
 
-Faça os exercícios 2.1, 2.2 e 2.3, disponibilizado nas branchs `exercise-two.one`, `exercise-two.two` e `exercise-two.three` As orientações para solução estão no código e no arquivo `description.md`.
+Faça os exercícios 2.1, 2.2 e 2.3, disponibilizado nas branchs `exercise-two.one`, `exercise-two.two` e `exercise-two.three`
+
+- 2.1: utilize o hook useState para conectar um campo de formulário com o componente React. Siga as instruções que estão no código do arquivo App.js
+
+- 2.2
 
 ---
