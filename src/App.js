@@ -9,9 +9,9 @@ function Name({name, onNameChange}) {
   )
 }
 
-// 🐨 accept `animal` and `onAnimalChange` props to this component
+// 🐨 receba `animal` e `onAnimalChange` como  props nesse componente
 function FavoriteAnimal() {
-  // 💣 delete this, it's now managed by the App
+  // 💣 apague essa parte, já que agora ela será gerenciada no App.js
   const [animal, setAnimal] = React.useState('')
   return (
     <div>
@@ -25,25 +25,25 @@ function FavoriteAnimal() {
   )
 }
 
-// 🐨 uncomment this
+// 🐨 descomente esse trecho
 // function Display({name, animal}) {
 //   return <div>{`Hey ${name}, your favorite animal is: ${animal}!`}</div>
 // }
 
-// 💣 remove this component in favor of the new one
+// 💣 substitua esse componente pelo que foi descomentado acima
 function Display({name}) {
   return <div>{`Hey ${name}, you are great!`}</div>
 }
 
 function App() {
-  // 🐨 add a useState for the animal
+  // 🐨 inclua um useState para o 'animal'
   const [name, setName] = React.useState('')
   return (
     <form>
       <Name name={name} onNameChange={event => setName(event.target.value)} />
-      {/* 🐨 pass the animal and onAnimalChange prop here (similar to the Name component above) */}
+      {/* 🐨 passe o animal e onAnimalChange como props aqui (semelhante ao que foi feito anteriormente no componente Name acima) */}
       <FavoriteAnimal />
-      {/* 🐨 pass the animal prop here */}
+      {/* 🐨 passe a prop animal aqui */}
       <Display name={name} />
     </form>
   )
