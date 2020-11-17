@@ -102,7 +102,7 @@ class TicTacToe extends React.Component {
   render() {
     const { gameBoard } = this.state;
     const win = this.victoryArchieved();
-    if (!gameBoard.includes(0)) {
+    if (!gameBoard.includes(0) && !win) {
       return (
         <>
           {this.renderButton()}
