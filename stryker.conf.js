@@ -8,6 +8,7 @@ module.exports = {
   mutate: [
     "src/App.js"
   ],
+  mutator: { excludedMutations: ["ObjectLiteral"] },
   commandRunner: {
     "command": "CI=true npm test"
   },
