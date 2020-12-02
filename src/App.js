@@ -5,7 +5,7 @@ import Digimon from './Digimon';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { digimon: { name: '' }, searchDigimon: '', isFetching: false, errorMessage: '' };
+    this.state = { searchDigimon: '', isFetching: false, errorMessage: '' };
   }
 
   inputValue = (value) => {
