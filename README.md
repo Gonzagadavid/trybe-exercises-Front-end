@@ -46,7 +46,7 @@ A seta azul mostra o local que deve estar com o valor de 100, o que indica a fin
 
 ### INSTRUÇÕES
 
-* Ao rodar o comando `npm run test-coverage`, será gerada uma nova pasta na raiz do seu projeto chamada `coverage`, após criada, abra o arquivo `./coverage/Icov-report/index.html` usando a extensão `Live Server` do seu VSCode.
+* Ao rodar o comando `npm run test-coverage`, será gerada uma nova pasta na raiz do seu projeto chamada `coverage`, após criada, abra o arquivo `./coverage/lcov-report/index.html` usando a extensão `Live Server` do seu VSCode.
 
 ![Resumo Coverage](images/coverage-resume.png)
 
