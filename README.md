@@ -66,7 +66,7 @@ O Stryker irá gerar os mutantes automaticamente de acordo com a configuração 
 
 ### Como usar o Stryker?
 
-Usar o Stryker é bastante fácil, basta rodar o comando `stryker run` nos projetos que têm ele configurado. Você pode também instalá-lo de forma global usando o comando `npm install -g stryker-cli`.
+Usar o Stryker é bastante fácil, basta rodar o comando `npx stryker run` nos projetos que têm ele configurado. Você pode também instalá-lo de forma global usando o comando `npm install -g stryker-cli`.
 
 ---
 
