@@ -1,10 +1,15 @@
 import React from 'react';
 
-const Users = () => (
-  <div>
-    <h2> Users </h2>
-    <p> My awesome Users component </p>
-  </div>
-);
+class Users extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2> Users </h2>
+        <p> My awesome Users component </p>
+      </div>
+
+    );
+  }
+};
 
 export default Users;
