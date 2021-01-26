@@ -72,7 +72,7 @@ Por fim, adicione uma rota que mapeie o caminho de _URL_ "/users" para o compone
 
 #### Exercício 7
 
-Altere o componente `Users` criado acima no projeto `comprehension-exercises`, para poder fazer o exercício a seguir.
+Altere o componente `Users` para poder fazer o exercício a seguir.
 
 ```js
 // arquivo Users.js
@@ -101,13 +101,13 @@ Daqui para frente, utilize o componente `Switch`:
 
 #### Exercício 10
 
-No componente `App` do projeto `comprehension-exercises`, você deve possuir 3 rotas: uma para renderizar o componente `Home`, outra para renderizar `About`, e outra para renderizar `Users`, sendo que a última faz uso de parâmetro de _URL_. Encapsule essas 3 rotas em um componente `Switch` e ordene as rotas do mais específico para o mais genérico, começando de cima.
+No componente `App`, você deve possuir 3 rotas: uma para renderizar o componente `Home`, outra para renderizar `About`, e outra para renderizar `Users`, sendo que a última faz uso de parâmetro de _URL_. Encapsule essas 3 rotas em um componente `Switch` e ordene as rotas do mais específico para o mais genérico, começando de cima.
 
 Para os próximos exercícios, utilize o componente `Redirect`:
 
 #### Exercício 11
 
-Adicione, no diretório `src` do projeto `comprehension-exercises`, um componente chamado `StrictAccess`. Como o próprio nome diz, esse componente é de acesso restrito, e ele deve receber um objeto `user` como props. Se `username` e `password` de `user` for "joao" e "1234", respectivamente, o componente `StrictAccess` renderiza um parágrafo que diz "Welcome joao!". Caso `username` ou `password` não sejam os valores esperados, o componente precisa gerar um alerta dizendo `Access denied` e redirecionar quem usa sua aplicação para a página principal.
+Adicione, no diretório `src`, um componente chamado `StrictAccess`. Como o próprio nome diz, esse componente é de acesso restrito, e ele deve receber um objeto `user` como props. Se `username` e `password` de `user` for "joao" e "1234", respectivamente, o componente `StrictAccess` renderiza um parágrafo que diz "Welcome joao!". Caso `username` ou `password` não sejam os valores esperados, o componente precisa gerar um alerta dizendo `Access denied` e redirecionar quem usa sua aplicação para a página principal.
 
 #### Exercício 12
 
