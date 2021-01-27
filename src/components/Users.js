@@ -7,7 +7,6 @@ class Users extends Component {
         <h2> Users </h2>
         <p> My awesome Users component </p>
       </div>
-
     );
   }
 };
