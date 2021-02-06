@@ -38,4 +38,4 @@ RescuePeach.propTypes = {
   congratulations: PropTypes.func.isRequired,
 };
 
-export default connect(null, mapDispatchToProps)(RescuePeach);
+
