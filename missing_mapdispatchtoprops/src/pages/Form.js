@@ -99,8 +99,4 @@ Form.propTypes = {
   selectedOmega: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  selectedOmega: (mutant) => dispatch(showMutant(mutant)),
-});
-
 export default connect(null, mapDispatchToProps)(Form);
