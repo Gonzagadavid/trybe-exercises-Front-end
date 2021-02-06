@@ -23,10 +23,6 @@ class PrepareBurger extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  receiveRecipe: state.spiedRecipe.recipe,
-});
-
 PrepareBurger.propTypes = {
   receiveRecipe: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
