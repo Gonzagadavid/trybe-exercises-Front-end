@@ -1,18 +1,16 @@
-## Entendendo o infograma de uma action
+## Entendendo o infograma de um Provider
 
 ![react-redux](https://i.postimg.cc/R0q3rfdk/provider-info.png)
 
 ### Análise do passo a passo
 ![provider](https://i.postimg.cc/G90tG51r/provider.png)
 
-Em src/actions foi retirada a action understandMatrix, que deverá receber um type 'PILL_TAKEN' e um 'id' como parâmetro.
+Em src/index.js foram retiradas todas as configurações de um Provider. Primeiramente é preciso importá-lo do 'react-redux' e então utilizá-lo para encapsular o App. Não se esqueça de passar a store como props para todos os componentes filhos do Provider.
 
-**Seu objetivo é criar a action que retornará o objeto com o type e id que serão passados para o reducer.**
+**Seu objetivo é configurar o Provider corretamente para que todos os componentes da aplicação recebam os estados contidos na store.**
 
 **Referências:**
 
-- Imagem wallpaper: https://cdn.pixabay.com/photo/2020/07/02/04/31/matrix-5361690_1280.png;
-- Gif neo: https://i2.wp.com/emceenetwork.com/wp-content/uploads/2018/05/Matrix-gif.gif?fit=500%2C208&ssl=1&w=640;
-- Gif john-wick: https://data.whicdn.com/images/325144945/original.gif;
-- Imagem blue-pill: https://projectinsides.com/wp-content/uploads/2017/08/Blue-pill.png;
-- Imagem red-pill: https://projectinsides.com/wp-content/uploads/2017/08/Red-pill.png.
+- Imagem wallpaper: https://upload.wikimedia.org/wikipedia/commons/9/92/M45_The_Pleiades_Seven_Sisters.jpg;
+- Imagem geminisaga: https://upload.wikimedia.org/wikipedia/it/b/b5/GeminiSaga.png;
+- Imagem seiyafivesenses: https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwHoTb4e0Tq3stF8c5dMOzSA.
