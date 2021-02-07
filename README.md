@@ -13,7 +13,9 @@ Em src/components/PrepareBurger.js:
 - A chave é uma props dentro de PrepareBurger.js e representa um estado da aplicação.
 
 *Dica receiveIngredients: o nome do reducer é 'spiedIngredients' e a chave atualizada da action é 'ingredients'.*
+
 *Dica receiveOrder: o nome do reducer é 'spiedOrder' e a chave atualizada da action é 'order'.*
+
 *Dica receiveRecipe: o nome do reducer é 'spiedRecipe' e a chave atualizada da action é 'recipe'.*
 
 **Seu objetivo é configurar o mapStateToProps dos componentes App.js e PrepareBurger.js para que eles recebam o estado atualizado da aplicação.**
