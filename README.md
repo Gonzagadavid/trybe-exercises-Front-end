@@ -3,7 +3,7 @@
 ![react-redux](https://i.postimg.cc/zXyFjZwS/reducer-info.png)
 
 ### Análise do passo a passo
-![store](https://i.postimg.cc/T1wqFBzx/reducer.png)
+![reducer](https://i.postimg.cc/T1wqFBzx/reducer.png)
 
 Em src/reducers:
 - Foi retirada a função rootReducer do arquivo index.js;
