@@ -1,5 +1,7 @@
 # Vamos começar com tudo os exercícios desse repositório de React-Redux.
 
+**Após clonar o repositório, é necessário rodar o comando *npm install* para instalar todas as dependências necessárias das aplicações.**
+
 - Para acessar o exercício sobre **store**:
 ```javascript
 git checkout exercise-1
