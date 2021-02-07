@@ -14,6 +14,6 @@ Em src/reducers:
 - Foi retirada a função europeContinent do reducer Europe.js;
 - Foi retirada a função oceaniaContinent do reducer Oceania.js;
 
-Seu objetivo é criar o código com o combineReducers no arquivo index.js, e criar as funções dos reducers que são responsáveis por receberem as actions que modificam os estados da aplicação.
+**Seu objetivo é criar o código com o combineReducers no arquivo index.js, e criar as funções dos reducers que são responsáveis por receberem as actions que modificam os estados da aplicação.**
 
-*Observação: Atenção aos estados iniciais do reducer.*
+*Observação: Atenção aos estados iniciais dos reducers.*
