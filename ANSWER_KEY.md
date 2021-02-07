@@ -157,10 +157,62 @@ export default oceaniaContinent;
 
 ## exercise-3 missing_actions
 
+#### src/actions/index.js:
+```javascript
+export const PILL_TAKEN = 'PILL_TAKEN';
+
+export const understandMatrix = (id) => ({
+  type: PILL_TAKEN,
+  id,
+});
+```
+
+---
+
 ## exercise-4 missing_provider
+
+#### src/index.js:
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { Provider } from 'react-redux';
+import App from './App';
+import store from './store';
+
+ReactDOM.render(
+  <Provider store={ store }>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);
+```
+
+---
 
 ## exercise-5 missing_mapdispatchtoprops
 
+#### src/pages/Form.js:
+```javascript
+const mapDispatchToProps = (dispatch) => ({
+  selectedOmega: (mutant) => dispatch(showMutant(mutant)),
+});
+
+export default connect(null, mapDispatchToProps)(Form);
+```
+
+---
+
 ## exercise-6 missing_connect
 
+#### src/reducers/Oceania.js:
+```javascript
+```
+
+---
+
 ## exercise-7 missing_mapstatetoprops
+
+#### src/reducers/Oceania.js:
+```javascript
+```
