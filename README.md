@@ -8,6 +8,7 @@
 Em src/App.js:
 - Foi retirado o mapStateToProps que recebe um objeto com as chaves receiveIngredients e receiveOrder;
 - Cada chave é uma props dentro de App.js e representam um estado da aplicação.
+
 Em src/components/PrepareBurger.js:
 - Foi retirado o mapStateToProps que recebe um objeto com a chave receiveRecipe;
 - A chave é uma props dentro de PrepareBurger.js e representa um estado da aplicação.
