@@ -205,14 +205,35 @@ export default connect(null, mapDispatchToProps)(Form);
 
 ## exercise-6 missing_connect
 
-#### src/reducers/Oceania.js:
+#### src/App.js:
 ```javascript
+export default connect(mapStateToProps, null)(App);
+```
+
+#### src/components/RescuePeach.js:
+```javascript
+export default connect(null, mapDispatchToProps)(RescuePeach);
 ```
 
 ---
 
 ## exercise-7 missing_mapstatetoprops
 
-#### src/reducers/Oceania.js:
+#### src/App.js:
 ```javascript
+const mapStateToProps = (state) => ({
+  receiveIngredients: state.spiedIngredients.ingredients,
+  receiveOrder: state.spiedOrder.order,
+});
+
+export default connect(mapStateToProps, null)(App);
+```
+
+#### src/components/PrepareBurger.js:
+```javascript
+const mapStateToProps = (state) => ({
+  receiveRecipe: state.spiedRecipe.recipe,
+});
+
+export default connect(mapStateToProps, null)(PrepareBurger);
 ```
