@@ -5,6 +5,8 @@
 ### Análise do passo a passo
 ![mapStateToProps](https://i.postimg.cc/rpt8C9Qw/connect.png)
 
+![mapStateToProps](https://i.postimg.cc/fbRhGThv/map-State-To-Props-exp.png)
+
 Em src/App.js:
 - Foi retirado o mapStateToProps que recebe um objeto com as chaves receiveIngredients e receiveOrder;
 - Cada chave é uma props dentro de App.js e representam um estado da aplicação.
