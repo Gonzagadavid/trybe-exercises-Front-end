@@ -5,7 +5,7 @@
 ### Análise do passo a passo
 ![mapDispatchToProps e dispatch](https://i.postimg.cc/L6Rn9GvB/map-Dispatch-To-Props-and-dispatch.png)
 
-![mapDispatchToProp](https://i.postimg.cc/Sxq4GfT3/map-Dispatch-To-Props.png)
+![mapDispatchToProp](https://i.postimg.cc/LhFJDgwD/map-Dispatch-To-Props.png)
 
 Em src/pages foi retirado o mapDispatchToProps e o dispatch da página Form.js. Você deve criar a função que retorna um objeto de chave selectedOmega. A chave selectedOmega é a função que é recebida como props dentro da aplicação. Após declarar a chave, é necessário disparar a ação showMutant através do dispatch. Não se esqueça que a função selectedOmega recebe um parâmetro e que esse parâmetro deverá ser passado para a action showMutant.
 
