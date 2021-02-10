@@ -5,6 +5,10 @@
 ### Análise do passo a passo
 ![provider](https://i.postimg.cc/G90tG51r/provider.png)
 
+```javascript
+npm install
+```
+
 Em src/index.js foram retiradas todas as configurações de um Provider. Primeiramente é preciso importá-lo do 'react-redux' e então utilizá-lo para encapsular o App. Não se esqueça de passar a store como props para todos os componentes filhos do Provider.
 
 **Seu objetivo é configurar o Provider corretamente para que todos os componentes da aplicação recebam os estados contidos na store.**
