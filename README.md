@@ -1,9 +1,9 @@
 ## Entendendo o infograma de um Provider
 
-![react-redux](https://i.postimg.cc/R0q3rfdk/provider-info.png)
+![react-redux](images/provider-info.png)
 
 ### Análise do passo a passo
-![provider](https://i.postimg.cc/G90tG51r/provider.png)
+![provider](images/provider.png)
 
 ```javascript
 npm install
