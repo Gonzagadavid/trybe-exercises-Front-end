@@ -14,6 +14,11 @@ Em src/App.js e src/components/RescuePeach.js foram retirados o export defaut co
 
 **Seu objetivo é configurar o connect de acordo com a necessidade de cada componente, fazendo a aplicação funcionar com React-Redux.**
 
+Antes de dar checkout na próxima branch:
+```javascript
+git stash
+```
+
 **Referências:**
 
 - Imagem mario: https://pixy.org/download/1200860/;
