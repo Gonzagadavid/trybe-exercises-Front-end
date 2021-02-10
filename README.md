@@ -1,9 +1,9 @@
 ## Entendendo o infograma do reducer e rootReducer
 
-![react-redux](https://i.postimg.cc/zXyFjZwS/reducer-info.png)
+![react-redux](images/reducer-info.png)
 
 ### Análise do passo a passo
-![reducer](https://i.postimg.cc/T1wqFBzx/reducer.png)
+![reducer](images/reducer.png)
 
 ```javascript
 npm install
