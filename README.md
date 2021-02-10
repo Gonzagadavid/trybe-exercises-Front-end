@@ -10,6 +10,7 @@
 ```javascript
 cd missing_mapstatetoprops
 npm install
+npm start
 ```
 
 Em src/App.js:
@@ -27,11 +28,6 @@ Em src/components/PrepareBurger.js:
 *Dica receiveRecipe: o nome do reducer é 'spiedRecipe' e a chave atualizada da action é 'recipe'.*
 
 **Seu objetivo é configurar o mapStateToProps dos componentes App.js e PrepareBurger.js para que eles recebam o estado atualizado da aplicação.**
-
-Antes de dar checkout na próxima branch:
-```javascript
-git stash
-```
 
 **Referências:**
 
