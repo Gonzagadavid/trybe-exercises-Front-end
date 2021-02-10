@@ -6,6 +6,7 @@
 ![actions](images/actions.png)
 
 ```javascript
+cd missing_actions
 npm install
 ```
 
