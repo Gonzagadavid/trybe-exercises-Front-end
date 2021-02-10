@@ -1,9 +1,9 @@
 ## Entendendo o infograma do connect
 
-![react-redux](https://i.postimg.cc/j50R8JFQ/connect-info.png)
+![react-redux](images/connect-info.png)
 
 ### Análise do passo a passo
-![connect](https://i.postimg.cc/rpt8C9Qw/connect.png)
+![connect](images/connect.png)
 
 ```javascript
 npm install
