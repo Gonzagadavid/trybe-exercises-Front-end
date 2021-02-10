@@ -16,6 +16,11 @@ Em src/pages foi retirado o mapDispatchToProps e o dispatch da página Form.js. 
 
 **Seu objetivo é configurar o mapDispatchToProps e o dispatch para disparar a ação responsável pela alteração do estado da aplicação.**
 
+Antes de dar checkout na próxima branch:
+```javascript
+git stash
+```
+
 **Referências:**
 
 - Imagem wallpaper: https://pixy.org/src/62/629825.jpg;
