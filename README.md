@@ -5,6 +5,10 @@
 ### Análise do passo a passo
 ![actions](https://i.postimg.cc/N0k6MgYY/actions.png)
 
+```javascript
+npm install
+```
+
 Em src/actions foi retirada a action understandMatrix do arquivo index.js, que deverá receber um type 'PILL_TAKEN' e um 'id' como parâmetro.
 
 **Seu objetivo é criar a action que retornará o objeto com o type e id que serão passados para o reducer.**
