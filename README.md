@@ -6,6 +6,7 @@
 ![provider](images/provider.png)
 
 ```javascript
+cd missing_provider
 npm install
 ```
 
