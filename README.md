@@ -8,16 +8,12 @@
 ```javascript
 cd missing_actions
 npm install
+npm start
 ```
 
 Em src/actions foi retirada a action understandMatrix do arquivo index.js, que deverá receber um type 'PILL_TAKEN' e um 'id' como parâmetro.
 
 **Seu objetivo é criar a action que retornará o objeto com o type e id que serão passados para o reducer.**
-
-Antes de dar checkout na próxima branch:
-```javascript
-git stash
-```
 
 **Referências:**
 
