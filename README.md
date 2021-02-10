@@ -5,6 +5,10 @@
 ### Análise do passo a passo
 ![connect](https://i.postimg.cc/rpt8C9Qw/connect.png)
 
+```javascript
+npm install
+```
+
 Em src/App.js e src/components/RescuePeach.js foram retirados o export defaut connect()(), portanto, os componentes não são localizados e não recebem nenhum dado do Redux. 
 
 **Seu objetivo é configurar o connect de acordo com a necessidade de cada componente, fazendo a aplicação funcionar com React-Redux.**
