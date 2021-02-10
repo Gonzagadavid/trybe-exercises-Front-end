@@ -14,6 +14,11 @@ Em src/index.js foram retiradas todas as configurações de um Provider. Primeir
 
 **Seu objetivo é configurar o Provider corretamente para que todos os componentes da aplicação recebam os estados contidos na store.**
 
+Antes de dar checkout na próxima branch:
+```javascript
+git stash
+```
+
 **Referências:**
 
 - Imagem wallpaper: https://upload.wikimedia.org/wikipedia/commons/9/92/M45_The_Pleiades_Seven_Sisters.jpg;
