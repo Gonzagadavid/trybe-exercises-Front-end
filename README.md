@@ -1,11 +1,11 @@
 ## Entendendo o infograma do mapDispatchToProps e dispatch
 
-![react-redux](https://i.postimg.cc/XvZv1W73/map-Dispatch-To-Props-and-dispatch-info.png)
+![react-redux](images/map-Dispatch-To-Props-and-dispatch-info.png)
 
 ### Análise do passo a passo
-![mapDispatchToProps e dispatch](https://i.postimg.cc/L6Rn9GvB/map-Dispatch-To-Props-and-dispatch.png)
+![mapDispatchToProps e dispatch](images/map-Dispatch-To-Props-and-dispatch.png)
 
-![mapDispatchToProp](https://i.postimg.cc/LhFJDgwD/map-Dispatch-To-Props.png)
+![mapDispatchToProp](images/map-Dispatch-To-Props.png)
 
 ```javascript
 npm install
