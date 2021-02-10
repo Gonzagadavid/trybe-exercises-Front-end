@@ -28,6 +28,11 @@ Em src/components/PrepareBurger.js:
 
 **Seu objetivo é configurar o mapStateToProps dos componentes App.js e PrepareBurger.js para que eles recebam o estado atualizado da aplicação.**
 
+Antes de dar checkout na próxima branch:
+```javascript
+git stash
+```
+
 **Referências:**
 
 - Imagem bobEsponja: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0e2f0bab-4518-4c60-a8d6-444eeef68485/dd56cw0-4ba5ce04-63ba-4369-8c8e-13bc3b3538fb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMGUyZjBiYWItNDUxOC00YzYwLWE4ZDYtNDQ0ZWVlZjY4NDg1XC9kZDU2Y3cwLTRiYTVjZTA0LTYzYmEtNDM2OS04YzhlLTEzYmMzYjM1MzhmYi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.P37ofPgA8KVdnrbgO761nelbriOZMk2coJiYPW6tA6I;
