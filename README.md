@@ -8,6 +8,7 @@
 ```javascript
 cd missing_reducers
 npm install
+npm start
 ```
 
 Em src/reducers:
@@ -22,11 +23,6 @@ Em src/reducers:
 **Seu objetivo é criar o código com o combineReducers no arquivo index.js, e criar as funções dos reducers que são responsáveis por receberem as actions que modificam os estados da aplicação.**
 
 *Observação: Atenção aos estados iniciais dos reducers.*
-
-Antes de dar checkout na próxima branch:
-```javascript
-git stash
-```
 
 **Referências:**
 
