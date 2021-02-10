@@ -8,6 +8,7 @@
 ![mapDispatchToProp](images/map-Dispatch-To-Props.png)
 
 ```javascript
+cd missing_mapdispatchtoprops
 npm install
 ```
 
