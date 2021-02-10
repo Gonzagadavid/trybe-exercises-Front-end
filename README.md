@@ -1,11 +1,11 @@
 ## Entendendo o infograma do mapStateToProps
 
-![react-redux](https://i.postimg.cc/j50R8JFQ/connect-info.png)
+![react-redux](images/map-State-To-Props-info.png)
 
 ### Análise do passo a passo
-![mapStateToProps](https://i.postimg.cc/rpt8C9Qw/connect.png)
+![mapStateToProps](images/map-State-To-Props.png)
 
-![mapStateToProps](https://i.postimg.cc/fbRhGThv/map-State-To-Props-exp.png)
+![mapStateToProps](images/map-State-To-Props-exp.png)
 
 ```javascript
 npm install
