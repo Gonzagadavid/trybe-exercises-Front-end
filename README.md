@@ -5,6 +5,10 @@
 ### Análise do passo a passo
 ![reducer](https://i.postimg.cc/T1wqFBzx/reducer.png)
 
+```javascript
+npm install
+```
+
 Em src/reducers:
 - Foi retirada a função rootReducer do arquivo index.js;
 - Foi retirada a função africaContinent do reducer Africa.js;
