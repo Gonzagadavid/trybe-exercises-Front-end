@@ -1,9 +1,9 @@
 ## Entendendo o infograma de uma action
 
-![react-redux](https://i.postimg.cc/5tgzJnq2/actions-info.png)
+![react-redux](images/actions-info.png)
 
 ### Análise do passo a passo
-![actions](https://i.postimg.cc/N0k6MgYY/actions.png)
+![actions](images/actions.png)
 
 ```javascript
 npm install
