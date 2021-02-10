@@ -8,6 +8,7 @@
 ![mapStateToProps](images/map-State-To-Props-exp.png)
 
 ```javascript
+cd missing_mapstatetoprops
 npm install
 ```
 
