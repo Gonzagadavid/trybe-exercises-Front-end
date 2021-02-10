@@ -6,6 +6,7 @@
 ![connect](images/connect.png)
 
 ```javascript
+cd missing_connect
 npm install
 ```
 
