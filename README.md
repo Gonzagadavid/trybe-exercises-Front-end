@@ -14,6 +14,11 @@ Em src/actions foi retirada a action understandMatrix do arquivo index.js, que d
 
 **Seu objetivo é criar a action que retornará o objeto com o type e id que serão passados para o reducer.**
 
+Antes de dar checkout na próxima branch:
+```javascript
+git stash
+```
+
 **Referências:**
 
 - Imagem wallpaper: https://cdn.pixabay.com/photo/2020/07/02/04/31/matrix-5361690_1280.png;
