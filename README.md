@@ -17,7 +17,7 @@ Em src/App.js e src/components/RescuePeach.js foram retirados o export defaut co
 
 **Referências:**
 
-- Imagem mario: https://pixy.org/download/1200860/;
+- Imagem mario: https://pixy.org/src/149/1494229.png;
 - Imagem marioepeach: https://upload.wikimedia.org/wikipedia/it/1/12/Peach_Toadstool.png; https://pixy.org/download/1270955/;
 - Imagem peach: https://upload.wikimedia.org/wikipedia/sco/d/d5/Peach_%28Super_Mario_3D_World%29.png;
 - Imagem map: https://i.pinimg.com/originals/ee/64/0c/ee640c8170c171bd1c38ae1fc8f24736.png;
