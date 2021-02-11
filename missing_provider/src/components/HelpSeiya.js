@@ -37,8 +37,8 @@ class HelpSeiya extends React.Component {
             alt="Seiya de Pégasus"
           />
           <p className="text-wrap">
-            Chegou a hora de lutar ou de morrer. Athena por favor,
-            deixe me ver o inimigo... Me de sua força pegasus!!!
+            Chegou a hora de lutar ou de morrer. Athena, por favor,
+            deixe-me ver o inimigo... Me dê sua força, Pegasus!!!
           </p>
         </div>
       </div>
