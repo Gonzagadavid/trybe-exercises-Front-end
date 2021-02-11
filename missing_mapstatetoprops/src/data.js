@@ -4,7 +4,7 @@ export const recipe = [
   `Acrescente a carne de siri e continue misturando.
   Ela solta bastante água mesmo, don't panic! `,
   `Quando tiver uma massa bem homogênea, acrescente o limão, alho,
-  sal, e pimenta-do-reinoo. Misture bem por aproximadamente 10 minutos. `,
+  sal, e pimenta-do-reino. Misture bem por aproximadamente 10 minutos. `,
   'Deixe a mistura esfriar, pegue a massa e modele os hambúrgueres. ',
   'Frite os hambúrgueres deixando-os bem dourados.',
 ];
@@ -42,8 +42,8 @@ export const order = [
 ];
 
 export const abstract = {
-  history: `Você finalmente descobriu a receita secreta do hambúrguer de siri
+  history: `Você finalmente descobriu a receita secreta do Hambúrguer de Siri
   do Siri Cascudo, mas antes que o Sr. Siriguejo percebesse, você decidiu salvar
   a receita na store e sair correndo. Agora é hora de recuperar essa receita
-  para preparar um lanchinho delicioso diretamente da Fenda do Biquini`,
+  e preparar um lanchinho delicioso diretamente da Fenda do Biquini`,
 };
