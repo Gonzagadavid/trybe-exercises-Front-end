@@ -1,6 +1,8 @@
 # Vamos começar com tudo os exercícios desse repositório de React-Redux.
 
-**Após clonar o repositório, é necessário rodar o comando *npm install* para instalar todas as dependências necessárias das aplicações.**
+**Após forkar e clonar o repositório, é necessário rodar o comando *npm install* para instalar todas as dependências necessárias das aplicações.**
+
+## ⚠️ ATENÇÃO! Não clone o repositório sem realizar seu fork! ⚠️
 
 - Para acessar o exercício sobre **store**:
 ```javascript
@@ -37,5 +39,6 @@ git checkout exercise-6
 git checkout exercise-7
 ```
 
-##### Há um arquivo markdown de gabarito aqui na master, mas tenho certeza que conseguirão realizar todos os exercícios e dominarão React-Redux.
-*#teamredux*
+Para melhor organização, **commite** as alterações que fizer nas branchs de cada exercícios antes de ir para a próxima!
+
+##### Há um arquivo com gabarito aqui na branch principal, mas realizar todos os exercícios é muito importante para o domínio do React-Redux.
