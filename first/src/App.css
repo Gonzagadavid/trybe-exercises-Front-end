@@ -1,0 +1,38 @@
+.card {
+  background-color: aliceblue;
+  border-radius: 25px !important;
+  padding: 10px;
+  width: 25%;
+}
+
+.card-list {
+  width: 100vw;
+}
+
+.git {
+  margin: 10px;
+}
+
+.gitNetwork {
+  background-color: lavender;
+  height: 100vh;
+}
+
+.myPicture {
+  border: 4px solid white;
+  border-radius: 100%;
+  width: 200px;
+}
+
+img {
+  border-radius: 25px !important;
+}
+p {
+  text-align: center;
+}
+
+span {
+  color: #710ece;
+  font-size: x-large;
+  font-weight: 600;
+}
