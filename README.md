@@ -2,15 +2,15 @@
 
 ### Para fazer um fork
 
-1 - Clique no botão "Fork" do repositório.
+**1 - Clique no botão "Fork" do repositório.**
 
 ![passo2](images/fork-step-1.png)
 
-2 - Selecione seu usuário do GitHub.
+**2 - Selecione seu usuário do GitHub.**
 
 ![passo3](images/fork-step-2.png)
 
-3 - Escolha a URL remota (SSH, HTTPS) para fazer o clone do repositório.
+**3 - Escolha a URL remota (SSH, HTTPS) para fazer o clone do repositório.**
 
 ![passo4](images/fork-step-3.png)
 
