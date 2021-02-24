@@ -14,7 +14,7 @@
 
 ![passo4](images/fork-step-3.png)
 
-### Instruções (Também podem ser consultadas no course)
+### Instruções (Idênticas às do course)
 Você receberá trechos do código de uma aplicação e deverá encaixar e adaptar esse código de acordo com o método correspondente. **Para isso você receberá dicas sobre qual é o método responsável pela execução do código, e qual o componente que precisará desse código.** Alinhamentos feitos? Let's code!
 
 ##### Dentro da master
@@ -98,14 +98,14 @@ alert('Você ocultou seu perfil');
 
 **Agora que você terminou a sua aplicação, você deve verificar que tudo está funcionando de acordo com o planejado, portanto, selecionamentos esta lista de celebridades do mundo da tecnologia que possuem um perfil no GitHub, para serem incluídos na sua lista VIP de contatos:**
 
-*- Sandi Metz (skmetz) - Desenvolvedora de software e autora, especialista em código orientado a objetos em Ruby on Rails.*
-*- Anders Hejlsberg (ahejlsberg) - Desenvolvedor do Delphi e Turbo Pascal.*
-*- Brendan Gregg (brendangregg) - Engenheiro de núcleo e desempenho da Netflix.*
-*- Guido van Rossum (gvanrossum) - Autor da linguagem de programação Python.*
-*- Yukihiro Matsumoto (matz) - Criador da linguagem de programação Ruby,*
-*- Brendan Eich (BrendanEich) - Criador da linguagem de programação JavaScript.*
-*- Markus Persson (xNotch) - Fundador da Mojang Studios e criador do jogo Minecraft.*
-*- Natalie Weizenbaum (nex3) - principal desenvolvedora e designer líder do Sass.*
+- Sandi Metz (skmetz) - Desenvolvedora de software e autora, especialista em código orientado a objetos em Ruby on Rails.
+- Anders Hejlsberg (ahejlsberg) - Desenvolvedor do Delphi e Turbo Pascal.
+- Brendan Gregg (brendangregg) - Engenheiro de núcleo e desempenho da Netflix.
+- Guido van Rossum (gvanrossum) - Autor da linguagem de programação Python.
+- Yukihiro Matsumoto (matz) - Criador da linguagem de programação Ruby,
+- Brendan Eich (BrendanEich) - Criador da linguagem de programação JavaScript.
+- Markus Persson (xNotch) - Fundador da Mojang Studios e criador do jogo Minecraft.
+- Natalie Weizenbaum (nex3) - principal desenvolvedora e designer líder do Sass.
 
 ##### Verifique:
 - Os dados do seu perfil GitHub foram exibidos ao iniciar a aplicação?
@@ -116,4 +116,6 @@ alert('Você ocultou seu perfil');
 - Ao excluir o contato, o background mudou para um tom alaranjado?
 - O contador de contatos funciona perfeitamente?
 
-**Se você respondeu *SIM* para todas as perguntas acima, você acabou de completar uma aplicação com todos os métodos comuns de ciclo de vida do React. Parabéns!** 
+**Se você respondeu *SIM* para todas as perguntas acima, você acabou de completar uma aplicação com todos os métodos comuns de ciclo de vida do React. Parabéns!**
+
+*O gabarito do exercício está na pasta **answer_keys** desse repositório.*
