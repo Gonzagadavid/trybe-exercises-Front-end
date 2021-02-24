@@ -9,16 +9,9 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    const myUser = 'paula-jfe';
-    const url = `https://api.github.com/users/${myUser}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => this.setState({ api: data }))
-      .catch((error) => console.log(error));
   }
 
   componentWillUnmount() {
-    alert('Você ocultou seu perfil');
   }
 
   render() {

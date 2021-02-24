@@ -14,27 +14,9 @@ class Connections extends React.Component {
   }
 
   shouldComponentUpdate(_nextProps, nextState) {
-    const maxContactsNumber = 3;
-
-    if (nextState.list.length <= maxContactsNumber) {
-      return true;
-    }
-    return false;
   }
 
-  /* é invocado imediatamente após alguma atualização ocorrer.
-  Este método não é chamado pelo initial render
-  componentDidUpdate() não será invocado se shouldComponentUpdate() retornar false. */
   componentDidUpdate(_prevProps, prevState) {
-    const { list } = this.state;
-    console.log('Deus é mais');
-    if (prevState.list.length < list.length) {
-      document.querySelector('.gitNetwork')
-        .style.backgroundColor = 'lightblue';
-    } else if (prevState.list.length > list.length) {
-      document.querySelector('.gitNetwork')
-        .style.backgroundColor = 'lightcoral';
-    }
   }
 
   handleChange({ target }) {
