@@ -101,7 +101,7 @@ class Connections extends React.Component {
               <h5>{ person.name }</h5>
               <img className="c-img" src={ person.avatar_url } alt="Avatar" width="50%" />
               <button
-                className="c-button btn btn-outline-dark w-25 align-self-center"
+                className="c-button btn btn-danger w-25 align-self-center"
                 data-login={ person.login }
                 type="button"
                 onClick={ this.removeContact }
