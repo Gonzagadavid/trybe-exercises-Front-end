@@ -118,4 +118,5 @@ alert('Você ocultou seu perfil');
 
 **Se você respondeu *SIM* para todas as perguntas acima, você acabou de completar uma aplicação com todos os métodos comuns de ciclo de vida do React. Parabéns!**
 
+##### Gabarito
 *O gabarito do exercício está na pasta **answer_keys** desse repositório.*
