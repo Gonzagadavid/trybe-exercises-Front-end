@@ -98,16 +98,16 @@ alert('Você ocultou seu perfil');
 
 **Agora que você terminou a sua aplicação, você deve verificar que tudo está funcionando de acordo com o planejado, portanto, selecionamentos esta lista de celebridades do mundo da tecnologia que possuem um perfil no GitHub, para serem incluídos na sua lista VIP de contatos:**
 
-- Sandi Metz (skmetz) - Desenvolvedora de software e autora, especialista em código orientado a objetos em Ruby on Rails.
-- Anders Hejlsberg (ahejlsberg) - Desenvolvedor do Delphi e Turbo Pascal.
-- Brendan Gregg (brendangregg) - Engenheiro de núcleo e desempenho da Netflix.
-- Guido van Rossum (gvanrossum) - Autor da linguagem de programação Python.
-- Yukihiro Matsumoto (matz) - Criador da linguagem de programação Ruby,
-- Brendan Eich (BrendanEich) - Criador da linguagem de programação JavaScript.
-- Markus Persson (xNotch) - Fundador da Mojang Studios e criador do jogo Minecraft.
-- Natalie Weizenbaum (nex3) - principal desenvolvedora e designer líder do Sass.
+- **Sandi Metz (skmetz)** - Desenvolvedora de software e autora, especialista em código orientado a objetos em Ruby on Rails.
+- **Anders Hejlsberg (ahejlsberg)** - Desenvolvedor do Delphi e Turbo Pascal.
+- **Brendan Gregg (brendangregg)** - Engenheiro de núcleo e desempenho da Netflix.
+- **Guido van Rossum (gvanrossum)** - Autor da linguagem de programação Python.
+- **Yukihiro Matsumoto (matz)** - Criador da linguagem de programação Ruby,
+- **Brendan Eich (BrendanEich)** - Criador da linguagem de programação JavaScript.
+- **Markus Persson (xNotch)** - Fundador da Mojang Studios e criador do jogo Minecraft.
+- **Natalie Weizenbaum (nex3)** - principal desenvolvedora e designer líder do Sass.
 
-##### Verifique:
+#### Verifique:
 - Os dados do seu perfil GitHub foram exibidos ao iniciar a aplicação?
 - É possível exibir ou ocultar os dados do seu perfil?
 - É possível adicionar um contato na sua lista de contatos?
@@ -118,5 +118,5 @@ alert('Você ocultou seu perfil');
 
 **Se você respondeu *SIM* para todas as perguntas acima, você acabou de completar uma aplicação com todos os métodos comuns de ciclo de vida do React. Parabéns!**
 
-##### Gabarito
+#### Gabarito
 *O gabarito do exercício está na pasta **answer_keys** desse repositório.*
