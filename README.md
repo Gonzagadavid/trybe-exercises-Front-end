@@ -1,4 +1,4 @@
-## Compreendendo os momentos de cada método de ciclo de vida do React
+## Gerenciamente de estados complexos com Context API e hooks
 
 ### Para fazer um fork
 
@@ -23,6 +23,7 @@ cd try-food
 npm install
 npm start
 ```
+
 
 #### Gabarito
 *O gabarito do exercício está na pasta **answer_keys** desse repositório.*
