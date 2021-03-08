@@ -1,4 +1,4 @@
-## Gerenciamente de estados complexos com Context API e hooks
+## Gerenciamente de estados complexos com Context API e React Hooks
 
 ### Para fazer um fork
 
