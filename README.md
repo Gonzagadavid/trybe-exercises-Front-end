@@ -16,6 +16,11 @@
 ![passo4](images/fork-step-3.png)
 
 
+### Instruções (Idênticas às do course)
+
+Você receberá um código que simula um aplicativo e precisará completar esse código para ver o aplicativo em funcionamento. A parte mais importante é treinar manipulação de estados dentro do arquivo **src/context/MyProvider.js**, onde a função **handleChange** está vazia. Analise o código da aplicação e pense como atualizar individualmente a lista de **comida, bebida** e **sobremesa**, que são arrays contidos no objeto **orderList**.
+
+
 ##### Dentro da master
 
 ```javascript
@@ -23,19 +28,6 @@ cd try-food
 npm install
 npm start
 ```
-
-
-### Instruções (Idênticas às do course)
-
-Você receberá um código que simula um aplicativo e precisará completar esse código para ver o aplicativo em funcionamento. A parte mais importante é treinar manipulação de estados dentro do arquivo **src/context/MyProvider.js**, onde a função **handleChange** está vazia. Analise o código da aplicação e pense como atualizar individualmente a lista de **comida, bebida** e **sobremesa**, que são arrays contidos no objeto **orderList**.
-
-Dentro da master:
-{{< highlight react >}}
-cd try-food
-npm install
-npm start
-{{< / highlight >}}
-
 
 ###### Dicas importantes:
 
