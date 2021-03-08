@@ -78,8 +78,19 @@ input {
   width: 50vw;
 }
 
+.list-title {
+  color: white;
+  font-weight: 500;
+  margin: 15px 0;
+  text-align: center;
+}
+
 .login {
   height: 100vh;
+}
+
+.order main {
+  display: flex;
 }
 
 .opt {

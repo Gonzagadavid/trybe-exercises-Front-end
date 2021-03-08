@@ -3,7 +3,7 @@ import MyContext from '../context/MyContext';
 import TryFood from '../images/tryfood.png';
 
 function Header() {
-  const { orderList, showCart } = useContext(MyContext);
+  const { orderList, showCart, updateCart } = useContext(MyContext);
 
   const roundingOption = 2;
   const start = 0;
@@ -33,7 +33,7 @@ function Header() {
           type="button"
           onClick={ showCart }
         >
-          Ver sacola
+          { updateCart ? 'Ver opções' : 'Ver sacola' }
         </button>
       </div>
     </div>

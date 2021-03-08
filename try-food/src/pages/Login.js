@@ -1,28 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import TryFoodWhite from '../images/tryfoodwhite.png';
 
 function Login() {
   const [personData, setPersonData] = useState({
     email: '',
-    password: 0,
-    disabled: true,
+    password: '',
   });
 
   const history = useHistory();
-
-  useEffect(() => {
-    /* const { email, password } = personData;
-    const regexForEmail = /\S+@\S+\.\S+/;
-    const length = 6; */
-    /* const passwordIsValid = password.length > length;
-    const emailIsValid = regexForEmail.test(email); */
-    /* if (passwordIsValid && emailIsValid === true) {
-      setPersonData({ disabled: false });
-    } else {
-      setPersonData({ disabled: true });
-    } */
-  }, [personData]);
+  const regexForEmail = /\S+@\S+\.\S+/;
+  const length = 6;
+  const passwordIsValid = personData.password.length > length;
+  const emailIsValid = regexForEmail.test(personData.email);
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -59,7 +49,7 @@ function Login() {
         <button
           className="btn btn-outline-light"
           type="button"
-          disabled={ personData.disabled }
+          disabled={ !((passwordIsValid && emailIsValid === true)) }
           onClick={ handleClick }
         >
           Entrar
