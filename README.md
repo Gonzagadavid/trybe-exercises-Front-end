@@ -14,7 +14,8 @@
 
 ![passo4](images/fork-step-3.png)
 
-### Instruções (Idênticas às do course)
+### Instruções (Idênticas às da plataforma do curso)
+
 Você receberá trechos do código de uma aplicação e deverá encaixar e adaptar esse código de acordo com o método correspondente. **Para isso você receberá dicas sobre qual é o método responsável pela execução do código, e qual o componente que precisará desse código.** Alinhamentos feitos? Let's code!
 
 ##### Dentro da master
@@ -25,7 +26,7 @@ npm start
 ```
 
 ##### src/App.js
-*É o primeiro método a ser executado, é executado uma única vez quando o componente é inicializado e guarda os estados iniciais do componente. Recebe props como argumento e é onde conectamos as funções ao componente (bind).*
+*O método que você procura é o primeiro método a ser executado. Ele é executado uma única vez quando o componente é inicializado e guarda os estados iniciais do componente. Recebe props como argumento e é onde conectamos as funções ao componente (bind).*
 ```javascript
 super();
 this.state = {
@@ -35,7 +36,7 @@ this.changeProfile = this.changeProfile.bind(this);
 ```
 
 ##### src/App.js
-*É executado toda vez que um estado for atualizado ou toda vez que uma props for atualizada. É executado várias vezes durante a vida útil do componente e é um método puro. Um método puro não tem efeitos colaterais, sua saída será sempre igual para uma mesma entrada, ou seja, não se deve utilizar setState dentro desse método.*
+*O método que você busca é executado toda vez que um estado for atualizado ou toda vez que uma prop for atualizada. É executado várias vezes durante a vida útil do componente e é um método puro. Um método puro não tem efeitos colaterais, sua saída será sempre igual para uma mesma entrada. Ou seja: não se deve utilizar setState dentro deste método, porque isso seria um efeito colateral.*
 ```javascript
 const { showProfile } = this.state;
 return (
@@ -56,7 +57,7 @@ return (
 ```
 
 ##### src/components/Profile.js
-*É executado assim que o componente for montado e estiver pronto. Se você fará uma requisição à alguma API, esse método é um bom lugar para realizar a requisição. React permite o uso do setState nesse método, gerando uma nova renderização.*
+*O método que você busca é executado assim que o componente for montado e estiver pronto na tela. Se você fará uma requisição a alguma API, esse método é um bom lugar para realizar tal requisição. O React permite o uso do setState nesse método.*
 ```javascript
 const myUser = '';
 //Preencha myUser com o seu usuário GitHub.
@@ -68,7 +69,7 @@ fetch(url)
 ```
 
 ##### src/components/Connections.js
-*É um método muito útil quando você não quer que a sua atualização de estado ou props, gere uma nova renderização, portanto é executado antes do método componentDidUpdate. O componentDidUpdate não será chamado se esse método retornar false. Recebe como parâmetros nextProps e nextState.*
+*O método aqui é muito útil quando você não quer que a sua atualização de estado ou props gere uma nova renderização. Ele, portanto, é executado antes do método componentDidUpdate. O componentDidUpdate não será chamado se esse método retornar false. Recebe como parâmetros nextProps e nextState.*
 ```javascript
 const maxContactsNumber = 3;
 if (nextState.list.length <= maxContactsNumber) {
@@ -91,12 +92,12 @@ if (prevState.list.length < list.length) {
 ```
 
 ##### src/components/Profile.js
-*Método executado no momento anterior a completa desmontagem, destruição, do componente. Qualquer limpeza pode ser realizada neste método, seja cancelar a chamada de uma API, limpar localStorage ou parar a atualização de algum timer. Não se deve utilizar o setState nesse método, uma vez que o componente será destruído e, portanto, não ocorrerá uma nova atualização de estado nesse componente.*
+*Aqui você busca o método executado no momento anterior a completa desmontagem, destruição, do componente. Qualquer limpeza pode ser realizada neste método, seja cancelar a chamada de uma API, limpar localStorage ou parar a atualização de algum timer. Não se deve utilizar o setState nesse método, uma vez que o componente será destruído e, portanto, não ocorrerá uma nova atualização de estado nesse componente.*
 ```javascript
 alert('Você ocultou seu perfil');
 ```
 
-**Agora que você terminou a sua aplicação, você deve verificar que tudo está funcionando de acordo com o planejado, portanto, selecionamentos esta lista de celebridades do mundo da tecnologia que possuem um perfil no GitHub, para serem incluídos na sua lista VIP de contatos:**
+**Agora que você terminou a sua aplicação, você deve verificar que tudo está funcionando de acordo com o planejado. Para isso, selecionamos esta lista de celebridades do mundo da tecnologia que possuem um perfil no GitHub, para serem incluídos e incluídas na sua lista VIP de contatos:**
 
 - **Sandi Metz (skmetz)** - Desenvolvedora de software e autora, especialista em código orientado a objetos em Ruby on Rails.
 - **Anders Hejlsberg (ahejlsberg)** - Desenvolvedor do Delphi e Turbo Pascal.
