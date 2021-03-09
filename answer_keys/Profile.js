@@ -10,15 +10,15 @@ class Profile extends React.Component {
   }
 
   async componentDidMount() {
-    const myUser = ''; //Preencha myUser com o seu user do GitHub.
+    const myUser = ''; // Preencha myUser com o seu user do GitHub.
 
     try {
       const url = `https://api.github.com/users/${myUser}`;
-      const response = await fetch(url)
-      const dataJson = await response.json()
-      this.setState({ api: dataJson})
+      const response = await fetch(url);
+      const dataJson = await response.json();
+      this.setState({ api: dataJson }); //eslint-disable-line
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
@@ -26,24 +26,23 @@ class Profile extends React.Component {
     alert('Você ocultou seu perfil');
   }
 
-
   render() {
-    const loading = <p>Loading...</p>;
+    const { api: { name, email, bio } = '', api } = this.state;
 
-    const { api } = this.state;
+    if (!api) return <p>Loading...</p>;
 
     const card = (
       <div className="d-flex h-100 flex-column justify-content-center align-items-center">
-        <h1>{ api.name }</h1>
-        <span>{ api.email }</span>
+        <h1>{ name }</h1>
+        <span>{ email }</span>
         <img className="myPicture" src={ api.avatar_url } alt="Avatar" />
-        <p>{ api.bio }</p>
+        <p>{ bio }</p>
       </div>
     );
 
     return (
       <div className="git d-flex flex-column justify-content-center align-items-center">
-        { api ? card : loading }
+        { card }
       </div>
     );
   }

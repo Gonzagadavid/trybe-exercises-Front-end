@@ -13,10 +13,10 @@ class Connections extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.removeContact = this.removeContact.bind(this);
-    this.contactAdder = this.contactAdder.bind(this)
+    this.contactAdder = this.contactAdder.bind(this);
   }
 
-  shouldComponentUpdate(_nextProps, nextState) { }
+  shouldComponentUpdate(_nextProps, { list }) { }
 
   componentDidUpdate(_prevProps, prevState) { }
 
@@ -33,12 +33,13 @@ class Connections extends React.Component {
 
     if (isUserAbsent) {
       try {
-        const apiResponse = await fetch(url)
-        const profileObject = await apiResponse.json()
+        const apiResponse = await fetch(url);
+        const profileObject = await apiResponse.json();
+
         this.setState({
-          list: [...list, profile],
-          counter: counter + 1
-        })
+          list: [...list, profileObject],
+          counter: counter + 1,
+        });
       } catch (error) {
         console.log(error);
       }
@@ -80,27 +81,27 @@ class Connections extends React.Component {
           </form>
         </div>
       </div>
-    )
+    );
   }
 
   contactList(list) {
     return (
-        <div className="card-list d-flex flex-row justify-content-around">
-          { list.map(({ name, avatarUrl, login}) => (
-            <div className="card d-flex align-items-center" key={ name }>
-              <h5>{ name }</h5>
-              <img className="c-img" src={ avatarUrl } alt="Avatar" width="50%" />
-              <button
-                className="c-button btn btn-danger w-25 align-self-center"
-                data-login={ login }
-                type="button"
-                onClick={() => this.removeContact(login) }
-              >
-                X
-              </button>
-            </div>))}
-        </div>
-      )
+      <div className="card-list d-flex flex-row justify-content-around">
+        { list.map((api) => (
+          <div className="card d-flex align-items-center" key={ api.name }>
+            <h5>{ api.name }</h5>
+            <img className="c-img" src={ api.avatar_url } alt="Avatar" width="50%" />
+            <button
+              className="c-button btn btn-danger w-25 align-self-center"
+              data-login={ api.login }
+              type="button"
+              onClick={ () => this.removeContact(api.login) }
+            >
+              X
+            </button>
+          </div>))}
+      </div>
+    );
   }
 
   render() {

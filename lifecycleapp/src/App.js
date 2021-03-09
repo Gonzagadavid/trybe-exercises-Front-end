@@ -10,7 +10,7 @@ class App extends React.Component {
   changeProfile() {
     const { showProfile } = this.state;
 
-    this.setState({ showProfile: !showProfile})
+    this.setState({ showProfile: !showProfile });
   }
 
   render() { }

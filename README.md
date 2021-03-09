@@ -79,14 +79,12 @@ try {
 ```javascript
 const maxContactsNumber = 3;
 
-return length <= maxContactsNumber
+return list.length <= maxContactsNumber;
 ```
 
 ##### src/components/Connections.js
 *Método executado sempre que ocorrer alguma atualização. Comumente utilizado para atualizar o DOM de acordo com as alterações de estado ou props, e é um método que também pode ser utilizado para requisições à API. Recebe como parâmetros prevProps, prevState e snapshot, sendo os mais utilizados os dois primeiros.*
 ```javascript
-// Amanhã aprenderemos uma forma nova de alterar as classes CSS dos elementos com base na lógica do código!
-
 const { list } = this.state;
 if (prevState.list.length < list.length) {
   document.querySelector('.gitNetwork')
