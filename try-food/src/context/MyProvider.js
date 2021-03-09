@@ -19,36 +19,46 @@ function MyProvider({ children }) {
     }
   };
 
-  const verifyIfExcluded = (name, value, columnType, itemPrice) => {
-    const noQuantity = 0;
-    if (Number(value) !== noQuantity) {
-      const orderState = orderList[columnType];
-      const index = orderState.findIndex((item) => item.id === name);
-      const newItemValue = { id: name, quantity: value, totalPrice: value * itemPrice };
-      orderState.splice(index, 1, newItemValue);
-      setOrderList({ ...orderList,
-        [columnType]: orderState });
-    } else {
-      const orderState = orderList[columnType];
-      const index = orderState.findIndex((item) => item.id === name);
-      orderState.splice(index, 1);
-      setOrderList({ ...orderList,
-        [columnType]: orderState });
-    }
+  const removeItemFromList = (orderState, indexPresentInList, itemType) => {
+    orderState.splice(indexPresentInList, 1);
+    setOrderList({ ...orderList,
+      [itemType]: orderState });
   };
 
-  const handleChange = ({ target }) => {
-    const columnType = target.getAttribute('data-type');
-    const itemPrice = target.getAttribute('data-price');
-    const { name, value } = target;
-    const verifyName = orderList[columnType].some((item) => item.id === name);
-    if (!verifyName) {
-      setOrderList({ ...orderList,
-        [columnType]: [...orderList[columnType],
-          { id: name, quantity: value, totalPrice: value * itemPrice }] });
-    } else {
-      verifyIfExcluded(name, value, columnType, itemPrice);
+  const incrementItemInList = (orderState, indexPresentInList,
+    itemName, value, itemType, itemPrice) => {
+    const newItemValue = {
+      id: itemName, quantity: value, totalPrice: value * itemPrice };
+    orderState.splice(indexPresentInList, 1, newItemValue);
+    setOrderList({ ...orderList,
+      [itemType]: orderState });
+  };
+
+  const manageItemsInList = (itemName, value, itemType, itemPrice) => {
+    const noQuantity = 0;
+    const orderState = orderList[itemType];
+    const indexPresentInList = orderState.findIndex((item) => item.id === itemName);
+    if (Number(value) === noQuantity) {
+      removeItemFromList(orderState, indexPresentInList, itemType);
     }
+    incrementItemInList(orderState, indexPresentInList,
+      itemName, value, itemType, itemPrice);
+  };
+
+  const addItemToList = (value, itemName, itemPrice, itemType) => {
+    console.log(orderList[itemType]);
+    setOrderList({ ...orderList,
+      [itemType]: [...orderList[itemType],
+        { id: itemName, quantity: value, totalPrice: value * itemPrice }] });
+  };
+
+  const handleChange = ({ target }, itemName, itemPrice, itemType) => {
+    const { value } = target;
+    const isPresentInList = orderList[itemType].some((item) => item.id === itemName);
+    if (!isPresentInList) {
+      addItemToList(value, itemName, itemPrice, itemType);
+    }
+    manageItemsInList(itemName, value, itemType, itemPrice);
   };
 
   return (
