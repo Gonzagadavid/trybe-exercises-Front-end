@@ -3,20 +3,21 @@ import React from 'react';
 class Profile extends React.Component {
   constructor() {
     super();
+
     this.state = {
       api: '',
     };
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() { }
 
-  componentWillUnmount() {
-  }
+  componentWillUnmount() { }
 
   render() {
-    const isFetching = <p>Loading...</p>;
+    const loading = <p>Loading...</p>;
+
     const { api } = this.state;
+
     const card = (
       <div className="d-flex h-100 flex-column justify-content-center align-items-center">
         <h1>{ api.name }</h1>
@@ -28,7 +29,7 @@ class Profile extends React.Component {
 
     return (
       <div className="git d-flex flex-column justify-content-center align-items-center">
-        { api ? card : isFetching }
+        { api ? card : loading }
       </div>
     );
   }

@@ -29,9 +29,11 @@ npm start
 *O método que você procura é o primeiro método a ser executado. Ele é executado uma única vez quando o componente é inicializado e guarda os estados iniciais do componente. Recebe props como argumento e é onde conectamos as funções ao componente (bind).*
 ```javascript
 super();
+
 this.state = {
   showProfile: true,
 };
+
 this.changeProfile = this.changeProfile.bind(this);
 ```
 
@@ -39,6 +41,7 @@ this.changeProfile = this.changeProfile.bind(this);
 *O método que você busca é executado toda vez que um estado for atualizado ou toda vez que uma prop for atualizada. É executado várias vezes durante a vida útil do componente e é um método puro. Um método puro não tem efeitos colaterais, sua saída será sempre igual para uma mesma entrada. Ou seja: não se deve utilizar setState dentro deste método, porque isso seria um efeito colateral.*
 ```javascript
 const { showProfile } = this.state;
+
 return (
   <div className="gitNetwork d-flex flex-column justify-content-center">
     { showProfile ? <Profile /> : null }
@@ -48,7 +51,7 @@ return (
         type="button"
         onClick={ this.changeProfile }
       >
-        Mostrar/ Ocultar Perfil
+        Mostrar / Ocultar Perfil
       </button>
     </div>
     <Connections />
@@ -59,28 +62,31 @@ return (
 ##### src/components/Profile.js
 *O método que você busca é executado assim que o componente for montado e estiver pronto na tela. Se você fará uma requisição a alguma API, esse método é um bom lugar para realizar tal requisição. O React permite o uso do setState nesse método.*
 ```javascript
-const myUser = '';
-//Preencha myUser com o seu usuário GitHub.
-const url = `https://api.github.com/users/${myUser}`;
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => this.setState({ api: data }))
-  .catch((error) => console.log(error));
+const myUser = ''; //Preencha myUser com o seu user do GitHub.
+
+try {
+  const url = `https://api.github.com/users/${myUser}`;
+  const response = await fetch(url)
+  const dataJson = await response.json()
+  this.setState({ api: dataJson})
+} catch (error) {
+  console.log(error)
+}
 ```
 
 ##### src/components/Connections.js
 *O método aqui é muito útil quando você não quer que a sua atualização de estado ou props gere uma nova renderização. Ele, portanto, é executado antes do método componentDidUpdate. O componentDidUpdate não será chamado se esse método retornar false. Recebe como parâmetros nextProps e nextState.*
 ```javascript
 const maxContactsNumber = 3;
-if (nextState.list.length <= maxContactsNumber) {
-  return true;
-}
-return false;
+
+return length <= maxContactsNumber
 ```
 
 ##### src/components/Connections.js
 *Método executado sempre que ocorrer alguma atualização. Comumente utilizado para atualizar o DOM de acordo com as alterações de estado ou props, e é um método que também pode ser utilizado para requisições à API. Recebe como parâmetros prevProps, prevState e snapshot, sendo os mais utilizados os dois primeiros.*
 ```javascript
+// Amanhã aprenderemos uma forma nova de alterar as classes CSS dos elementos com base na lógica do código!
+
 const { list } = this.state;
 if (prevState.list.length < list.length) {
   document.querySelector('.gitNetwork')

@@ -7,27 +7,23 @@ import Connections from './components/Connections';
 class App extends React.Component {
   constructor() {
     super();
+
     this.state = {
       showProfile: true,
     };
+
     this.changeProfile = this.changeProfile.bind(this);
   }
 
   changeProfile() {
     const { showProfile } = this.state;
-    if (showProfile === true) {
-      this.setState({
-        showProfile: false,
-      });
-    } else {
-      this.setState({
-        showProfile: true,
-      });
-    }
+
+    this.setState({ showProfile: !showProfile})
   }
 
   render() {
     const { showProfile } = this.state;
+
     return (
       <div className="gitNetwork d-flex flex-column justify-content-center">
         { showProfile ? <Profile /> : null }
@@ -37,7 +33,7 @@ class App extends React.Component {
             type="button"
             onClick={ this.changeProfile }
           >
-            Mostrar/ Ocultar Perfil
+            Mostrar / Ocultar Perfil
           </button>
         </div>
         <Connections />

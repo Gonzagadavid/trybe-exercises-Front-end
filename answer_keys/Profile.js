@@ -3,28 +3,35 @@ import React from 'react';
 class Profile extends React.Component {
   constructor() {
     super();
+
     this.state = {
       api: '',
     };
   }
 
-  componentDidMount() {
-    const myUser = '';
-    //Preencha myUser com o seu usuário GitHub.
-    const url = `https://api.github.com/users/${myUser}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => this.setState({ api: data }))
-      .catch((error) => console.log(error));
+  async componentDidMount() {
+    const myUser = ''; //Preencha myUser com o seu user do GitHub.
+
+    try {
+      const url = `https://api.github.com/users/${myUser}`;
+      const response = await fetch(url)
+      const dataJson = await response.json()
+      this.setState({ api: dataJson})
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   componentWillUnmount() {
     alert('Você ocultou seu perfil');
   }
 
+
   render() {
-    const isFetching = <p>Loading...</p>;
+    const loading = <p>Loading...</p>;
+
     const { api } = this.state;
+
     const card = (
       <div className="d-flex h-100 flex-column justify-content-center align-items-center">
         <h1>{ api.name }</h1>
@@ -36,7 +43,7 @@ class Profile extends React.Component {
 
     return (
       <div className="git d-flex flex-column justify-content-center align-items-center">
-        { api ? card : isFetching }
+        { api ? card : loading }
       </div>
     );
   }
