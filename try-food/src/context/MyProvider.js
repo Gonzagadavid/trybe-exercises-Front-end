@@ -25,40 +25,39 @@ function MyProvider({ children }) {
       [itemType]: orderState });
   };
 
-  const incrementItemInList = (orderState, indexPresentInList,
-    itemName, value, itemType, itemPrice) => {
-    const newItemValue = {
-      id: itemName, quantity: value, totalPrice: value * itemPrice };
-    orderState.splice(indexPresentInList, 1, newItemValue);
-    setOrderList({ ...orderList,
-      [itemType]: orderState });
+  const incrementItemInList = (orderState, indexPresentInList, newItem) => {
+    orderState.splice(indexPresentInList, 1, newItem);
+    setOrderList({ ...orderList, [newItem.itemType]: orderState });
   };
 
-  const manageItemsInList = (itemName, value, itemType, itemPrice) => {
+  const manageItemsInList = (newItem) => {
     const noQuantity = 0;
-    const orderState = orderList[itemType];
-    const indexPresentInList = orderState.findIndex((item) => item.id === itemName);
-    if (Number(value) === noQuantity) {
-      removeItemFromList(orderState, indexPresentInList, itemType);
+    const orderState = orderList[newItem.itemType];
+    const indexPresentInList = orderState.findIndex((e) => e.id === newItem.id);
+    if (Number(newItem.quantity) === noQuantity) {
+      return removeItemFromList(orderState, indexPresentInList, newItem.itemType);
     }
-    incrementItemInList(orderState, indexPresentInList,
-      itemName, value, itemType, itemPrice);
+    incrementItemInList(orderState, indexPresentInList, newItem);
   };
 
-  const addItemToList = (value, itemName, itemPrice, itemType) => {
-    console.log(orderList[itemType]);
-    setOrderList({ ...orderList,
-      [itemType]: [...orderList[itemType],
-        { id: itemName, quantity: value, totalPrice: value * itemPrice }] });
+  const addItemToList = (newItem) => {
+    setOrderList((s) => ({ ...s,
+      [newItem.itemType]: [...s[newItem.itemType], newItem] }));
   };
 
   const handleChange = ({ target }, itemName, itemPrice, itemType) => {
     const { value } = target;
     const isPresentInList = orderList[itemType].some((item) => item.id === itemName);
+    const newItem = {
+      id: itemName,
+      quantity: value,
+      totalPrice: value * itemPrice,
+      itemType,
+    };
     if (!isPresentInList) {
-      addItemToList(value, itemName, itemPrice, itemType);
+      return addItemToList(newItem, itemType);
     }
-    manageItemsInList(itemName, value, itemType, itemPrice);
+    manageItemsInList(newItem);
   };
 
   return (

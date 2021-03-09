@@ -19,7 +19,7 @@ function Options() {
                 const { name, source, price } = item;
                 const aux = comida
                   .find((e) => e.id === item.name);
-                const quantidade = aux ? aux.quantidade : start;
+                const quantidade = aux ? aux.quantity : start;
                 return (
                   <div
                     key={ name }
