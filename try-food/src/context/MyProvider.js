@@ -41,8 +41,8 @@ function MyProvider({ children }) {
   };
 
   const addItemToList = (newItem) => {
-    setOrderList((s) => ({ ...s,
-      [newItem.itemType]: [...s[newItem.itemType], newItem] }));
+    setOrderList({ ...orderList,
+      [newItem.itemType]: [...orderList[newItem.itemType], newItem] });
   };
 
   const handleChange = ({ target }, itemName, itemPrice, itemType) => {
