@@ -29,7 +29,6 @@ npm start
 *O método que você procura é o primeiro método a ser executado. Ele é executado uma única vez quando o componente é inicializado e guarda os estados iniciais do componente. Recebe props como argumento e é onde conectamos as funções ao componente (bind).*
 ```javascript
 super();
-
 this.state = {
   showProfile: true,
 };
@@ -44,18 +43,18 @@ const { showProfile } = this.state;
 
 return (
   <div className="gitNetwork d-flex flex-column justify-content-center">
-		{ showProfile ? <Profile /> : null }
-		<div className="central d-flex justify-content-center">
-			<button
-				className="btn btn-dark align-self-center"
-				type="button"
-				onClick={ this.changeProfile }
-			>
-				Mostrar / Ocultar Perfil
-			</button>
-		</div>
-		<Connections />
+	{ showProfile ? <Profile /> : null }
+	<div className="central d-flex justify-content-center">
+		<button
+			className="btn btn-dark align-self-center"
+			type="button"
+			onClick={ this.changeProfile }
+		>
+			Mostrar / Ocultar Perfil
+		</button>
 	</div>
+	<Connections />
+</div>
 );
 ```
 
