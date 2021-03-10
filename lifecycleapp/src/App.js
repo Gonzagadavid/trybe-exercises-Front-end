@@ -5,24 +5,15 @@ import Profile from './components/Profile';
 import Connections from './components/Connections';
 
 class App extends React.Component {
-  constructor() {
-  }
+  constructor() { }
 
   changeProfile() {
     const { showProfile } = this.state;
-    if (showProfile === true) {
-      this.setState({
-        showProfile: false,
-      });
-    } else {
-      this.setState({
-        showProfile: true,
-      });
-    }
+
+    this.setState({ showProfile: !showProfile });
   }
 
-  render() {
-  }
+  render() { }
 }
 
 export default App;

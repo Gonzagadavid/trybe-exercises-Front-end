@@ -3,32 +3,33 @@ import React from 'react';
 class Profile extends React.Component {
   constructor() {
     super();
+
     this.state = {
       api: '',
     };
   }
 
-  componentDidMount() {
-  }
+  async componentDidMount() { }
 
-  componentWillUnmount() {
-  }
+  componentWillUnmount() { }
 
   render() {
-    const isFetching = <p>Loading...</p>;
-    const { api } = this.state;
+    const { api: { name, email, bio } = '', api } = this.state;
+
+    if (!api) return <p>Loading...</p>;
+
     const card = (
       <div className="d-flex h-100 flex-column justify-content-center align-items-center">
-        <h1>{ api.name }</h1>
-        <span>{ api.email }</span>
+        <h1>{ name }</h1>
+        <span>{ email }</span>
         <img className="myPicture" src={ api.avatar_url } alt="Avatar" />
-        <p>{ api.bio }</p>
+        <p>{ bio }</p>
       </div>
     );
 
     return (
       <div className="git d-flex flex-column justify-content-center align-items-center">
-        { api ? card : isFetching }
+        { card }
       </div>
     );
   }

@@ -3,26 +3,28 @@ import React from 'react';
 class Connections extends React.Component {
   constructor() {
     super();
+
     this.state = {
       user: '',
       list: [],
       counter: 0,
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.removeContact = this.removeContact.bind(this);
+    this.contactAdder = this.contactAdder.bind(this);
   }
 
-  shouldComponentUpdate(_nextProps, nextState) {
+  shouldComponentUpdate(_nextProps, { list }) {
     const maxContactsNumber = 3;
-    if (nextState.list.length <= maxContactsNumber) {
-      return true;
-    }
-    return false;
+
+    return list.length <= maxContactsNumber;
   }
 
   componentDidUpdate(_prevProps, prevState) {
     const { list } = this.state;
+
     if (prevState.list.length < list.length) {
       document.querySelector('.gitNetwork')
         .style.backgroundColor = 'lightblue';
@@ -32,40 +34,43 @@ class Connections extends React.Component {
     }
   }
 
-  handleChange({ target }) {
+  handleChange({ target: { value } }) {
     this.setState({
-      user: target.value,
+      user: value,
     });
   }
 
-  handleClick() {
+  async handleClick() {
     const { user, list, counter } = this.state;
     const url = `https://api.github.com/users/${user}`;
-    const findUser = list.some((contact) => contact.login === user);
-    if (!findUser) {
-      fetch(url)
-        .then((res) => res.json())
-        .then((profile) => this.setState({
-          list: [...list, profile],
+    const isUserAbsent = !list.some((contact) => contact.login === user);
+
+    if (isUserAbsent) {
+      try {
+        const apiResponse = await fetch(url);
+        const profileObject = await apiResponse.json();
+
+        this.setState({
+          list: [...list, profileObject],
           counter: counter + 1,
-        }))
-        .catch((error) => console.log(error));
+        });
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
 
-  removeContact({ target }) {
+  removeContact(loginToRemove) {
     const { list, counter } = this.state;
-    const login = target.getAttribute('data-login');
-    const newList = list.filter((contact) => contact.login !== login);
+    const updatedList = list.filter(({ login }) => login !== loginToRemove);
+
     this.setState({
-      list: newList,
+      list: updatedList,
       counter: counter - 1,
     });
   }
 
-  render() {
-    const { list, counter } = this.state;
-
+  contactAdder(counter) {
     return (
       <div className="git-connections">
         <div className="counter">
@@ -89,22 +94,37 @@ class Connections extends React.Component {
             </button>
           </form>
         </div>
+      </div>
+    );
+  }
 
-        <div className="card-list d-flex flex-row justify-content-around">
-          { list.map((person) => (
-            <div className="card d-flex align-items-center" key={ person.name }>
-              <h5>{ person.name }</h5>
-              <img className="c-img" src={ person.avatar_url } alt="Avatar" width="50%" />
-              <button
-                className="c-button btn btn-danger w-25 align-self-center"
-                data-login={ person.login }
-                type="button"
-                onClick={ this.removeContact }
-              >
-                X
-              </button>
-            </div>))}
-        </div>
+  contactList(list) {
+    return (
+      <div className="card-list d-flex flex-row justify-content-around">
+        { list.map((api) => (
+          <div className="card d-flex align-items-center" key={ api.name }>
+            <h5>{ api.name }</h5>
+            <img className="c-img" src={ api.avatar_url } alt="Avatar" width="50%" />
+            <button
+              className="c-button btn btn-danger w-25 align-self-center"
+              data-login={ api.login }
+              type="button"
+              onClick={ () => this.removeContact(api.login) }
+            >
+              X
+            </button>
+          </div>))}
+      </div>
+    );
+  }
+
+  render() {
+    const { list, counter } = this.state;
+
+    return (
+      <div>
+        {this.contactAdder(counter)}
+        {this.contactList(list)}
       </div>
     );
   }
