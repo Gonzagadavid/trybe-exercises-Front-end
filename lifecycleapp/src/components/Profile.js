@@ -7,11 +7,19 @@ class Profile extends React.Component {
     this.state = {
       api: '',
     };
+
+    this.changeDataJson = this.changeDataJson.bind(this);
   }
 
-  async componentDidMount() { }
+  async componentDidMount() {
+  }
 
-  componentWillUnmount() { }
+  componentWillUnmount() {
+  }
+
+  changeDataJson(dataJson) {
+    this.setState({ api: dataJson });
+  }
 
   render() {
     const { api: { name, email, bio } = '', api } = this.state;

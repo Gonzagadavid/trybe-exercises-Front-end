@@ -44,33 +44,33 @@ const { showProfile } = this.state;
 
 return (
   <div className="gitNetwork d-flex flex-column justify-content-center">
-    { showProfile ? <Profile /> : null }
-    <div className="central d-flex justify-content-center">
-      <button
-        className="btn btn-dark align-self-center"
-        type="button"
-        onClick={ this.changeProfile }
-      >
-        Mostrar / Ocultar Perfil
-      </button>
-    </div>
-    <Connections />
-  </div>
+		{ showProfile ? <Profile /> : null }
+		<div className="central d-flex justify-content-center">
+			<button
+				className="btn btn-dark align-self-center"
+				type="button"
+				onClick={ this.changeProfile }
+			>
+				Mostrar / Ocultar Perfil
+			</button>
+		</div>
+		<Connections />
+	</div>
 );
 ```
 
 ##### src/components/Profile.js
 *O método que você busca é executado assim que o componente for montado e estiver pronto na tela. Se você fará uma requisição a alguma API, esse método é um bom lugar para realizar tal requisição. O React permite o uso do setState nesse método.*
 ```javascript
-const myUser = ''; //Preencha myUser com o seu user do GitHub.
+const myUser = ''; // Preencha myUser com o seu user do GitHub.
 
 try {
   const url = `https://api.github.com/users/${myUser}`;
-  const response = await fetch(url)
-  const dataJson = await response.json()
-  this.setState({ api: dataJson})
+  const response = await fetch(url);
+  const dataJson = await response.json();
+  this.changeDataJson(dataJson);
 } catch (error) {
-  console.log(error)
+  console.log(error);
 }
 ```
 
@@ -86,6 +86,7 @@ return list.length <= maxContactsNumber;
 *Método executado sempre que ocorrer alguma atualização. Comumente utilizado para atualizar o DOM de acordo com as alterações de estado ou props, e é um método que também pode ser utilizado para requisições à API. Recebe como parâmetros prevProps, prevState e snapshot, sendo os mais utilizados os dois primeiros.*
 ```javascript
 const { list } = this.state;
+
 if (prevState.list.length < list.length) {
   document.querySelector('.gitNetwork')
     .style.backgroundColor = 'lightblue';

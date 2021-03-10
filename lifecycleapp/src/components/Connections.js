@@ -16,9 +16,11 @@ class Connections extends React.Component {
     this.contactAdder = this.contactAdder.bind(this);
   }
 
-  shouldComponentUpdate(_nextProps, { list }) { }
+  shouldComponentUpdate(_nextProps, { list }) {
+  }
 
-  componentDidUpdate(_prevProps, prevState) { }
+  componentDidUpdate(_prevProps, prevState) {
+  }
 
   handleChange({ target: { value } }) {
     this.setState({
@@ -58,8 +60,8 @@ class Connections extends React.Component {
 
   contactAdder(counter) {
     return (
-      <div className="git-connections">
-        <div className="counter">
+      <div className="counter">
+        <div>
           <h5>Quantidade de contatos:</h5>
           <span>{ counter }</span>
         </div>
@@ -108,7 +110,7 @@ class Connections extends React.Component {
     const { list, counter } = this.state;
 
     return (
-      <div>
+      <div className="git-connections">
         {this.contactAdder(counter)}
         {this.contactList(list)}
       </div>

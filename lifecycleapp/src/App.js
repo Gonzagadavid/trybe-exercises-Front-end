@@ -5,7 +5,8 @@ import Profile from './components/Profile';
 import Connections from './components/Connections';
 
 class App extends React.Component {
-  constructor() { }
+  constructor() {
+  }
 
   changeProfile() {
     const { showProfile } = this.state;
@@ -13,7 +14,12 @@ class App extends React.Component {
     this.setState({ showProfile: !showProfile });
   }
 
-  render() { }
+  render() {
+    const { showProfile } = this.state;
+
+    return (
+    );
+  }
 }
 
 export default App;

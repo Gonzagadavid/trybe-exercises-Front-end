@@ -7,6 +7,8 @@ class Profile extends React.Component {
     this.state = {
       api: '',
     };
+
+    this.changeDataJson = this.changeDataJson.bind(this);
   }
 
   async componentDidMount() {
@@ -16,7 +18,7 @@ class Profile extends React.Component {
       const url = `https://api.github.com/users/${myUser}`;
       const response = await fetch(url);
       const dataJson = await response.json();
-      this.setState({ api: dataJson }); //eslint-disable-line
+      this.changeDataJson(dataJson);
     } catch (error) {
       console.log(error);
     }
@@ -24,6 +26,10 @@ class Profile extends React.Component {
 
   componentWillUnmount() {
     alert('Você ocultou seu perfil');
+  }
+
+  changeDataJson(dataJson) {
+    this.setState({ api: dataJson });
   }
 
   render() {
@@ -49,3 +55,4 @@ class Profile extends React.Component {
 }
 
 export default Profile;
+

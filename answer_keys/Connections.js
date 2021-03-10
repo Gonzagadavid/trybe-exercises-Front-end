@@ -72,8 +72,8 @@ class Connections extends React.Component {
 
   contactAdder(counter) {
     return (
-      <div className="git-connections">
-        <div className="counter">
+      <div className="counter">
+        <div>
           <h5>Quantidade de contatos:</h5>
           <span>{ counter }</span>
         </div>
@@ -122,7 +122,7 @@ class Connections extends React.Component {
     const { list, counter } = this.state;
 
     return (
-      <div>
+      <div className="git-connections">
         {this.contactAdder(counter)}
         {this.contactList(list)}
       </div>
@@ -131,3 +131,4 @@ class Connections extends React.Component {
 }
 
 export default Connections;
+
