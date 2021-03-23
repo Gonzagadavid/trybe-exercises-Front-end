@@ -1,6 +1,6 @@
 # Vamos começar com tudo os exercícios desse repositório de React-Redux.
 
-**Após forkar e clonar o repositório e entrar na branch de cada exercício, é necessário rodar o comando *npm install* para instalar todas as dependências necessárias das aplicações.**
+**Após forkar e clonar o repositório, é necessário trocar para a branch do exercício e entrar no diretório da aplicação para então executar o comando *npm install* e instalar as dependências necessárias (verifique a existência do arquivo package.json no diretório para ter certeza que está no local correto)**
 
 ## ⚠️ ATENÇÃO! Não clone o repositório sem realizar seu fork! ⚠️
 
