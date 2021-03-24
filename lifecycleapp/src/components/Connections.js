@@ -8,18 +8,34 @@ class Connections extends React.Component {
       user: '',
       list: [],
       counter: 0,
+      background: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.removeContact = this.removeContact.bind(this);
     this.contactAdder = this.contactAdder.bind(this);
+    this.changeToBlue = this.changeToBlue.bind(this);
+    this.changeToCoral = this.changeToCoral.bind(this);
   }
 
   shouldComponentUpdate(_nextProps, { list }) {
+    const maxContactsNumber = 3;
+
+    return list.length <= maxContactsNumber;
+    // A quantidade de contatos não pode ser maior que 3, portanto se a lista é maior que 3, ele deverá retornar false e impedir a atualização.
   }
 
   componentDidUpdate(_prevProps, prevState) {
+    const { list } = this.state;
+
+    if (prevState.list.length < list.length) {
+      this.changeToBlue();
+      // Ao adicionar um contato, a div ficará azul.
+    } else if (prevState.list.length > list.length) {
+      this.changeToCoral();
+      // Ao deletar um contato, a div ficará coral.
+    }
   }
 
   handleChange({ target: { value } }) {
@@ -46,6 +62,14 @@ class Connections extends React.Component {
         console.log(error);
       }
     }
+  }
+
+  changeToBlue() {
+    this.setState({ background: 'connections-blue' });
+  }
+
+  changeToCoral() {
+    this.setState({ background: 'connections-coral' });
   }
 
   removeContact(loginToRemove) {
@@ -107,12 +131,12 @@ class Connections extends React.Component {
   }
 
   render() {
-    const { list, counter } = this.state;
+    const { list, counter, background } = this.state;
 
     return (
-      <div className="git-connections">
-        {this.contactAdder(counter)}
-        {this.contactList(list)}
+      <div className={ `git-connections ${background}` }>
+        { this.contactAdder(counter) }
+        { this.contactList(list) }
       </div>
     );
   }

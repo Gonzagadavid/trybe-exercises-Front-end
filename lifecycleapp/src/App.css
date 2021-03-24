@@ -26,6 +26,15 @@
   height: 10vh;
 }
 
+.connections-blue {
+  background-color: lightblue;
+}
+
+.connections-coral {
+  background-color: lightcoral;
+}
+
+
 .counter {
   margin: 15px 0;
   text-align: center;
