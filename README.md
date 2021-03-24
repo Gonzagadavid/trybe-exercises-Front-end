@@ -46,9 +46,9 @@ return (
     { showProfile ? <Profile /> : null }
     <div className="central d-flex justify-content-center">
       <button
-	className="btn btn-dark align-self-center"
-	type="button"
-	onClick={ this.changeProfile }
+        className="btn btn-dark align-self-center"
+        type="button"
+        onClick={ this.changeProfile }
       >
         Mostrar / Ocultar Perfil
       </button>
@@ -79,6 +79,7 @@ try {
 const maxContactsNumber = 3;
 
 return list.length <= maxContactsNumber;
+// A quantidade de contatos não pode ser maior que 3, portanto se a lista é maior que 3, ele deverá retornar false e impedir a atualização.
 ```
 
 ##### src/components/Connections.js
@@ -87,11 +88,11 @@ return list.length <= maxContactsNumber;
 const { list } = this.state;
 
 if (prevState.list.length < list.length) {
-  document.querySelector('.gitNetwork')
-    .style.backgroundColor = 'lightblue';
+  this.changeToBlue();
+  // Ao adicionar um contato, a div ficará azul.
 } else if (prevState.list.length > list.length) {
-  document.querySelector('.gitNetwork')
-    .style.backgroundColor = 'lightcoral';
+  this.changeToCoral();
+  // Ao deletar um contato, a div ficará coral.
 }
 ```
 
