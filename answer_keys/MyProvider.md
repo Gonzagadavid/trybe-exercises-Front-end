@@ -57,7 +57,7 @@ function MyProvider({ children }) {
       itemType,
     };
     if (!isPresentInList) {
-      return addItemToList(newItem, itemType);
+      return addItemToList(newItem);
     }
     manageItemsInList(newItem);
   };

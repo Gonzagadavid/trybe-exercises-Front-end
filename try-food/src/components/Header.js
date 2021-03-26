@@ -8,12 +8,12 @@ function Header() {
   const roundingOption = 2;
   const start = 0;
 
-  const dishesValue = orderList.comida
+  const returnValue = (column) => orderList[column]
     .map((item) => item.totalPrice).reduce((acc, next) => acc + next, start);
-  const drinksValue = orderList.bebida
-    .map((item) => item.totalPrice).reduce((acc, next) => acc + next, start);
-  const dessertsValue = orderList.sobremesa
-    .map((item) => item.totalPrice).reduce((acc, next) => acc + next, start);
+
+  const dishesValue = returnValue('comida');
+  const drinksValue = returnValue('bebida');
+  const dessertsValue = returnValue('sobremesa');
 
   return (
     <div>

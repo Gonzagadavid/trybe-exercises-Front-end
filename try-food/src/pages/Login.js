@@ -36,14 +36,14 @@ function Login() {
           className="form-control"
           name="email"
           type="email"
-          placeholder="E-mail"
+          placeholder="Digite um e-mail válido"
           onChange={ handleChange }
         />
         <input
           className="form-control"
           name="password"
           type="password"
-          placeholder="Senha"
+          placeholder="Senha maior que 6 caracteres"
           onChange={ handleChange }
         />
         <button

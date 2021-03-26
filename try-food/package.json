@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.js . --ext .js,.jsx",
     "lint:style": "npx stylelint '**/*.css'"
   },
   "eslintConfig": {
@@ -42,7 +42,7 @@
   "devDependencies": {
     "bootstrap": "^4.6.0",
     "eslint": "^7.21.0",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react": "^7.23.1",
     "stylelint": "^13.11.0"
   }
 }
