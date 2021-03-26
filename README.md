@@ -28,8 +28,8 @@ Você receberá um código que simula um aplicativo e precisará completar esse 
 - **components:** Diretório que contém os componentes utilizados na aplicação.
 - **context:** Diretório que contém o contexto da aplicação e o provedor de estados da sua aplicação.
 - **pages:** Diretório que contém as páginas da aplicação, ou seja, as páginas configuradas por rotas.
-- **index.js:** Arquivo que trata de encontrar o arquivo raiz da aplicação e implementa o código React nele. O index.js importa a biblioteca react-dom e contém o BrowserRouter, que realiza a implementação de rotas para navegadores HTML5 e informa a aplicação que teremos roteamento de componentes a partir daquele ponto.
-- **App.js:** Arquivo que representa o elemento raiz da aplicação, a partir dele haverá ramificações.
+- **index.js:** Arquivo que trata de encontrar o arquivo raiz da aplicação e implementa o código React nele. O index.js importa a biblioteca react-dom e contém o BrowserRouter, que realiza a implementação de rotas para navegadores HTML5 e informa a aplicação que teremos roteamento de componentes a partir daquele ponto. Esta implementação encapsula App.js.
+- **App.js:** Arquivo que representa o elemento raiz da aplicação, a partir dele haverá ramificações. Esta implementação encapsula Router.js.
 - **Routes.js:** Arquivo que centraliza todas as rotas da aplicação (boa prática).
 
 ##### Dentro da master
