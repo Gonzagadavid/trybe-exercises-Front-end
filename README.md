@@ -16,21 +16,21 @@
 ![passo4](images/fork-step-3.png)
 
 
-### Instruções (Idênticas às do course)
+### Instruções
 
 Você receberá um código que simula um aplicativo e precisará completar esse código para ver o aplicativo em funcionamento. A parte mais importante é treinar manipulação de estados dentro do arquivo **src/context/MyProvider.js**, onde a função **handleChange** está vazia. Analise o código da aplicação e pense como atualizar individualmente a lista de **comida, bebida** e **sobremesa**, que são arrays contidos no objeto **orderList**.
 
 #### Esquema de pastas e arquivos
 ![esquema](images/schema.png)
 
-- try-food: Diretório com toda a aplicação.
-- src: Diretório que contém seu código JavaScript, JSX.
-- components: Diretório que contém os componentes utilizados na aplicação.
-- context: Diretório que contém o contexto da aplicação e o provedor de estados da sua aplicação.
-- pages: Diretório que contém as páginas da aplicação, ou seja, as páginas configuradas por rotas.
-- index.js: Arquivo que trata de encontrar o arquivo raiz da aplicação e implementa o código React nele. O index.js importa a biblioteca react-dom e contém o BrowserRouter, que realiza a implementação de rotas para navegadores HTML5 e informa a aplicação que teremos roteamento de componentes a partir daquele ponto.
-- App.js: Arquivo que representa o elemento raiz da aplicação, a partir dele haverá ramificações.
-- Routes.js: Arquivo que centraliza todas as rotas da aplicação (boa prática).
+- **try-food:** Diretório com toda a aplicação.
+- **src:** Diretório que contém seu código JavaScript, JSX.
+- **components:** Diretório que contém os componentes utilizados na aplicação.
+- **context:** Diretório que contém o contexto da aplicação e o provedor de estados da sua aplicação.
+- **pages:** Diretório que contém as páginas da aplicação, ou seja, as páginas configuradas por rotas.
+- **index.js:** Arquivo que trata de encontrar o arquivo raiz da aplicação e implementa o código React nele. O index.js importa a biblioteca react-dom e contém o BrowserRouter, que realiza a implementação de rotas para navegadores HTML5 e informa a aplicação que teremos roteamento de componentes a partir daquele ponto.
+- **App.js:** Arquivo que representa o elemento raiz da aplicação, a partir dele haverá ramificações.
+- **Routes.js:** Arquivo que centraliza todas as rotas da aplicação (boa prática).
 
 ##### Dentro da master
 
