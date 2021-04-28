@@ -37,9 +37,11 @@ class Connections extends React.Component {
     const { user, list, counter } = this.state;
     const url = `https://api.github.com/users/${user}`;
     const isUserAbsent = !list.some((contact) => contact.login === user);
+
     try {
       const apiResponse = await fetch(url);
       const profileObject = await apiResponse.json();
+
       if (profileObject.login && isUserAbsent) {
         this.setState({
           list: [...list, profileObject],
