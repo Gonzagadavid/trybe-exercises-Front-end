@@ -39,24 +39,24 @@ class Connections extends React.Component {
       user: value,
     });
   }
-
+  
   async handleClick() {
     const { user, list, counter } = this.state;
-    const url = `https://api.github.com/users/${user}`;
+    const url = https://api.github.com/users/${user};
     const isUserAbsent = !list.some((contact) => contact.login === user);
-
-    if (isUserAbsent) {
-      try {
-        const apiResponse = await fetch(url);
-        const profileObject = await apiResponse.json();
-
+    try {
+      const apiResponse = await fetch(url);
+      const profileObject = await apiResponse.json();
+      if (profileObject.login && isUserAbsent) {
         this.setState({
           list: [...list, profileObject],
           counter: counter + 1,
         });
-      } catch (error) {
-        console.log(error);
+      } else {
+        throw new Error('Usuário não encontrado');
       }
+    } catch (error) {
+      console.log(error);
     }
   }
 
