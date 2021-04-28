@@ -22,15 +22,15 @@ class Connections extends React.Component {
     return list.length <= maxContactsNumber;
   }
 
-  componentDidUpdate(_prevProps, prevState) {
+  componentDidUpdate(_prevProps, prevState) {  
     const { list } = this.state;
 
     if (prevState.list.length < list.length) {
-      document.querySelector('.gitNetwork')
-        .style.backgroundColor = 'lightblue';
+      this.changeToBlue();
+      // Ao adicionar um contato, a div ficará azul.
     } else if (prevState.list.length > list.length) {
-      document.querySelector('.gitNetwork')
-        .style.backgroundColor = 'lightcoral';
+      this.changeToCoral();
+      // Ao deletar um contato, a div ficará coral.
     }
   }
 
