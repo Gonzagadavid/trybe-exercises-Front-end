@@ -1,4 +1,4 @@
-const maxLines = 70;
+const maxLines = 100;
 
 module.exports = {
   env: {
