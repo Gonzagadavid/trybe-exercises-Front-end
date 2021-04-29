@@ -18,12 +18,12 @@ function Header() {
   return (
     <div>
       <div className="header d-flex flex-row align-items-center justify-content-around">
-        <img src={ TryFood } alt="try food logo" width="150px" />
-        <div>
-          <span className="header-price">
+        <img className="header-img" src={ TryFood } alt="try food logo" />
+        <div className="d-flex w-25 flex-column align-items-center">
+          <span className="d-flex header-price">
             Valor total:
           </span>
-          <span className="header-price">
+          <span className="d-flex header-price">
             { `R$ ${(dishesValue + drinksValue + dessertsValue)
               .toFixed(roundingOption)}` }
           </span>

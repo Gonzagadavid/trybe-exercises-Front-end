@@ -45,7 +45,7 @@ function Options() {
   return (
     !updateCart
       && (
-        <main>
+        <main className="row">
           <div className="dishes-column col d-flex flex-column align-items-center">
             <h3>Comida</h3>
             <div className="d-flex flex-wrap align-items-center justify-content-center">

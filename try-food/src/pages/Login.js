@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import TryFoodWhite from '../images/tryfoodwhite.png';
 
 function Login() {
@@ -7,8 +7,8 @@ function Login() {
     email: '',
     password: '',
   });
+  const [shouldRedirect, setShouldRedirect] = useState(false);
 
-  const history = useHistory();
   const regexForEmail = /\S+@\S+\.\S+/;
   const length = 6;
   const passwordIsValid = personData.password.length > length;
@@ -24,11 +24,12 @@ function Login() {
       email: personData.email,
     };
     localStorage.setItem('login', JSON.stringify(information));
-    history.push('/order');
+    setShouldRedirect(true);
   };
 
   return (
     <div className="login d-flex flex-column justify-content-center">
+      { shouldRedirect && <Redirect to="/order" /> }
       <img src={ TryFoodWhite } alt="try food logo" width="250px" />
       <span className="slogan">Falta pouco para matar sua fome!</span>
       <form className="d-flex flex-column justify-content-center">

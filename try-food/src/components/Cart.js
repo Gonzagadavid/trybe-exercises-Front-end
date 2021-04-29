@@ -14,8 +14,8 @@ function Cart() {
   return (
     updateCart
       && (
-        <main className="cart-wall d-flex flex-column aling-items-center">
-          <div className="d-flex aling-items-center justify-content-center">
+        <main className="cart-wall d-flex flex-column align-items-center">
+          <div className="d-flex align-items-center justify-content-center">
             <p className="list-title">Usuário:</p>
             <p className="list-title">{ email }</p>
           </div>

@@ -50,10 +50,39 @@ h1 {
 }
 
 .header-price {
-  align-self: flex-end;
-  font-size: xx-large;
   font-weight: 700;
-  margin: 15px;
+  margin: 5px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+  .header-price {
+    font-size: xx-large;
+  }
+
+  .header-img {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .header-price {
+    font-size: x-large;
+  }
+
+  .header-img {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-price {
+    font-size: medium;
+  }
+
+  .header-img {
+    width: 100px;
+  }
 }
 
 .img-option {
