@@ -10,8 +10,7 @@ const initialState = {
 function reducer(state = initialState, action) {
   switch (action.type) {
     case CHANGE_SIGNAL:
-      return { ...state, 
-        signal: { ...state.signal, color: action.payload } };
+      return { ...state, signal: { ...state.signal, color: action.payload } };
     default:
       return state;
   }
