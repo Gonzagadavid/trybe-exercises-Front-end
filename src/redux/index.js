@@ -10,7 +10,6 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
-  console.log(action)
   switch (action.type) {
     case MOVE_CAR:
       return { ...state, cars: { ...state.cars, [action.car]: action.side } };
