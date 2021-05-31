@@ -14,10 +14,15 @@ Vá para a branch master do seu projeto e execute o comando:
 Verifique se as seguintes branchs apareceram:
 
   `exercise-one`
+  
   `exercise-two`
+  
   `exercise-three`
+  
   `classe-exercise-one`
+  
   `classe-exercise-two`
+  
   `classe-exercise-three`
 
 - Cada branch dessas será um exercício, as três primeiras branches contam com a estrutura do exercício com função e as outras com classe.
