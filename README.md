@@ -25,7 +25,7 @@ Verifique se as seguintes branchs apareceram:
   
   `classe-exercise-three`
 
-- Cada branch dessas será um exercício, as três primeiras branches contam com a estrutura do exercício com função e as outras com classe, fique a vontade pra escolher qual você quer utilizar.
+- Cada branch dessas será um exercício, as três primeiras branches contam com a estrutura do exercício com função e as outras com classe. É possível resolver de ambas as maneiras. Queremos que vocês vão se acostumando a utilizar das duas formas, então o gabarito desses exercícios são apresentados na forma de funçã. Fique à vontade pra escolher qual você quer utilizar.
 - Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
 
 Observe o que deve ser feito nas instruções para cada exercício.
