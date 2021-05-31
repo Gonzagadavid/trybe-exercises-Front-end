@@ -9,15 +9,18 @@ Após feito o fork, clone o repositório criado para o seu computador.
 Rode o `npm install`.
 
 Vá para a branch master do seu projeto e execute o comando:
-- `git branch` 
+- `git branch` ou `git branch -a` 
 
 Verifique se as seguintes branchs apareceram:
 
   `exercise-one`
   `exercise-two`
   `exercise-three`
+  `classe-exercise-one`
+  `classe-exercise-two`
+  `classe-exercise-three`
 
-- Cada branch dessas será um exercício.
+- Cada branch dessas será um exercício, as três primeiras branches contam com a estrutura do exercício com função e as outras com classe.
 - Mude para a branch `exercise-one` com o comando `git checkout exercise-one`. É nessa branch que você realizará a solução para o exercício 1, e assim por diante.
 
 Observe o que deve ser feito nas instruções para cada exercício.
