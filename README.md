@@ -44,7 +44,23 @@ Torne a aplicação navegável, encapsulando o que é retornado pelo `App` dentr
 
 #### Exercício 2
 
-Agora, adicione dentro de `BrowserRouter` uma lista contendo 3 links:
+Crie uma rota para o componente `Home`, utilizando um `Route` que mapeia o caminho de _URL_ "/" para `Home`
+
+#### Exercício 3
+
+Adicione uma rota que mapeie o caminho de _URL_ "/about" para o componente `About`. Acesse `http://localhost:3000/about` para ver se o componente `About` foi renderizado!
+
+#### Exercício 4
+
+Legal, o componente `About` foi renderizado, mas o componente `Home` foi também, o que não era desejado para o nosso caso. 😭 Altere a forma como a correspondência de caminho da _URL_ está sendo feita para renderizar `Home`, de modo que `Home` **somente** seja renderizado se o caminho da _URL_ for **exatamente** igual a "/".
+
+#### Exercício 5
+
+Por fim, adicione uma rota que mapeie o caminho de _URL_ "/users" para o componente `Users`. Acesse `http://localhost:3000/users` para ver se **somente** o componente `Users` foi renderizado.
+
+#### Exercício 6
+
+Agora que as rotas, adicione dentro de `BrowserRouter` uma lista contendo 3 links:
 
   * um link que aponte para o caminho de _URL_ "/" contendo o texto `Home`;
 
@@ -54,36 +70,25 @@ Agora, adicione dentro de `BrowserRouter` uma lista contendo 3 links:
 
     *OBS*: averigue que os links estão atualizando a _URL_ do seu browser quando são clicados.
 
-#### Exercício 3
-
-Substitua o componente `Home` por um `Route` que mapeia o caminho de _URL_ "/" para `Home`.
-
-#### Exercício 4
-
-Adicione uma rota que mapeie o caminho de _URL_ "/about" para o componente `About`. Acesse `http://localhost:3000/about` para ver se o componente `About` foi renderizado!
-
-#### Exercício 5
-
-Legal, o componente `About` foi renderizado, mas o componente `Home` foi também, o que não era desejado para o nosso caso. 😭 Altere a forma como a correspondência de caminho da _URL_ está sendo feita para renderizar `Home`, de modo que `Home` **somente** seja renderizado se o caminho da _URL_ for **exatamente** igual a "/".
-
-#### Exercício 6
-
-Por fim, adicione uma rota que mapeie o caminho de _URL_ "/users" para o componente `Users`. Acesse `http://localhost:3000/users` para ver se **somente** o componente `Users` foi renderizado.
-
 #### Exercício 7
 
 Altere o componente `Users` para poder fazer o exercício a seguir.
 
 ```js
 // arquivo Users.js
-import React from 'react';
+import React, { Component } from 'react';
 
-const Users = ({ greetingMessage = 'Hi There' }) => (
-  <div>
-    <h2> Users </h2>
-    <p> {greetingMessage}, this is my awesome Users component </p>
-  </div>
-);
+class Users extends Component {
+  render() {
+    const { greetingsMessage } = this.props
+    return (
+      <div>
+        <h2>Users</h2>
+        <p> { greetingsMessage }, My awesome Users component </p>
+      </div>
+    );
+  }
+};
 
 export default Users;
 
