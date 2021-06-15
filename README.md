@@ -96,7 +96,7 @@ export default Users;
 
 #### Exercício 8
 
-No componente `App` há uma rota que renderiza o componente `Users`. Altere a forma como ela renderiza o componente `Users`, passando para ele a prop `greetingMessage` com o valor igual a "Good Morning". Lembre-se de usar a prop correta no `Route`!
+No componente `App` há uma rota que renderiza o componente `Users`. Altere a forma como ela renderiza o componente `Users`, passando para ele a prop `greetingsMessage` com o valor igual a "Good Morning". Lembre-se de usar a prop correta no `Route`!
 
 #### Exercício 9
 
