@@ -7,7 +7,6 @@ import uniform from '../imgs/siriCascudoUniforme.png';
 class PrepareBurger extends React.Component {
   render() {
     const { receiveRecipe } = this.props;
-
     return (
       <div className="d-flex flex-column align-items-center">
         <img src={ burger } alt="Hambúrguer de Siri" height="100px" width="100px" />
