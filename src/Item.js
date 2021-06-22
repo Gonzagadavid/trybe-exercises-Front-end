@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 function Item(props) {
-  const { content } = props
+  const { content, handleEvent } = props
   return (
-    <div className="Item">
+    <div className="Item" onClick={ handleEvent }>
       {content}
     </div>
   );
