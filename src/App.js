@@ -8,48 +8,26 @@ class App extends Component {
 
     this.state = {
       listTodo: [],
-      selectTask: '',
-      disabled: true,
     };
 
     this.addTodo = this.addTodo.bind(this);
-    this.handleEvent = this.handleEvent.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
-
-
   }
 
   addTodo(todo) {
     this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
   }
 
-  handleEvent({ target }) {
-    this.setState({
-      selectTask: target.innerHTML,
-      disabled: false,
-    })  
-  }
-
-  handleRemove() {
-    const { listTodo, selectTask } = this.state;
-    const newArr = listTodo.filter((itemList) => itemList !== selectTask)
-    this.setState({
-      listTodo: newArr,
-      disabled: true,
-    })
-  }
-
   render() {
-    const { listTodo, disabled } = this.state;
+    const { listTodo } = this.state;
     return (
       <div className="App">
-        <InputTodo disabled={ disabled } handleRemove={ this.handleRemove } addTodo={(todo) => this.addTodo(todo)} />
+        <InputTodo addTodo={(todo) => this.addTodo(todo)} />
         {listTodo &&
           <ul>
             {
               listTodo.map((todo, index) => (
-                <li key={index + 1} >
-                  <Item content={todo} handleEvent={ this.handleEvent } />
+                <li key={index + 1}>
+                  <Item content={todo} />
                 </li>
               ))
             }
