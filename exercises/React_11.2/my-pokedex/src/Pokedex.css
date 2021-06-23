@@ -1,0 +1,14 @@
+.Pokedex {
+  width: 300px;
+  padding: 5px;
+  margin: 20px;
+  background-color: rgba(6, 29, 29, 0.3);
+  font-size: 20px;
+  border-radius: 10%;
+  box-shadow: 5px 5px 5px black;
+  color: white;
+}
+
+.Pokedex img {
+  width: 190px;
+}

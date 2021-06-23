@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  background-color: rgb(100, 100, 92);
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
