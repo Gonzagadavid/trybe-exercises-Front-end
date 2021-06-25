@@ -35,13 +35,18 @@ h1 {
   background-color: rgb(149, 158, 157);
 }
 
-.pokedex button {
+.nextBtn button {
   color:white;
-  background-color: rgb(49, 48, 48);
+  background-color: rgb(8, 122, 8);
   border: none;
-  border-radius: 0 7px 7px 0;
+  border-radius: 3px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.nextBtn button:disabled {
+  display: none;
 }
 
 .btn-type {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button';
 import Pokemon from './Pokemon';
 
 class Pokedex extends Component {
@@ -29,10 +30,16 @@ class Pokedex extends Component {
         <div className="pokedex">
           <Pokemon pokemon={pokemensList[index]} />
         </div>
-        <button type="button" onClick={(event) => this.setType(event)} className="btn-type" value="Fire">Fire</button>
-        <button type="button" onClick={(event) => this.setType(event)} className="btn-type" value="Psychic">Psychic</button>
-        <button type="button" onClick={(event) => this.setType(event)} className="btn-type" value="">All</button>
-        <button onClick={() => this.nextPkn(limit)} type="button">Next</button>
+        <Button click={(event) => this.setType(event)} text="Fire" />
+        <Button click={(event) => this.setType(event)} text="Psychic" />
+        <Button click={(event) => this.setType(event)} text="Electric" />
+        <Button click={(event) => this.setType(event)} text="Bug" />
+        <Button click={(event) => this.setType(event)} text="Dragon" />
+        <Button click={(event) => this.setType(event)} text="Normal" />
+        <Button click={(event) => this.setType(event)} text="" />
+        <div className="nextBtn">
+          <Button click={() => this.nextPkn(limit)} text="next" disabledBtn={limit === 0} />
+        </div>
       </div>
     );
   }
