@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: cornflowerblue;
+}
+
+h1 {
+  font-size: 65px;
+  color: white;
+  text-shadow: 3px 3px 3px black;
 }
 
 .pokemon {
@@ -14,7 +21,6 @@ body {
   flex: 1 1 auto;
   min-width: 25%;
   margin: 10px 10px;
-  border: 1px gray solid;
   border-radius: 10px;
 }
 
@@ -22,4 +28,25 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 10px;
+  box-shadow: 5px 5px 5px black;
+  border: black solid 0.5px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgb(149, 158, 157);
+}
+
+.pokedex button {
+  color:white;
+  background-color: rgb(49, 48, 48);
+  border: none;
+  border-radius: 0 7px 7px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-type {
+  margin: 30px;
+  font-size: 20px;
+  width: 100px;
+  border-radius: 20px;
 }
