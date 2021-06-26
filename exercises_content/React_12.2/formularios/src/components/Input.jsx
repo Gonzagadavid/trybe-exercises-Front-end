@@ -5,18 +5,17 @@ class Input extends Component {
     const {
       typeInput, idInput, valueInput, handler, text, validation,
     } = this.props;
-    let erro = '';
-    if (validation && validation(valueInput)) erro = 'O campo está preenchido incorretamente';
+    const erro = validation && validation(valueInput);
     return (
       <label htmlFor={idInput} className="element">{text}
         <input
           type={typeInput}
           name={idInput}
           id={idInput}
-          onChange={handler}
+          onInput={(event) => handler(event, validation)}
           value={valueInput}
         />
-        <span className="error">{erro}</span>
+        <span className="error">{erro ? 'O campo está preenchido incorretamente' : ''}</span>
       </label>
     );
   }

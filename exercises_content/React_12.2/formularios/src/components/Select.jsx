@@ -8,7 +8,12 @@ class Select extends Component {
     return (
       <label htmlFor="language" className="element">
         {text}
-        <select name={idSelect} id={idSelect} onChange={handler} value={valueSelect}>
+        <select
+          name={idSelect}
+          id={idSelect}
+          onChange={handler}
+          value={valueSelect}
+        >
           {
             options.map((option) => (
               <option value={option.value} key={option.value}>
