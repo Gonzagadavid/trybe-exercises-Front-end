@@ -1,0 +1,21 @@
+.element {
+  display: flex;
+  margin: 30px;
+  justify-self: flex-end;
+  font-size: 20px;
+  position: relative;
+}
+
+.element input, .element textarea, .element select{
+  margin-left: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+.error {
+  background-color: rgb(233, 140, 140);
+  color: rgb(141, 1, 1);
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+}
