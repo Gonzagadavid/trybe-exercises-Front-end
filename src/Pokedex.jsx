@@ -32,7 +32,13 @@ class Pokedex extends Component {
         <div className="pokedex">
           <Pokemon pokemon={pokemensList[index]} />
         </div>
-        {types.map((typePkn) => <Button click={(event) => this.setType(event)} text={typePkn} key={typePkn} />)}
+        {types.map((typePkn) => (
+          <Button
+            click={(event) => this.setType(event)}
+            text={typePkn}
+            key={typePkn}
+          />
+        ))}
         <div className="nextBtn">
           <Button click={() => this.nextPkn(limit)} text="next" disabledBtn={limit === 0} />
         </div>
