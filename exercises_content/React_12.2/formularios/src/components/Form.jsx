@@ -73,7 +73,7 @@ class Form extends Component {
             options={[
               { value: 'java', text: 'Java' },
               { value: 'javascript', text: 'JavaScript' },
-              { value: 'phyton', text: 'Phyton' },
+              { value: 'python', text: 'Python' },
             ]}
             text="Na sua opnião, qual a melhor language"
           />
