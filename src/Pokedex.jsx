@@ -23,6 +23,8 @@ class Pokedex extends Component {
   render() {
     const { index, type } = this.state;
     const { pokemons } = this.props;
+    const types = [...new Set(pokemons.map((pokemon) => pokemon.type))];
+    types.push('');
     const pokemensList = type ? pokemons.filter((pkn) => pkn.type === type) : pokemons;
     const limit = pokemensList.length - 1;
     return (
@@ -30,13 +32,7 @@ class Pokedex extends Component {
         <div className="pokedex">
           <Pokemon pokemon={pokemensList[index]} />
         </div>
-        <Button click={(event) => this.setType(event)} text="Fire" />
-        <Button click={(event) => this.setType(event)} text="Psychic" />
-        <Button click={(event) => this.setType(event)} text="Electric" />
-        <Button click={(event) => this.setType(event)} text="Bug" />
-        <Button click={(event) => this.setType(event)} text="Dragon" />
-        <Button click={(event) => this.setType(event)} text="Normal" />
-        <Button click={(event) => this.setType(event)} text="" />
+        {types.map((typePkn) => <Button click={(event) => this.setType(event)} text={typePkn} key={typePkn} />)}
         <div className="nextBtn">
           <Button click={() => this.nextPkn(limit)} text="next" disabledBtn={limit === 0} />
         </div>
