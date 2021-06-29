@@ -23,8 +23,7 @@ git checkout exercise-3
 ```javascript
 git checkout exercise-4
 ```
-
-- Para acessar o exercício sobre **mapDispatchToProps e dispatch**:
+- Para acessar o exercício sobre **mapStateToProps**:
 ```javascript
 git checkout exercise-5
 ```
@@ -34,7 +33,7 @@ git checkout exercise-5
 git checkout exercise-6
 ```
 
-- Para acessar o exercício sobre **mapStateToProps**:
+- Para acessar o exercício sobre **mapDispatchToProps e dispatch**:
 ```javascript
 git checkout exercise-7
 ```
