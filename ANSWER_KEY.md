@@ -202,6 +202,16 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, null)(App);
 ```
 
+
+#### src/components/PrepareBurger.js:
+```javascript
+const mapStateToProps = (state) => ({
+  receiveRecipe: state.spiedRecipe.recipe,
+});
+
+export default connect(mapStateToProps, null)(PrepareBurger);
+```
+
 ---
 
 ## exercise-6 missing_connect
@@ -227,13 +237,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(null, mapDispatchToProps)(Form);
-```
-
-#### src/components/PrepareBurger.js:
-```javascript
-const mapStateToProps = (state) => ({
-  receiveRecipe: state.spiedRecipe.recipe,
-});
-
-export default connect(mapStateToProps, null)(PrepareBurger);
 ```
