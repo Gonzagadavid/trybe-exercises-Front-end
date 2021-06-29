@@ -190,15 +190,16 @@ ReactDOM.render(
 
 ---
 
-## exercise-5 missing_mapdispatchtoprops
+## exercise-5 missing_mapstatetoprops
 
-#### src/pages/Form.js:
+#### src/App.js:
 ```javascript
-const mapDispatchToProps = (dispatch) => ({
-  selectedOmega: (mutant) => dispatch(showMutant(mutant)),
+const mapStateToProps = (state) => ({
+  receiveIngredients: state.spiedIngredients.ingredients,
+  receiveOrder: state.spiedOrder.order,
 });
 
-export default connect(null, mapDispatchToProps)(Form);
+export default connect(mapStateToProps, null)(App);
 ```
 
 ---
@@ -217,16 +218,15 @@ export default connect(null, mapDispatchToProps)(RescuePeach);
 
 ---
 
-## exercise-7 missing_mapstatetoprops
+## exercise-7 missing_mapdispatchtoprops
 
-#### src/App.js:
+#### src/pages/Form.js:
 ```javascript
-const mapStateToProps = (state) => ({
-  receiveIngredients: state.spiedIngredients.ingredients,
-  receiveOrder: state.spiedOrder.order,
+const mapDispatchToProps = (dispatch) => ({
+  selectedOmega: (mutant) => dispatch(showMutant(mutant)),
 });
 
-export default connect(mapStateToProps, null)(App);
+export default connect(null, mapDispatchToProps)(Form);
 ```
 
 #### src/components/PrepareBurger.js:
