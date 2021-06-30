@@ -10,7 +10,7 @@ Rode o `npm install`.
 
 Vá para a branch master do seu projeto e execute o comando:
 
-git branch
+`git branch`ou `git branch -a`
 
 Mude para a branch dog-image com o comando git checkout -b dog-image. É nessa branch que você realizará a solução para o exercício.
 
