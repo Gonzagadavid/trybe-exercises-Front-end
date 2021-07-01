@@ -5,8 +5,8 @@ import Profile from './components/Profile';
 import Connections from './components/Connections';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       showProfile: true,
