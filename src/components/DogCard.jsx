@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { string, func } from 'prop-types';
+import './dogCard.css';
 
 class DogCard extends Component {
   componentDidMount() {
@@ -10,7 +11,7 @@ class DogCard extends Component {
   render() {
     const { imagePath } = this.props;
     return (
-      <div>
+      <div className="dogCard">
         <img src={ imagePath } alt="cachorros felizes" />
       </div>
     );
