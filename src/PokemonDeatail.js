@@ -19,10 +19,10 @@ class PokemonDetails extends React.Component {
             Average weight: {`${averageWeight.value} ${averageWeight.measurementUnit}`}
           </p>
           <p>{summary}</p>
+          <a href={moreInfo}>More Informations</a>
           <div className="pokemon-map">
             {foundAt.map((loc, index) => <Map key={index} location={loc.location} map={loc.map} name={name}/>)}
           </div>
-          <a href={moreInfo}>More Informations</a>
         </div>
       </div>
     );

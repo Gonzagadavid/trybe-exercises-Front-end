@@ -2,17 +2,26 @@ import React from 'react';
 import './App.css';
 import pokemons from './data';
 import Pokedex from './Pokedex';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 import PokemonDetails from './PokemonDeatail';
+import About from './About';
+import NotFound from './NotFound';
 
 function App() {
   return (
     <div className="App">
       <Router>
-      <Link to="/" >Back</Link>
+      <nav className="nav-bar">
+        <Link to="/" >HOME</Link>
+        <Link to="/about" >ABOUT</Link>
+      </nav>
       <h1> Pokedex </h1>
-        <Route exact path="/" render={(props) => <Pokedex {...props} pokemons={pokemons} />} />
-        <Route path="/pokemon-details/:id" component={PokemonDetails} />
+        <Switch>
+          <Route exact path="/" render={(props) => <Pokedex {...props} pokemons={pokemons} />} />
+          <Route exact path="/pokemon-details/:id" component={PokemonDetails} />
+          <Route exact path="/about" component={About} />
+          <Route path="*" component={NotFound} />
+          </Switch>
       </Router>
     </div>
   );

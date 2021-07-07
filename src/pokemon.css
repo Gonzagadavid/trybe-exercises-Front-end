@@ -7,7 +7,9 @@
   margin: 10px 10px;
   border: 1px gray solid;
   border-radius: 10px;
+  padding: 20px;
 }
+
 
 .pokemon-details img {
   width: 130px;;
@@ -24,4 +26,10 @@
 .pokemon-map img {
   width: 200px;
   margin: 20px;
+}
+
+.about {
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
 }
