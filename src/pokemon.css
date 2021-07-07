@@ -8,3 +8,20 @@
   border: 1px gray solid;
   border-radius: 10px;
 }
+
+.pokemon-details img {
+  width: 130px;;
+}
+
+.pokemon-map {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+}
+
+.pokemon-map img {
+  width: 200px;
+  margin: 20px;
+}
