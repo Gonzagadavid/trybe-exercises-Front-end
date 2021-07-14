@@ -18,7 +18,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-  // Caso o tipo da actio seja SET_PROFESSIONAL_VALUE,
+  // Caso o tipo da action seja SET_PROFESSIONAL_VALUE,
   // retorne o que já existe no estado e atualize
   // o professionalInputs com a informação trazida pela action case
   case SET_PROFESSIONAL_VALUE:

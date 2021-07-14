@@ -122,7 +122,9 @@ const mapDispatchToProps = (dispatch) => ({
   // aqui estamos apenas avisando que vai existir um parâmetro
   // mas o estado do componente é passado no momento da execução
   // nesse caso, dentro da função onSubmitForm
-  dispatchSetValue: (valueAndName) => dispatch(setPersonalValue(valueAndName)) });
+  dispatchSetValue: (valueAndName) => dispatch(setPersonalValue(valueAndName)),
+}
+);
 
 const mapStateToProps = (state) => ({ personalInputs: state.reducer.personalInputs });
 

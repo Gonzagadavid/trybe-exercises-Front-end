@@ -266,17 +266,130 @@ Feita a instalação, vamos para o que interessa, O CÓDIGO!
 
 O exercício 5 diz:
 
-**4 - Crie um diretório chamado `Redux`:**
+**5 - Crie um diretório chamado `Redux`:**
 
-Dentro da pasta "redux", crie as pastas "actions", "reducers" e "store".
-Dentro de "actions" crie um arquivo chamado `action.js`.
-Dentro de "reducers" crie um arquivo chamado `reducers.js`.
-Dentro de "store" crie um arquivo chamado `store.js`.
+* Dentro da pasta "redux", crie as pastas "actions", "reducers" e "store".
+* Dentro de "actions" crie um arquivo chamado `action.js`.
+* Dentro de "reducers" crie um arquivo chamado `reducers.js`.
+* Dentro de "store" crie um arquivo chamado `store.js`.
 
 **Lembre-se que, ao montar a estrutura do Redux, é preciso importar o Provider, que recebe a store, no index.js.**
 
+### Resolução exercício 5:
 
+Primeiro, vamos montar a estrutura do Redux e aos poucos vamos complementando com as informações necessárias.
 
+* Crie uma pasta chamada "redux".
 
+* Dentro da pasta "redux", crie as pastas: "store", "reducer" e "actions".
 
+* Dentro da pasta "store", crie um arquivo `store.js`.
 
+* Dentro da pasta "reducer" crie um arquivo reducer.js e outro arquivo `index.js`.
+
+* Dentro da pasta "actions" crie um arquivo chamado `actions.js`.
+
+O `reducer` será responsável pela manipulação da `store` de acordo com as `actions` que vai receber. A estrutura do `reducer` consiste em ter o estado inicial do formulário `PersonalForm` e do `ProfessionalForm`, lembrando que:
+
+* O `PersonalForm` contém as informações relativas à: `nome`, `email`, `cpf`, `endereço`, `cidade` e `estado`.
+
+* O `ProfessionalForm` contém as informações relativas à: `currículo`, `cargo` e `descrição`.
+
+Como ainda não temos as nossas actions e nem o que cada uma delas irá fazer, criremos o nosso `reducer` com o switch apenas com o default. Mais pra frente iremos complementá-lo.
+
+![reducer](./images/reducer.png)
+
+Todo estado de sua aplicação será armazenado pela store. Ela executada a partir da função `createStore()` que recebe dois parâmetros:
+
+1. o primeiro parâmetro vai receber nosso `reducer`. Lembrando que quando temos mais de um `reducer` precisamos unir os `reducers`, para isso, no arquivo index.js, vamos colocar todos os `reducers` da aplicação e combiná-los atráves da função `combineReducers()`. É através dessa função que a `store` tem acesso a todos os estados manipulados. Na nossa aplicação, vamos utilizar apenas um `reducer`, mas é bom já deixarmos estruturado.
+
+![combineReducer](./images/combineReducer.png)
+
+2. o segundo parâmetro vai ser o `composeWithDevTools()` que irá permitir a visualização dos seus estados no Redux pelo navegador com a [extensão](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=pt-BR) `Redux Devtools` e para conectá-lo na aplicação, basta instalar utilizar a seguinte linha de comando `npm i redux-devtools-extension`.
+
+**_OBS: Se a extensão Redux Devtools não estiver instalada, a linha de configuração dela apresentará um erro no navegador._**
+
+![store](./images/store.png)
+
+Antes de criar as nossas `actions`, vamos importar a nossa `store` e o `Provider` dentro do `index.js` na raíz da nossa aplicação.
+
+![provider](./images/provider.png)
+
+Atualize seu navegador e perceba que agora a extensão está ativada ![devtools](./images/devtools.png) redux devtools e você consegue visualizar os estados da sua store na aba state.
+
+![devtools-screen](./images/devtoolscreen.png)
+
+Agora, precisamos implementar as nossas `actions`!
+
+As `actions` são objetos javascript responsáveis por levar a informação para o nosso reducer, se comunicando através do `type`. Mas como disparamos essas `actions`? Ou seja, como disparamos esse objeto? Fazemos isso através de uma função, essa função é chamada de `action creator` e que retorna um objeto, ou seja, nossa `action`.
+
+Vamos criar as `action creators` e cada uma delas será responsável por carregar (ou não) uma informação (payload) para atualizar a `store` e, obrigatoriamente um `type`, que é o tipo da nossa `action`:
+
+![actions](./images/actions.png)
+
+Não podemos esquecer agora do nosso `reducer`:
+
+![reducerLogic](./images/reducerLogic.png)
+
+Pronto, toda a estrutura do nosso `Redux` está pronta, agora precisamos capturar os estados das nossas páginas `PersonalForm` e `ProfessionalForm`, salvá-las na `store`. Ao acessar a página `FormDataDisplay`, precisamos recuperar essas informações da `store` e exibí-las na tela, como pede o exercício 6:
+
+**6 - Salve as informações das páginas `PersonalForm` e `ProfessionalForm` na `store`.**
+
+**_Dica: Lembre-se que o `mapStateToProps` lê as informações da `store` e o `mapDispatchToProps` envia as informações para a `store`._**
+
+### Resolução exercício 6:
+
+No componente PersonalForm, vamos importar a função responsável por despachar a `action` que vai carregar o type `SET_PERSONAL_VALUE`, a função que retorna essa `action` está dentro do arquivo `action.js` e é chamada `setPersonalValue`.
+
+Mas, para poder enviar informações para a nossa `store`, precisamos informar que vamos despachar essa ação, então, pra isso, precisamos utilizar o `mapDispatchToProps` e "apelidamos" a nossa função `setPersonalValue` de `dispatchSetValue`.
+
+* PersonalForm.jsx
+
+![personalredux1](./images/personalredux1.png)
+![personalredux2](./images/personalredux2.png)
+![personalredux3](./images/personalredux3.png)
+
+Vamos fazer praticamente a mesma coisa na `ProfessionalForm`, mas importando a função `action creator` correspondente.
+
+* ProfessionalForm.jsx
+
+![professionalredux1](./images/professionalredux1.png)
+![professionalredux2](./images/professionalredux2.png)
+
+E por último, o exercício 7! \o\
+
+**7 - Renderize, em `FormDataDisplay`, todas as informações que estão salvas na `store`.**
+
+## Resolução exercício 7:
+
+![formdisplay1](./images/formdisplay1.png)
+![formdisplay2](./images/formdisplay2.png)
+
+Você percebeu que estamos repetindo o mesmo código várias vezes? O que podemos fazer quando isso acontece?
+
+Componetizar! \o/
+
+Mas agora, vamos deixar com você! ;)
+
+**Dicas**:
+
+Se você quiser, pode criar uma pasta para cada um dos componentes, dessa forma, ao criar o `css` para cada componente, eles ficam separados em pastas. Ex: components/ Input/ Input.js Input.css
+
+Você também pode criar um arquivo index dentro da sua pasta `components` e dentro da sua pasta `pages`, para fazer o export default de cada um dos componentes.
+
+Exemplo:
+
+``` javascript
+ // components/index.js
+
+export { default as Input } from './Input'; export { default as Button } from './Button';
+
+```
+
+E dentro dos seus componentes, importar assim:
+
+``` javascript
+
+ import { Input, Button } from '../components';
+
+ ```
