@@ -1,5 +1,50 @@
 # Exercício de fixação
 Vamos criar formulários utilizando `Redux`! \o/
+# Antes de iniciar
+
+Crie um fork desse projeto e para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
+
+Após feito o fork, clone o repositório criado para o seu computador.
+
+Rode o `npm install`.
+
+Vá para a branch master do seu projeto e execute o comando:
+
+git branchou `git branch -a`
+
+Verifique se as seguintes branchs apareceram:
+
+`master` e `gabarito`
+
+* O exercício deverá ser feito na branch `master`.
+
+* Na branch `gabarito` contém um Readme com o gabarito **guiado** para esse exercício.
+Não tem problema dar checkout para conferir, mas não deixe de tentar resolver por conta própria :).
+
+
+Observe o que deve ser feito nas instruções.
+
+Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a master, sinta-se a vontade!
+
+**Atenção**! Quando for criar o PR você irá se deparar com essa tela:
+
+![exemple-pr](images/examplepr.png)
+
+É necessário realizar uma mudança. Clique no base repository como na imagem abaixo:
+
+![exemple-pr](images/change-base.png)
+
+Mude para o seu repositório. Seu nome estará na frente do nome dele, por exemplo: `antonio/forms-redux`. Depois desse passo a página deve ficar assim:
+
+![exemple-pr](images/after-change.png)
+
+Agora basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
+
+Para cada PR realize esse processo.
+
+---
+
+# COMEÇANDO O EXERCÍCIO
 
 Vocês criarão dois formulários, cada um em uma etapa, um para dados pessoais e outro para dados profissionais e exibí-los na tela.
 
