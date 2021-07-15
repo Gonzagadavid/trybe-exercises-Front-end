@@ -30,7 +30,7 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 `ProfessionalForm` será renderizada ao acessar a rota `'/professionalForm'`.
 `FormDataDisplay` será renderizada ao acessar a rota `'/formDisplay'`.
 
-**3 - Crie um `fieldset` que contenha os seguintes `inputs` e os renderize em `PersonalForm.js`:**
+**3 - Crie um `fieldset` que contenha os seguintes `inputs` e os renderize em `PersonalForm.jsx`:**
 
 Nome - Texto
 Email - Texto
@@ -41,7 +41,7 @@ Estado - Select
 Todos os estados do Brasil
 Um botão com o texto `Enviar` e que redireciona para a página ProfessionalForm
 
-**4 - Crie um `fieldset` que contenha os seguintes inputs e os renderize em `ProfessionalForm.js`:**
+**4 - Crie um `fieldset` que contenha os seguintes inputs e os renderize em `ProfessionalForm.jsx`:**
 Resumo do currículo - TextArea
 Cargo - TextArea
 Descrição do cargo - Texto
