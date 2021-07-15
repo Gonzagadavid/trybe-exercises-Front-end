@@ -13,7 +13,7 @@ Você vai precisar de:
 
 * Gerenciador de estados (Reeeedux), para salvar as informações na `store` e também para acessá-las.
 
-Então, mãos ao código!
+Então, mãos ao código!!
 
 **1 - Crie uma pasta chamada `pages`, e, dentro dela, 3 arquivos:**
 
