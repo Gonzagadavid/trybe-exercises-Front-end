@@ -77,7 +77,7 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 
 **Dica:** Teste se suas rotas estão funcionando e lembre-se que, que estamos usando o `Switch`, caso alguma rota não renderize a página correta, verifique a ordem em que ela se encontra.
 
-**3 - Crie um `fieldset` que contenha os seguintes `inputs` e os renderize em `PersonalForm.jsx`:**
+**3 - Crie um `fieldset` que contenha os seguintes `inputs` e os renderize em `PersonalForm.jsx` salvando os estados:**
 
 - Nome - Texto
 - Email - Texto
@@ -89,7 +89,7 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 
 **Dica:** Você pode criar 3 componentes: Input, Select e Button
 
-**4 - Crie um `fieldset` que contenha os seguintes inputs e os renderize em `ProfessionalForm.jsx`:**
+**4 - Crie um `fieldset` que contenha os seguintes inputs e os renderize em `ProfessionalForm.jsx` salvando os estados:**
 - Resumo do currículo - TextArea
 - Cargo - Texto
 - Descrição do cargo - TextArea
