@@ -48,7 +48,7 @@ Para cada PR realize esse processo.
 
 Vocês criarão dois formulários, cada um em uma etapa, um para dados pessoais e outro para dados profissionais e exibí-los na tela.
 
-[gif]
+![forms-redux](form-redux.gif)
 
 Para isso, é preciso salvar as informações de cada formulário no gerenciador de estados e, por fim, numa outra página, acessar esses dados para que sejam renderizados.
 
