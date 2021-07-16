@@ -71,9 +71,9 @@ _Se vocês quiserem utilizar a extensão .js, tudo bem, fiquem à vontade!_
 Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apenas uma `div` com um texto identificando cada uma das páginas.
 
 **2 - Crie as rotas dentro de `App.js` para renderizar as páginas:**
-`PersonalForm` será renderizada na página principal, com a rota `'/'`.
-`ProfessionalForm` será renderizada ao acessar a rota `'/professionalForm'`.
-`FormDataDisplay` será renderizada ao acessar a rota `'/formDisplay'`.
+- `PersonalForm` será renderizada na página principal, com a rota `'/'`.
+- `ProfessionalForm` será renderizada ao acessar a rota `'/professionalForm'`.
+- `FormDataDisplay` será renderizada ao acessar a rota `'/formDisplay'`.
 
 **3 - Crie um `fieldset` que contenha os seguintes `inputs` e os renderize em `PersonalForm.jsx`:**
 
