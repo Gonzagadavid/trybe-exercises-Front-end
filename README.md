@@ -97,11 +97,16 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 
 **Dica:** Você pode reaproveitar os componentes já existentes e criar um novo para a TextArea
 
-**5 - Crie um diretório chamado Redux:**
+**5 - Implemente o Redux:**
 - Dentro da pasta "redux", crie as pastas "actions", "reducers" e "store".
 - Dentro de "actions" crie um arquivo chamado `action.js`.
-- Dentro de "reducers" crie um arquivo chamado `reducer.js`
+- Dentro de "reducers" crie um arquivo chamado `reducer.js`.
 - Dentro de "store" crie um arquivo chamado `store.js`.
+- Implemente o `reducer`.
+- Implemente a `store`.
+- Implemente as `actions`.
+
+**Dica:** De início, você pode implementar seu reducer apenas com o valor `default`.
 
 _Lembre-se que, ao montar a estrutura do Redux, é preciso importar o `Provider`, que recebe a `store`, no `index.js`._
 
