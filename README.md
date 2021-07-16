@@ -62,9 +62,9 @@ Então, mãos ao código!!
 
 **1 - Crie uma pasta chamada `pages`, e, dentro dela, 3 arquivos:**
 
-PersonalForm.jsx
-ProfessionalForm.jsx
-FormDataDisplay.jsx
+- PersonalForm.jsx
+- ProfessionalForm.jsx
+- FormDataDisplay.jsx
 
 _Se vocês quiserem utilizar a extensão .js, tudo bem, fiquem à vontade!_
 
