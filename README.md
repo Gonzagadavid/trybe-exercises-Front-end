@@ -106,7 +106,9 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 - Implemente a `store`.
 - Implemente as `actions`.
 
-**Dica:** De início, você pode implementar seu reducer apenas com o valor `default`.
+**Dicas:** 
+- De início, você pode implementar seu reducer apenas com o valor `default`.
+-  O `composeWithDevTools` pode te ajudar.
 
 _Lembre-se que, ao montar a estrutura do Redux, é preciso importar o `Provider`, que recebe a `store`, no `index.js`._
 
