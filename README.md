@@ -75,22 +75,23 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 - `ProfessionalForm` será renderizada ao acessar a rota `'/professionalForm'`.
 - `FormDataDisplay` será renderizada ao acessar a rota `'/formDisplay'`.
 
+**Dica:** Teste se suas rotas estão funcionando e lembre-se que, que estamos usando o `Switch`, caso alguma rota não renderize a página correta, verifique a ordem em que ela se encontra.
+
 **3 - Crie um `fieldset` que contenha os seguintes `inputs` e os renderize em `PersonalForm.jsx`:**
 
-Nome - Texto
-Email - Texto
-CPF - Texto
-Endereço - Texto
-Cidade - Texto
-Estado - Select
-Todos os estados do Brasil
-Um botão com o texto `Enviar` e que redireciona para a página ProfessionalForm
+- Nome - Texto
+- Email - Texto
+- CPF - Texto
+- Endereço - Texto
+- Cidade - Texto
+- Estado - Select com todos os estados do Brasil
+- Um botão com o texto `Enviar` e que redireciona para a página `ProfessionalForm`
 
 **4 - Crie um `fieldset` que contenha os seguintes inputs e os renderize em `ProfessionalForm.jsx`:**
-Resumo do currículo - TextArea
-Cargo - TextArea
-Descrição do cargo - Texto
-Um botão com o texto `Enviar` e que redireciona para a página FormDataDisplay
+- Resumo do currículo - TextArea
+- Cargo - TextArea
+- Descrição do cargo - Texto
+- Um botão com o texto `Enviar` e que redireciona para a página `FormDataDisplay`
 
 
 **5 - Crie um diretório chamado Redux:**
