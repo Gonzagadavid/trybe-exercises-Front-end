@@ -100,7 +100,7 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 **5 - Implemente o Redux:**
 - Dentro da pasta "redux", crie as pastas "actions", "reducers" e "store".
 - Dentro de "actions" crie um arquivo chamado `action.js`.
-- Dentro de "reducers" crie um arquivo chamado `reducer.js`.
+- Dentro de "reducers" crie um arquivo chamado `reducer.js` e, caso necessário, um arquivo `index.js` para usar o `combineReducers`.
 - Dentro de "store" crie um arquivo chamado `store.js`.
 - Implemente o `reducer`.
 - Implemente a `store`.
