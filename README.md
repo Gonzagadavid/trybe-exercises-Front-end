@@ -91,8 +91,8 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 
 **4 - Crie um `fieldset` que contenha os seguintes inputs e os renderize em `ProfessionalForm.jsx`:**
 - Resumo do currículo - TextArea
-- Cargo - TextArea
-- Descrição do cargo - Texto
+- Cargo - Texto
+- Descrição do cargo - TextArea
 - Um botão com o texto `Enviar` e que redireciona para a página `FormDataDisplay`
 
 **Dica:** Você pode reaproveitar os componentes já existentes e criar um novo para a TextArea
