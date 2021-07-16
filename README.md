@@ -10,7 +10,7 @@ Rode o `npm install`.
 
 Vá para a branch master do seu projeto e execute o comando:
 
-git branchou `git branch -a`
+`git branch` ou `git branch -a`
 
 Verifique se as seguintes branchs apareceram:
 
