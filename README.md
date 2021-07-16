@@ -87,12 +87,15 @@ Não se preocupe com o conteúdo de cada uma delas, por enquanto renderize apena
 - Estado - Select com todos os estados do Brasil
 - Um botão com o texto `Enviar` e que redireciona para a página `ProfessionalForm`
 
+**Dica:** Você pode criar 3 componentes: Input, Select e Button
+
 **4 - Crie um `fieldset` que contenha os seguintes inputs e os renderize em `ProfessionalForm.jsx`:**
 - Resumo do currículo - TextArea
 - Cargo - TextArea
 - Descrição do cargo - Texto
 - Um botão com o texto `Enviar` e que redireciona para a página `FormDataDisplay`
 
+**Dica:** Você pode reaproveitar os componentes já existentes e criar um novo para a TextArea
 
 **5 - Crie um diretório chamado Redux:**
 Dentro da pasta "redux", crie as pastas "actions", "reducers" e "store".
