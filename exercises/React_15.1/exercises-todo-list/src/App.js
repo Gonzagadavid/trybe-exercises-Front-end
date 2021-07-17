@@ -23,7 +23,7 @@ class App extends Component {
       <div className="App">
         <InputTodo addTodo={(todo) => this.addTodo(todo)} />
         {listTodo &&
-          <ul>
+          <ul data-testid='todo-list'>
             {
               listTodo.map((todo, index) => (
                 <li key={index + 1}>
