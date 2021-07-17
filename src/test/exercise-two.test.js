@@ -7,8 +7,8 @@ afterEach(cleanup);
 
 describe('Teste do campo de input', () => {
   test('Testando a adição de vários itens a aplicação', () => {
-    const listTodo = ['Realizar CR', 'Ler Post no Medium', 'Beber água']; // Use esse array como base para realizar os testes.
-    const {getByLabelText, queryByText, getByTestId } = render(<App />) // Caso precise de uma nova query adicione no object destructuring
+    const listTodo = ['Realizar CR', 'Ler Post no Medium', 'Beber água']; 
+    const {getByLabelText, queryByText, getByTestId } = render(<App />);
     const inputTodo = getByLabelText('Tarefa:');
     const addBtn = queryByText('Adicionar');
     const todoList = getByTestId('todo-list');
