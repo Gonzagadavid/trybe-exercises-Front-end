@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 function Item(props) {
-  const { content } = props
+  const { content, onSelected } = props
   return (
     <div className="Item">
-      {content}
+      <span onClick={() => onSelected(content)}>{content}</span>
     </div>
   );
 }
