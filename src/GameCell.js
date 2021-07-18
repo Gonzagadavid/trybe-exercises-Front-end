@@ -10,10 +10,12 @@ import oImage from './o.svg';
 
 class GameCell extends React.Component {
   render() {
-    const { id } = this.props;
-
+    const { id, toMark, playerId } = this.props;
+    const src = playerId === 1 ? xImage : oImage
     return (
-      <div data-testid={`cell_${id}`} className="game-cell"></div>
+      <div data-testid={`cell_${id}`} className="game-cell" onClick={() => toMark(id)}>
+        { this.props.playerId ? <img src={src}/> : '' }
+      </div>
     );
   }
 }
