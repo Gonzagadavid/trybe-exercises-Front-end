@@ -11,6 +11,7 @@ describe('Testando funcionalidade de apagar item selecionado', () => {
     expect(btnRemove.disabled).toBe(true);
   });
 
+  
   test('Testando a seleção de elemento', () => {
     const { getByLabelText, getByText, queryByText } = render(<App />);
     const inputTask = getByLabelText('Tarefa:');
