@@ -30,27 +30,43 @@ describe("Comportamento de cada casa", () => {
   });
 
   test("O simbolo precisa ser trocado ao clicar em uma casa para a outra, 'X' para 'O', começando com o 'X'", () => {
-    const cells = screen.getAllByTestId(/cell_\d/)
+    const cells = screen.getAllByTestId(/cell_\d/);
     cells.forEach((cell, i)=> {
-      const src = `http://localhost/${i % 2 ? oImage : xImage}`
+      const src = `http://localhost/${i % 2 ? oImage : xImage}`;
       fireEvent.click(cell); 
-      console.log(cell)
-      expect(cell.firstChild.src).toBe(src)
+      expect(cell.firstChild.src).toBe(src);
     })
   });
 
   test("Se clicar em uma casa já preenchida, o simbolo deve continuar o mesmo", () => {
-
+    const cell = screen.getByTestId('cell_1');
+    const srcX = `http://localhost/${xImage}`
+    const srcO = `http://localhost/${oImage}`
+    fireEvent.click(cell);
+    expect(cell.firstChild.src).toBe(srcX);
+    fireEvent.click(cell);
+    expect(cell.firstChild.src).toBe(srcX);
+    expect(cell.firstChild.src).not.toBe(srcO);
 
   });
 
   test("O simbolo das casas precisam ser mantidas, quando outra casa for clicada", () => {
-
+    const srcX = `http://localhost/${xImage}`
+    const cell1 = screen.getByTestId('cell_1');
+    const cell2 = screen.getByTestId('cell_2');
+    fireEvent.click(cell1);
+    expect(cell1.firstChild.src).toBe(srcX);
+    fireEvent.click(cell2);
+    expect(cell1.firstChild.src).toBe(srcX);
 
   });
 
   test("O simbolo não pode ser mudado se a casa for clicada duas vezes seguidas.", () => {
-
-
+    const srcX = `http://localhost/${xImage}`
+    const cell1 = screen.getByTestId('cell_1');
+    fireEvent.click(cell1);
+    expect(cell1.firstChild.src).toBe(srcX);
+    fireEvent.click(cell1);
+    expect(cell1.firstChild.src).toBe(srcX);
   });
 });
