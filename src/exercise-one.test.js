@@ -6,6 +6,7 @@ afterEach(cleanup);
 
 describe("Configuração inicial do jogo", () => {
   beforeEach(() => render(<TicTacToe />))
+  
   test('Verificar se foi renderizada nove casas', () => {
     const casas = screen.getAllByTestId(/cell_\d/)
     expect(casas).toHaveLength(9)
@@ -17,6 +18,8 @@ describe("Configuração inicial do jogo", () => {
   });
 
   test("Começar sem a frase 'Fim de jogo'", () => {
-    
+    const text = screen.queryByText(/Fim de jogo/i)
+    console.log(text)
+    expect(text).not.toBeInTheDocument()
   });
 });
