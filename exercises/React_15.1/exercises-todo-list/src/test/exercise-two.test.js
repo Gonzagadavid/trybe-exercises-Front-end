@@ -23,8 +23,8 @@ describe('Teste do campo de input', () => {
 
 describe('Teste do componente Item', () => {
   test('Ao receber uma string como prop ela precisa aparecer na tela', () => {
-    const { getByText } = render(<Item  content="test task"/>)
-    const itemTest = getByText('test task')
+    const { getByText } = render(<Item  content="test task"/>);
+    const itemTest = getByText('test task');
     expect(itemTest).toBeInTheDocument();
   })
 })
