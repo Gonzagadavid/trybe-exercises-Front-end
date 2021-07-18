@@ -19,7 +19,6 @@ describe("Configuração inicial do jogo", () => {
 
   test("Começar sem a frase 'Fim de jogo'", () => {
     const text = screen.queryByText(/Fim de jogo/i)
-    console.log(text)
     expect(text).not.toBeInTheDocument()
   });
 });
