@@ -18,10 +18,10 @@ class TicTacToe extends React.Component {
   }
 
   toMark(id) {
+    const { gameBoard } = this.state;
+    if (gameBoard[id] !== 0) return;
     this.setState(({ activePlayer, gameBoard }) => {
-      if (gameBoard[id] !== 0) return { gameBoard };
       gameBoard[id] = activePlayer;
-
       return { gameBoard };
     }, () => {
       const { activePlayer } = this.state;

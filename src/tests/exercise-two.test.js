@@ -3,8 +3,8 @@ import {
   render, cleanup, fireEvent, screen,
 } from '@testing-library/react';
 import TicTacToe from '../components/TicTacToe';
-import xImage from './x.png';
-import oImage from './o.svg';
+import xImage from '../x.png';
+import oImage from '../o.svg';
 
 afterEach(cleanup);
 
@@ -31,8 +31,8 @@ describe('Comportamento de cada casa', () => {
   });
 
   test("O simbolo precisa ser trocado ao clicar em uma casa para a outra, 'X' para 'O', começando com o 'X'", () => {
-    const cells = screen.getAllByTestId(/cell_\d/);
-    cells.forEach((cell, i) => {
+    Array(6).fill(0).forEach((_, i) => {
+      const cell = screen.getByTestId(`cell_${i}`);
       const src = `http://localhost/${i % 2 ? oImage : xImage}`;
       fireEvent.click(cell);
       expect(cell.firstChild.src).toBe(src);
