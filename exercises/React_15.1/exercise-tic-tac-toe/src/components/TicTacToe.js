@@ -10,6 +10,8 @@ class TicTacToe extends React.Component {
       activePlayer: 1,
       gameBoard: [0, 0, 0, 0, 0, 0, 0, 0, 0],
       gameFinished: false,
+      win: '',
+      tie: false,
     };
     this.toMark = this.toMark.bind(this);
     this.CheckGame = this.CheckGame.bind(this);
@@ -23,7 +25,8 @@ class TicTacToe extends React.Component {
       return { gameBoard };
     }, () => {
       const { activePlayer } = this.state;
-      this.setState({ activePlayer: activePlayer === 1 ? 2 : 1 });
+      const checkWin = activePlayer === 1 ? 'X' : 'O';
+      this.setState({ activePlayer: activePlayer === 1 ? 2 : 1, win: checkWin });
       this.CheckGame();
     });
   }
@@ -31,15 +34,20 @@ class TicTacToe extends React.Component {
   CheckGame() {
     const { gameBoard } = this.state;
     const check = checkGame(gameBoard);
-    this.setState({ gameFinished: check });
+    const checkTie = !gameBoard.includes(0);
+    this.setState({ gameFinished: check, tie: checkTie });
   }
 
   render() {
-    const { gameBoard, gameFinished } = this.state;
+    const {
+      gameBoard, gameFinished, win, tie,
+    } = this.state;
     return (
       <div>
         {
-          gameFinished ? <FinishedGame /> : <GameBoard gameState={gameBoard} toMark={this.toMark} />
+          gameFinished || tie
+            ? <FinishedGame statusGame={`Jogador "${win}" Ganhou!!`} tie={tie} />
+            : <GameBoard gameState={gameBoard} toMark={this.toMark} />
         }
       </div>
     );

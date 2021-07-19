@@ -9,7 +9,7 @@ class GameBoard extends React.Component {
     return (
       <div className="game-board">
         {gameState.map((playerId, i) => (
-          <GameCell id={i} key={playerId} toMark={toMark} playerId={playerId} />
+          <GameCell id={i} key={Math.random()} toMark={toMark} playerId={playerId} />
         ))}
       </div>
     );
