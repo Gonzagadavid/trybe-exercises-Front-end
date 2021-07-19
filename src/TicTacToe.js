@@ -1,5 +1,7 @@
 import React from 'react';
+import FinishedGame from './FinishdGame';
 import GameBoard from './GameBoard';
+import checkGame from './service/checkGame';
 
 class TicTacToe extends React.Component {
   constructor(props) {
@@ -7,8 +9,10 @@ class TicTacToe extends React.Component {
     this.state = {
       activePlayer: 1,
       gameBoard: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      gameFinished: false
     };
     this.toMark = this.toMark.bind(this);
+    this.CheckGame = this.CheckGame.bind(this);
   }
 
   toMark(id) {
@@ -20,22 +24,24 @@ class TicTacToe extends React.Component {
     }, () => {
       const { activePlayer } = this.state
       this.setState({ activePlayer: activePlayer === 1 ? 2 : 1})
+      this.CheckGame()
     })
   }
 
-  // Antes de começar a realizar o exercício,
-  // junte os dois outros exercícios na master (ou seja, mergeie as Pull Requests).
-  // Atualize essa branch com o git merge master.
-
-  // Adicione nesse arquivo a lógica para identificar
-  // quando que o jogo deve acabar. É necessário passar
-  // nos teste do arquivo exercise-3.test.js;
-
-  // Analise bem como que os teste são realizados 
-  // para criar o que se pede.
+  CheckGame() {
+    const { gameBoard } = this.state
+    const check = checkGame(gameBoard)
+    this.setState({gameFinished: check})
+  }
 
   render() {
-    return <GameBoard gameState={this.state.gameBoard} toMark={ this.toMark }/>;
+    const { gameBoard, gameFinished } = this.state
+    return (
+      <>
+        <GameBoard gameState={gameBoard} toMark={ this.toMark }/>
+        { gameFinished ? <FinishedGame/> : '' }
+      </>
+    )
   }
 }
 
