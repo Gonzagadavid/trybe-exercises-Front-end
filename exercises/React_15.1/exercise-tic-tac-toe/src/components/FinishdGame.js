@@ -1,13 +1,16 @@
-import { bool, string } from 'prop-types';
+import { bool, func, string } from 'prop-types';
 import React, { Component } from 'react';
 
 class FinishedGame extends Component {
   render() {
-    const { statusGame, tie } = this.props;
+    const {
+      statusGame, tie, gameFinished, restart,
+    } = this.props;
     return (
       <div>
         <p>Fim de Jogo</p>
-        <p>{tie ? 'Empate!!' : statusGame}</p>
+        <p>{tie && !gameFinished ? 'Empate!!' : statusGame}</p>
+        <button type="button" onClick={restart}>Jogar Novamente</button>
       </div>
     );
   }
@@ -16,6 +19,8 @@ class FinishedGame extends Component {
 FinishedGame.propTypes = {
   statusGame: string.isRequired,
   tie: bool.isRequired,
+  gameFinished: bool.isRequired,
+  restart: func.isRequired,
 };
 
 export default FinishedGame;

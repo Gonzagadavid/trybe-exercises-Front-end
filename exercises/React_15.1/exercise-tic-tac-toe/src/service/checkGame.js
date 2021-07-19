@@ -4,7 +4,6 @@ function checkDigonals(array) {
   const size = array.length - 1;
   for (let index = 0; index <= size; index += 4) left.push(array[index]);
   for (let index = 2; index <= 6; index += 2) right.push(array[size - index]);
-
   const checkLeft = !left.includes(0) && new Set(left).size === 1;
   const checkRight = !right.includes(0) && new Set(right).size === 1;
   return checkLeft || checkRight;
