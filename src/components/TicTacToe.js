@@ -15,6 +15,7 @@ class TicTacToe extends React.Component {
     };
     this.toMark = this.toMark.bind(this);
     this.CheckGame = this.CheckGame.bind(this);
+    this.restart = this.restart.bind(this);
   }
 
   toMark(id) {
@@ -38,6 +39,16 @@ class TicTacToe extends React.Component {
     this.setState({ gameFinished: check, tie: checkTie });
   }
 
+  restart() {
+    this.setState({
+      activePlayer: 1,
+      gameBoard: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+      gameFinished: false,
+      win: '',
+      tie: false,
+    });
+  }
+
   render() {
     const {
       gameBoard, gameFinished, win, tie,
@@ -46,7 +57,14 @@ class TicTacToe extends React.Component {
       <div>
         {
           gameFinished || tie
-            ? <FinishedGame statusGame={`Jogador "${win}" Ganhou!!`} tie={tie} gameFinished={gameFinished} />
+            ? (
+              <FinishedGame
+                statusGame={`Jogador "${win}" Ganhou!!`}
+                tie={tie}
+                gameFinished={gameFinished}
+                restart={this.restart}
+              />
+            )
             : <GameBoard gameState={gameBoard} toMark={this.toMark} />
         }
       </div>
