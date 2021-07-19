@@ -35,4 +35,17 @@ describe('verifica a mensagens de fim de jogo', () => {
     const menssage = screen.getByText('Empate!!');
     expect(menssage).toBeInTheDocument();
   });
+
+  it('verifica se ao finalizar o jogo renderiza um botão para reiniciar, e se ao clicar a começa uma nova partida', () => {
+    Array(9).fill(0).forEach((_, i) => {
+      const cellIndice = i === 8 ? 5 : i > 4 ? i + 1 : i;
+      fireEvent.click(screen.getByTestId(`cell_${cellIndice}`));
+    });
+    const btn = screen.getByText('Jogar Novamente');
+    fireEvent.click(btn);
+    const casas = screen.getAllByTestId(/cell_\d/);
+    casas.forEach((casa) => expect(casa.firstChild).toBe(null));
+    const text = screen.queryByText(/Fim de jogo/i);
+    expect(text).not.toBeInTheDocument();
+  });
 });
