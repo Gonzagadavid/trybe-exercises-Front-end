@@ -1,0 +1,24 @@
+import React from 'react';
+import { arrayOf, number, func } from 'prop-types';
+import GameCell from './GameCell';
+import './GameBoard.css';
+
+class GameBoard extends React.Component {
+  render() {
+    const { gameState, toMark } = this.props;
+    return (
+      <div className="game-board">
+        {gameState.map((playerId, i) => (
+          <GameCell id={i} key={playerId} toMark={toMark} playerId={playerId} />
+        ))}
+      </div>
+    );
+  }
+}
+
+GameBoard.propTypes = {
+  gameState: arrayOf(number).isRequired,
+  toMark: func.isRequired,
+};
+
+export default GameBoard;
