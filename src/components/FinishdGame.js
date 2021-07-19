@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class FinishedGame extends Component {
   render() {
-    return(
+    return (
       <div>
         <p>Fim de Jogo</p>
       </div>
-    )
+    );
   }
 }
 
