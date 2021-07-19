@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { number, func } from 'prop-types';
 import './GameCell.css';
 import xImage from './x.png';
 import oImage from './o.svg';
@@ -15,6 +15,12 @@ class GameCell extends React.Component {
       </div>
     );
   }
+}
+
+GameCell.propTypes = {
+  id: number, 
+  toMark: func, 
+  playerId: number
 }
 
 export default GameCell;
