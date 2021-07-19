@@ -46,7 +46,7 @@ class TicTacToe extends React.Component {
       <div>
         {
           gameFinished || tie
-            ? <FinishedGame statusGame={`Jogador "${win}" Ganhou!!`} tie={tie} />
+            ? <FinishedGame statusGame={`Jogador "${win}" Ganhou!!`} tie={tie} gameFinished={gameFinished} />
             : <GameBoard gameState={gameBoard} toMark={this.toMark} />
         }
       </div>

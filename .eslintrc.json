@@ -27,6 +27,7 @@
         "jsx-a11y/click-events-have-key-events": "off",
         "import/no-unresolved": "off",
         "no-shadow": "off",
-        "react/no-array-index-key": "off"
+        "react/no-array-index-key": "off",
+        "no-nested-ternary": "off"
     }
 }

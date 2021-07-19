@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 
 class FinishedGame extends Component {
   render() {
-    const { statusGame, tie } = this.props;
+    const { statusGame, tie, gameFinished } = this.props;
     return (
       <div>
         <p>Fim de Jogo</p>
-        <p>{tie ? 'Empate!!' : statusGame}</p>
+        <p>{tie && !gameFinished ? 'Empate!!' : statusGame}</p>
       </div>
     );
   }
@@ -16,6 +16,7 @@ class FinishedGame extends Component {
 FinishedGame.propTypes = {
   statusGame: string.isRequired,
   tie: bool.isRequired,
+  gameFinished: bool.isRequired,
 };
 
 export default FinishedGame;
