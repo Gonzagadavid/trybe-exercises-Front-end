@@ -16,4 +16,14 @@ describe('verifica a mensagens de fim de jogo', () => {
     const menssage = screen.getByText('Jogador "X" Ganhou!!');
     expect(menssage).toBeInTheDocument();
   });
+
+  it('verifica se quando o primeiro jogador vence aparece a mensagem "Jogador "O" Ganhou!!"', () => {
+    fireEvent.click(screen.getByTestId('cell_8'));
+    Array(3).fill(0).forEach((_, i) => {
+      fireEvent.click(screen.getByTestId(`cell_${i}`));
+      if (i < 2)fireEvent.click(screen.getByTestId(`cell_${i + 3}`));
+    });
+    const menssage = screen.getByText('Jogador "O" Ganhou!!');
+    expect(menssage).toBeInTheDocument();
+  });
 });
