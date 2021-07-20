@@ -6,12 +6,12 @@ const resp = [{"name":"Angemon","img":"https://digimon.shadowsmith.com/img/angem
 
 describe('Teste da aplicação toda', () => {
 
-  global.fetch = jest.fn(() => Promise.resolve({
-    json: () => Promise.resolve(resp)
-  }))
+  global.fetch = jest.fn().mockResolvedValue({
+    json: jest.fn().mockResolvedValue(resp)
+  })
 
   it('renders App', async () => {
-    const { getByText, getByTestId } = render(<App />);
+    const { getByText, getByTestId, getByRole } = render(<App />);
     const linkElement = getByText(/Faça uma pesquisa/i);
      expect(linkElement).toBeInTheDocument();
     
@@ -23,8 +23,9 @@ describe('Teste da aplicação toda', () => {
       expect(button).toBeInTheDocument();
       fireEvent.click(button)
       await waitForDomChange()
-      const h2 = getByText('Angemon')
+      const h2 = getByRole( 'heading', { level: 2 })
       expect(h2).toBeInTheDocument()
+      expect(h2).toHaveTextContent('Angemon')
       expect(global.fetch).toHaveBeenCalled();
       expect(linkElement).not.toBeInTheDocument();
     });
