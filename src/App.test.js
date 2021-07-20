@@ -10,15 +10,25 @@ describe('Teste da aplicação toda', () => {
     .mockResolvedValueOnce({ json: jest.fn().mockResolvedValue(resp)})
     .mockResolvedValueOnce({ json: jest.fn().mockResolvedValue(erro)})
 
+  // global.fetch = jest.fn().mockImplementation( url => {
+  //   // if (!url) return {json: () => Promise.resolve({"ErrorMsg": "O campo está vazio"})}
+  //   return Promise.resolve({ 
+  //     json:() => url === 'https://digimon-api.vercel.app/api/digimon/name/angemon'
+  //     ? Promise.resolve(resp) 
+  //     : Promise.resolve(erro)})
+  // })
+
   it('renders App', async () => {
     const { getByText, getByTestId, getByRole } = render(<App />);
     const linkElement = getByText(/Faça uma pesquisa/i);
      expect(linkElement).toBeInTheDocument();
-    
+
       const input = getByTestId('input');
+      expect(input.value).toBe('')
+      
       fireEvent.change(input, { target : { value: 'angemon'}})
       expect(input.value).toBe('angemon')
-
+      
       const button = getByTestId('buttonSearch');
       expect(button).toBeInTheDocument();
       fireEvent.click(button)
@@ -27,6 +37,7 @@ describe('Teste da aplicação toda', () => {
       expect(h2).toBeInTheDocument()
       expect(h2).toHaveTextContent('Angemon')
       expect(global.fetch).toHaveBeenCalled();
+      expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(linkElement).not.toBeInTheDocument();
 
       fireEvent.change(input, { target : { value: ''}})
@@ -34,7 +45,6 @@ describe('Teste da aplicação toda', () => {
       fireEvent.click(button)
       expect(h2).toBeInTheDocument()
       expect(h2).toHaveTextContent('Angemon')
-      expect(global.fetch).toHaveBeenCalled();
       expect(linkElement).not.toBeInTheDocument();
       
       global.fetch.mockClear()
@@ -43,8 +53,11 @@ describe('Teste da aplicação toda', () => {
       expect(input.value).toBe('pikachu')
       fireEvent.click(button)
       expect(global.fetch).toHaveBeenCalled();
+      expect(global.fetch).toHaveBeenCalledTimes(1);
       await waitForDomChange()
       const error = getByText('Pikachu is not a Digimon in our database.')
       expect(error).toBeInTheDocument()
+
+      global.fetch.mockClear()
   });
 });
