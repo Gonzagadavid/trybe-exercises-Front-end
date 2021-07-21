@@ -3,7 +3,7 @@ import React from 'react';
 class About extends React.Component {
   render() {
     return (
-      <div>About</div>
+      <h2>Quem sou eu</h2>
     );
   };
 }
