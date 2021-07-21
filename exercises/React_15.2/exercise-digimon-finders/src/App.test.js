@@ -4,19 +4,18 @@ import App from './App';
 
 const resp = [{"name":"Angemon","img":"https://digimon.shadowsmith.com/img/angemon.jpg","level":"Champion"}]
 const erro = {"ErrorMsg":"Pikachu is not a Digimon in our database."}
+const urlFetch = 'https://digimon-api.vercel.app/api/digimon/name/angemon'
 describe('Teste da aplicação toda', () => {
 
-  global.fetch = jest.fn()
-    .mockResolvedValueOnce({ json: jest.fn().mockResolvedValue(resp)})
-    .mockResolvedValueOnce({ json: jest.fn().mockResolvedValue(erro)})
+  // global.fetch = jest.fn()
+  //   .mockResolvedValue({ json: jest.fn().mockResolvedValue(erro)})
+  //   .mockResolvedValueOnce({ json: jest.fn().mockResolvedValue(resp)})
+  //   .mockResolvedValueOnce({ json: jest.fn().mockResolvedValue(erro)})
 
-  // global.fetch = jest.fn().mockImplementation( url => {
-  //   // if (!url) return {json: () => Promise.resolve({"ErrorMsg": "O campo está vazio"})}
-  //   return Promise.resolve({ 
-  //     json:() => url === 'https://digimon-api.vercel.app/api/digimon/name/angemon'
-  //     ? Promise.resolve(resp) 
-  //     : Promise.resolve(erro)})
-  // })
+
+  global.fetch = jest.fn().mockImplementation( url => {
+    return Promise.resolve({ json:() => url === urlFetch ? Promise.resolve(resp) : Promise.resolve(erro)})
+  })
 
   it('renders App', async () => {
     const { getByText, getByTestId, getByRole } = render(<App />);
@@ -40,9 +39,12 @@ describe('Teste da aplicação toda', () => {
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(linkElement).not.toBeInTheDocument();
 
+      global.fetch.mockClear()
+
       fireEvent.change(input, { target : { value: ''}})
       expect(input.value).toBe('')
       fireEvent.click(button)
+      expect(global.fetch).toHaveBeenCalledTimes(0);
       expect(h2).toBeInTheDocument()
       expect(h2).toHaveTextContent('Angemon')
       expect(linkElement).not.toBeInTheDocument();
@@ -59,5 +61,5 @@ describe('Teste da aplicação toda', () => {
       expect(error).toBeInTheDocument()
 
       global.fetch.mockClear()
-  });
+    });       
 });
