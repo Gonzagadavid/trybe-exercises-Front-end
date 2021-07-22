@@ -3,12 +3,12 @@
 - Repotsitório usado para os exercícios e conteudos feitos  no modulo de front-end durante  o curso da trybe
 
 
--[x] Bloco 11: Introdução à React
--[x] Bloco 12: Componentes com Estado, Eventos e Formulários com React
--[x] Bloco 13: Ciclo de Vida de Componentes e React Router
--[x] Bloco 14: Metodologias Ágeis
--[x] Bloco 15: Testes automatizados com React Testing Library
--[] Bloco 16: Gerenciamento de estado com Redux
--[] Bloco 17: Projeto Jogo de Trivia
--[] Bloco 18: Context API e React Hooks
--[] Bloco 19: Projeto App de Receitas
+- [x] Bloco 11: Introdução à React
+- [x] Bloco 12: Componentes com Estado, Eventos e Formulários com React
+- [x] Bloco 13: Ciclo de Vida de Componentes e React Router
+- [x] Bloco 14: Metodologias Ágeis
+- [x] Bloco 15: Testes automatizados com React Testing Library
+- [] Bloco 16: Gerenciamento de estado com Redux
+- [] Bloco 17: Projeto Jogo de Trivia
+- [] Bloco 18: Context API e React Hooks
+- [] Bloco 19: Projeto App de Receitas
