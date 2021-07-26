@@ -2,10 +2,8 @@ import store from './store.js';
 
 window.onload = () => {
   setTimeout(() => {
-    const state1 = store.getState().meuPrimeiroReducer.nome
-    const state2 = store.getState().meuSegundoReducer.nome
-    store.dispatch({type: `ESTADO_${state1 === 'Bruna' ? 1 : 2}`})
-    store.dispatch({type: `ESTADO_${state2 === 'Bruna' ? 1 : 2}`})
+    const state = store.getState().meuSegundoReducer.nome
+    store.dispatch({type: `ESTADO_${state === 'Bruna' ? 1 : 2}`})
   }, 3000);
 };
 
