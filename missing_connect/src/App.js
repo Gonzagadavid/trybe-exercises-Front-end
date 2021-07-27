@@ -26,4 +26,4 @@ App.propTypes = {
   status: PropTypes.string.isRequired,
 };
 
-
+export default connect(mapStateToProps)(App);
