@@ -2,7 +2,6 @@
 
 - Repotsitório usado para os exercícios e conteudos feitos  no modulo de front-end durante  o curso da trybe
 
-
 - [x] Bloco 11: Introdução à React
 - [x] Bloco 12: Componentes com Estado, Eventos e Formulários com React
 - [x] Bloco 13: Ciclo de Vida de Componentes e React Router
