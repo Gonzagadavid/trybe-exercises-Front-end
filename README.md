@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Vamos começar com tudo os exercícios desse repositório de React-Redux.
 
 **Após forkar e clonar o repositório, é necessário trocar para a branch do exercício e entrar no diretório da aplicação para então executar o comando *npm install* e instalar as dependências necessárias (verifique a existência do arquivo package.json no diretório para ter certeza que está no local correto)**
@@ -64,10 +65,22 @@ cd missing_store
 ```javascript
 cd missing_reducers
 >>>>>>> exercise-2
+=======
+## Entendendo o infograma de uma action
+
+![react-redux](images/actions-info.png)
+
+### Análise do passo a passo
+![actions](images/actions.png)
+
+```javascript
+cd missing_actions
+>>>>>>> exercise-3
 npm install
 npm start
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Abra a aplicação no browser para ver como ela está! Em src/store foi retirado o conteúdo no arquivo index.js.
 Seu objetivo é criar o código da store para fazer a aplicação rodar corretamente com React-Redux.
@@ -101,3 +114,16 @@ Em src/reducers:
 - Gif genkidama: http://worldotaku.weebly.com/uploads/1/0/9/5/109555207/zhfbscufgp721_orig.gif;
 - Imagem gokuxfreeza: http://www.comboinfinito.com.br/principal/wp-content/uploads/2017/12/Dragon-Ball-Super-Goku-vs-Freeza.jpg.
 >>>>>>> exercise-2
+=======
+Em src/actions foi retirada a action understandMatrix do arquivo index.js, que deverá receber um type 'PILL_TAKEN' e um 'id' como parâmetro.
+
+**Seu objetivo é criar a action que retornará o objeto com o type e id que serão passados para o reducer.**
+
+**Referências:**
+
+- Imagem wallpaper: https://cdn.pixabay.com/photo/2020/07/02/04/31/matrix-5361690_1280.png;
+- Gif neo: https://i2.wp.com/emceenetwork.com/wp-content/uploads/2018/05/Matrix-gif.gif?fit=500%2C208&ssl=1&w=640;
+- Gif john-wick: https://data.whicdn.com/images/325144945/original.gif;
+- Imagem blue-pill: https://projectinsides.com/wp-content/uploads/2017/08/Blue-pill.png;
+- Imagem red-pill: https://projectinsides.com/wp-content/uploads/2017/08/Red-pill.png.
+>>>>>>> exercise-3
