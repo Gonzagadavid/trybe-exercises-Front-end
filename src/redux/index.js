@@ -1,24 +1,8 @@
-import { createStore } from 'redux';
-<<<<<<< HEAD
-import { CHANGE_SIGNAL } from './actionCreators';
+import { createStore, combineReducers } from 'redux';
+import { reducerCar, reducerSignal } from './reducers'
 
-const initialState = {
-  signal: {
-    color: 'red',
-  },
-}
+const reducerRoot = combineReducers({reducerCar, reducerSignal})
 
-function reducer(state = initialState, action) {
-  switch (action.type) {
-    case CHANGE_SIGNAL:
-      return { ...state, signal: { ...state.signal, color: action.payload } };
-    default:
-      return state;
-  }
-}
-=======
->>>>>>> exercise-three
-
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(reducerRoot, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export default store;
