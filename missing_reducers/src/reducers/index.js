@@ -6,6 +6,13 @@ import Asia from './Asia';
 import Europe from './Europe';
 import Oceania from './Oceania';
 
-
+const rootReducer = combineReducers({
+  Africa,
+  America,
+  Antarctica,
+  Asia,
+  Europe,
+  Oceania,
+});
 
 export default rootReducer;
