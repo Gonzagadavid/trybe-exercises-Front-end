@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Vamos começar com tudo os exercícios desse repositório de React-Redux.
 
 **Após forkar e clonar o repositório, é necessário trocar para a branch do exercício e entrar no diretório da aplicação para então executar o comando *npm install* e instalar as dependências necessárias (verifique a existência do arquivo package.json no diretório para ter certeza que está no local correto)**
@@ -76,10 +77,22 @@ cd missing_reducers
 ```javascript
 cd missing_actions
 >>>>>>> exercise-3
+=======
+## Entendendo o infograma de um Provider
+
+![react-redux](images/provider-info.png)
+
+### Análise do passo a passo
+![provider](images/provider.png)
+
+```javascript
+cd missing_provider
+>>>>>>> exercise-4
 npm install
 npm start
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Abra a aplicação no browser para ver como ela está! Em src/store foi retirado o conteúdo no arquivo index.js.
@@ -127,3 +140,14 @@ Em src/actions foi retirada a action understandMatrix do arquivo index.js, que d
 - Imagem blue-pill: https://projectinsides.com/wp-content/uploads/2017/08/Blue-pill.png;
 - Imagem red-pill: https://projectinsides.com/wp-content/uploads/2017/08/Red-pill.png.
 >>>>>>> exercise-3
+=======
+Em src/index.js foram retiradas todas as configurações de um Provider. Primeiramente é preciso importá-lo do 'react-redux' e então utilizá-lo para encapsular o App. Não se esqueça de passar a store como props para todos os componentes filhos do Provider.
+
+**Seu objetivo é configurar o Provider corretamente para que todos os componentes da aplicação recebam os estados contidos na store.**
+
+**Referências:**
+
+- Imagem wallpaper: https://upload.wikimedia.org/wikipedia/commons/9/92/M45_The_Pleiades_Seven_Sisters.jpg;
+- Imagem geminisaga: https://upload.wikimedia.org/wikipedia/it/b/b5/GeminiSaga.png;
+- Imagem seiyafivesenses: https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwHoTb4e0Tq3stF8c5dMOzSA.
+>>>>>>> exercise-4
