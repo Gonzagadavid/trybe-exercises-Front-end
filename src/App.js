@@ -1,57 +1,54 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import InputTodo from './InputTodo';
 import Item from './Item';
+import { actionRemove, actionSelected  } from './redux/actions';
 
 class App extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      listTodo: [],
-      selected: '',
-      handler: true
-    };
-
-    this.addTodo = this.addTodo.bind(this);
-    this.onSelected = this.onSelected.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
   }
 
-  addTodo(todo) {
-    this.setState((state) => ({ listTodo: [...state.listTodo, todo] }));
-  }
-
-  onSelected(todo) {
-    this.setState({ selected: todo, handler: false });
-  }
 
   removeTodo() {
-    const { selected } = this.state;
-    this.setState((prevState) => {
-      const newList = prevState.listTodo.filter((task) => task !== selected);
-      return ({ listTodo: newList, selected: '' , handler: true});
-    })
+    const { selected, removeTodo, onSelected } = this.props;
+    removeTodo(selected)
+    onSelected('')
   }
 
   render() {
-    const { listTodo, handler } = this.state;
+    const { listTodo, selected } = this.props;
     return (
       <div className="App">
-        <InputTodo addTodo={(todo) => this.addTodo(todo)}/>
+        <InputTodo />
         {listTodo &&
           <ul data-testid='todo-list'>
             {
               listTodo.map((todo, index) => (
                 <li key={index + 1}>
-                  <Item content={todo} onSelected={this.onSelected} />
+                  <Item task={todo} />
                 </li>
               ))
             }
           </ul>
         }
-        <input type="button" data-testid="id-remove" onClick={this.removeTodo} disabled={handler} value="Remover"/>
+        <input type="button" data-testid="id-remove" onClick={this.removeTodo} disabled={!selected} value="Remover"/>
       </div>
     );
   }
 }
-export default App;
+
+const mapStateToProps = (state) => {
+  return { 
+    listTodo: state.listTodo,
+    selected: state.selected 
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  removeTodo: (text) => dispatch(actionRemove(text)),
+  onSelected: (text) => dispatch(actionSelected(text))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
