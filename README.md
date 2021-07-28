@@ -9,7 +9,7 @@ Após feito o fork, clone o repositório criado para o seu computador.
 Rode o `npm install`.
 
 Vá para a branch master do seu projeto e execute o comando:
-- `git branch` 
+- `git branch` ou `git branch -a`
 
 - Mude para a branch `exercise-GOT` com o comando `git checkout -b exercise-GOT`. É nessa branch que você realizará a solução para o exercício.
 
