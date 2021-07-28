@@ -11,7 +11,7 @@
 - [x] 16.1: Introdução ao Redux - O estado global da aplicação
 - [x] 16.2: Usando o Redux no React
 - [x] 16.3: Usando o Redux no React - Prática
-- [ ] 16.4: Usando o Redux no React - Actions Assíncronas
+- [x] 16.4: Usando o Redux no React - Actions Assíncronas
 - [ ] 16.5: Testes em React-Redux
 - [ ] Bloco 17: Projeto Jogo de Trivia
 - [ ] Bloco 18: Context API e React Hooks
