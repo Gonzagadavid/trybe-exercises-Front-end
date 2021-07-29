@@ -26,7 +26,7 @@ function TrafficSignal({ signalColor, changeSignal }) {
         <button onClick={ () => changeSignal('yellow') } type="button">Yellow</button>
         <button onClick={ () => changeSignal('green') } type="button">Green</button>
       </div>
-      <img className="signal" src={renderSignal(signalColor)} alt="" />
+      <img className="signal" src={renderSignal(signalColor)} alt="" data-testid="signal" />
     </div>
   );
 }
