@@ -9,7 +9,7 @@ function Item(props) {
   return (
     <div className="Item">
       <span onClick={() => onSelected(task)}>{task}</span>
-      <span onClick={() => onCompleted(task)} >{`status: ${completed.includes(task) ? 'concluída' : 'em andamento'}`}</span>
+      <span data-testid="status" onClick={() => onCompleted(task)} >{`status: ${completed.includes(task) ? 'concluída' : 'em andamento'}`}</span>
     </div>
   );
 }
