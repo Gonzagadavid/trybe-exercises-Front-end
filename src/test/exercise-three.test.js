@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import App from '../App';
+import renderWithRedux from './helper/renderWithRedux';
 
 describe('Testando funcionalidade de apagar item selecionado', () => {
   test('Necessário ter um botão, com o texto Remover, e ele precisa estar desabilitado caso não exista nenhum item selecionado', () => {
-    const { getByTestId } = render(<App />);
-    const btnRemove = getByTestId('id-remove');
+    renderWithRedux(<App />);
+    const btnRemove = screen.getByTestId('id-remove');
     expect(btnRemove).toBeInTheDocument();
     expect(btnRemove.value).toBe('Remover');
     expect(btnRemove.disabled).toBe(true);
@@ -13,20 +14,43 @@ describe('Testando funcionalidade de apagar item selecionado', () => {
 
   
   test('Testando a seleção de elemento', () => {
-    const { getByLabelText, getByText, queryByText } = render(<App />);
-    const inputTask = getByLabelText('Tarefa:');
-    const btnAdd = getByText('Adicionar');
-    const btnRemove = getByText('Remover');
+    const { store } = renderWithRedux(<App />);
+    const inputTask = screen.getByLabelText('Tarefa:');
+    const btnAdd = screen.getByText('Adicionar');
+    const btnRemove = screen.getByText('Remover');
+   
     fireEvent.change(inputTask, { target: { value: 'Exercitar' } })
     fireEvent.click(btnAdd);
+    expect(store.getState().listTodo).toContain('Exercitar')
+    
     fireEvent.change(inputTask, { target: { value: 'Estudar' } })
     fireEvent.click(btnAdd);
-    const selectTask = getByText('Exercitar');
+    expect(store.getState().listTodo).toContain('Estudar')
+
+    const selectTask = screen.getByText('Exercitar');
     expect(selectTask).toBeInTheDocument();
     fireEvent.click(selectTask);
-    expect(btnRemove.disabled).toBe(false);
+    expect(store.getState().selected).toBe('Exercitar')
+    expect(btnRemove.disabled).toBeFalsy();
+
     fireEvent.click(btnRemove);
-    expect(btnRemove.disabled).toBe(true);
-    expect(queryByText('Exercitar')).not.toBeInTheDocument();
+    expect(store.getState().listTodo).not.toContain('Exercitar')
+    expect(store.getState().selected).toBe('')
+    expect(screen.queryByText('Exercitar')).not.toBeInTheDocument();
+    expect(btnRemove.disabled).toBeTruthy();
+    
+    const selectedTask = screen.getByText('Estudar');
+    const status = screen.getByTestId('status')
+    expect(status).toHaveTextContent('em andamento')
+    fireEvent.click(selectedTask);
+    expect(store.getState().selected).toBe('Estudar')
+    fireEvent.click(status);
+    expect(store.getState().completed).toContain('Estudar')
+    expect(btnRemove.disabled).toBeFalsy();
+
+    fireEvent.click(btnRemove);
+    expect(store.getState().selected).toBe('')
+    expect(store.getState().completed).not.toContain('Estudar')
+    expect(btnRemove.disabled).toBeTruthy();
   })
 });
