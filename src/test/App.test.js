@@ -1,11 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import App from '../App';
+import renderWithRedux from './helper/renderWithRedux';
 
 describe('Testando a aplicação, testando input', () => {
-  const { getByLabelText, getByText } = render(<App />)
-  const inputTask = getByLabelText('Tarefa:');
-  const labelTask = getByText('Tarefa:');
+  renderWithRedux(<App />)
+  const inputTask = screen.getByLabelText('Tarefa:');
+  const labelTask = screen.getByText('Tarefa:');
   test('Verificando se o label e o input existem no documento', () => {
     expect(labelTask).toBeInTheDocument();
     expect(inputTask).toBeInTheDocument();
