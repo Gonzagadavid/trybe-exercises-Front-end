@@ -12,7 +12,7 @@
 - [x] 16.2: Usando o Redux no React
 - [x] 16.3: Usando o Redux no React - Prática
 - [x] 16.4: Usando o Redux no React - Actions Assíncronas
-- [ ] 16.5: Testes em React-Redux
+- [x] 16.5: Testes em React-Redux
 - [ ] Bloco 17: Projeto Jogo de Trivia
 - [ ] Bloco 18: Context API e React Hooks
 - [ ] Bloco 19: Projeto App de Receitas
