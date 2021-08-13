@@ -13,6 +13,11 @@
 - [x] 16.3: Usando o Redux no React - Prática
 - [x] 16.4: Usando o Redux no React - Actions Assíncronas
 - [x] 16.5: Testes em React-Redux
-- [ ] Bloco 17: Projeto Jogo de Trivia
+- [x] Bloco 17: Projeto Jogo de Trivia
 - [ ] Bloco 18: Context API e React Hooks
+- [ ] Context API do React
+- [ ] React Hooks - useState e useContext
+- [ ] React Hooks - useEffect e Hooks customizados
+- [ ] Projeto - StarWars Datatable com Context API e Hooks
+
 - [ ] Bloco 19: Projeto App de Receitas
