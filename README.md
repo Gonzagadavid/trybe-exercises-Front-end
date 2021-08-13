@@ -7,7 +7,10 @@
 - [x] Bloco 13: Ciclo de Vida de Componentes e React Router
 - [x] Bloco 14: Metodologias Ágeis
 - [x] Bloco 15: Testes automatizados com React Testing Library
-- [ ] Bloco 16: Gerenciamento de estado com Redux
+- [x] 15.1 RTL - Primeiros passos
+- [x] 15.2 RTL - Mocks e Inputs
+- [x] 15.3 RTL - Testando React Router
+- [x] Bloco 16: Gerenciamento de estado com Redux
 - [x] 16.1: Introdução ao Redux - O estado global da aplicação
 - [x] 16.2: Usando o Redux no React
 - [x] 16.3: Usando o Redux no React - Prática
