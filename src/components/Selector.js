@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import MyContext from '../MyContext';
 
 const renderOptions = (options) => (
   options.map((option) => (
@@ -12,24 +12,20 @@ const renderOptions = (options) => (
   ))
 );
 
-const Selector = ({ value, onChange, options }) => (
-  <span>
-    <h1>{`Selected: ${value}`}</h1>
-    <select
-      onChange={(e) => onChange(e.target.value)}
-      value={value}
-    >
-      {renderOptions(options)}
-    </select>
-  </span>
+const Selector = ({ options, onChange }) => (
+  <MyContext.Consumer>
+    {({ selectedSubreddit }) => (
+      <span>
+        <h1>{`Selected: ${selectedSubreddit}`}</h1>
+        <select
+          onChange={(e) => onChange(e.target.value)}
+          value={selectedSubreddit}
+          >
+          {renderOptions(options)}
+        </select>
+      </span>
+    )}
+  </MyContext.Consumer>
 );
-
-Selector.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  options: PropTypes.arrayOf(
-    PropTypes.string.isRequired,
-  ).isRequired,
-  value: PropTypes.string.isRequired,
-};
 
 export default Selector;
