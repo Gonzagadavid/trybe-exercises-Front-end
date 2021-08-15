@@ -29,17 +29,14 @@ const App = () => {
   return (
     <MyContext.Provider value={{ setSelected, lastUpdated, fetchPosts, isFetching, posts, selectedSubreddit }}>
       <div>
-        <Selector
-          onChange={(nextSubreddit) => setSelected(nextSubreddit)}
-          options={['frontend', 'reactjs']}
-          />
+        <Selector />
         <div>
-          {lastUpdated && <LastUpdatedAt lastUpdated={lastUpdated} />}
-          <RefreshButton fetchPosts={fetchPosts} isFetching={isFetching} /> 
+          {lastUpdated && <LastUpdatedAt />}
+          <RefreshButton /> 
         </div>
         {isFetching && <h2>Loading...</h2>}
         {!isFetching && !posts.length && <h2>Empty.</h2>}
-        {!isFetching && posts.length && <Posts posts={posts} />}
+        {!isFetching && posts.length && <Posts />}
       </div>
     </MyContext.Provider>
   );

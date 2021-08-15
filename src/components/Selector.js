@@ -12,16 +12,16 @@ const renderOptions = (options) => (
   ))
 );
 
-const Selector = ({ options, onChange }) => (
+const Selector = () => (
   <MyContext.Consumer>
-    {({ selectedSubreddit }) => (
+    {({ selectedSubreddit, setSelected  }) => (
       <span>
         <h1>{`Selected: ${selectedSubreddit}`}</h1>
         <select
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => setSelected(e.target.value)}
           value={selectedSubreddit}
           >
-          {renderOptions(options)}
+          {renderOptions(['frontend', 'reactjs'])}
         </select>
       </span>
     )}
