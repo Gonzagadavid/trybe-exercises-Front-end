@@ -22,12 +22,15 @@ function MyProvider({ children }) {
 
   /* Passo 8 */
   const removeItemFromList = (orderState, indexPresentInList, itemType) => {
-    setOrderList();
+    const newList = orderState.filter((_, index) => index !== indexPresentInList);
+    setOrderList({ ...orderList, [itemType]: newList });
   };
 
   /* Passo 9 */
   const updateValueItemInList = (orderState, indexPresentInList, newItem) => {
-    setOrderList();
+    const { itemType, id } = newItem;
+    const newList = orderState.map((item) => (item.id === id ? newItem : item));
+    setOrderList({ ...orderList, [itemType]: newList });
   };
 
   /* Passo 7 */
@@ -43,14 +46,14 @@ function MyProvider({ children }) {
 
   /* Passo 6 */
   const addItemToList = (newItem) => {
-    setOrderList();
+    const { itemType } = newItem;
+    setOrderList({ ...orderList, [itemType]: [...orderList[itemType], newItem] });
   };
 
   /* Passo 2 */
   const handleChange = ({ target }, itemName, itemPrice, itemType) => {
     /* Passo 3 */
     const { value } = target;
-
     const newItem = {
       id: itemName,
       quantity: value,
@@ -59,8 +62,7 @@ function MyProvider({ children }) {
     };
 
     /* Passo 4 */
-    const isPresentInList = '';
-
+    const isPresentInList = orderList[itemType].some(({ id }) => id === itemName);
     /* Passo 5 */
     if (!isPresentInList) {
       return addItemToList(newItem);
