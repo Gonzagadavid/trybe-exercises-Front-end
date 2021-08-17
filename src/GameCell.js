@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import './GameCell.css';
 import xImage from './x.png';
 import oImage from './o.svg';
+import GameContext from './GameContext';
 
-const GameCell = ({ content, onClick, id })  => (
+const GameCell = ({ content, id })  => {
+  const { updateState } = useContext(GameContext)
+  return(
   <div
     role="button"
     tabIndex="0"
     aria-label="Cell"
-    onKeyPress={onClick}
+    onKeyPress={() => updateState(id)}
     data-testid={`cell_${id}`}
     className="game-cell"
-    onClick={onClick}
+    onClick={() => updateState(id)}
   >
     {
       content > 0 &&
@@ -24,10 +27,9 @@ const GameCell = ({ content, onClick, id })  => (
     }
   </div>
 );
-
+}
 GameCell.propTypes = {
   content: PropTypes.oneOf([0, 1, 2]),
-  onClick: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
 };
 
