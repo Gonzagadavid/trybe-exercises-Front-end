@@ -4,53 +4,26 @@ import './GameCell.css';
 import xImage from './x.png';
 import oImage from './o.svg';
 
-class GameCell extends React.Component {
-  render() {
-    const { content, onClick, id } = this.props;
-
-    if (content === 1) {
-      return (
-        <div
-          data-testid={`cell_${id}`}
-          className="game-cell"
-          onClick={onClick}
-          role="button"
-          tabIndex="0"
-          aria-label="Cell"
-          onKeyPress={onClick}
-        >
-          <img data-testid={`cell_${id}_image`} alt="X" src={xImage} />
-        </div>
-      );
-    }
-    if (content === 2) {
-      return (
-        <div
-          data-testid={`cell_${id}`}
-          className="game-cell"
-          onClick={onClick}
-          role="button"
-          tabIndex="0"
-          aria-label="Cell"
-          onKeyPress={onClick}
-        >
-          <img data-testid={`cell_${id}_image`} alt="O" src={oImage} />
-        </div>
-      );
-    }
-    return (
-      <div
-        role="button"
-        tabIndex="0"
-        aria-label="Cell"
-        onKeyPress={onClick}
-        data-testid={`cell_${id}`}
-        className="game-cell"
-        onClick={onClick}
+const GameCell = ({ content, onClick, id })  => (
+  <div
+    role="button"
+    tabIndex="0"
+    aria-label="Cell"
+    onKeyPress={onClick}
+    data-testid={`cell_${id}`}
+    className="game-cell"
+    onClick={onClick}
+  >
+    {
+      content > 0 &&
+      <img 
+        data-testid={`cell_${id}_image`} 
+        alt={ `${ content === 2 ? 'O' : 'X'}`}
+        src={ content === 2 ? oImage : xImage}
       />
-    );
-  }
-}
+    }
+  </div>
+);
 
 GameCell.propTypes = {
   content: PropTypes.oneOf([0, 1, 2]),
