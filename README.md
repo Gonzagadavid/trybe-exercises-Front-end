@@ -19,7 +19,7 @@
 - [ ] Bloco 18: Context API e React Hooks
 - [x] 18.1 Context API do React
 - [x] 18.2 React Hooks - useState e useContext
-- [ ] 18.3 React Hooks - useEffect e Hooks customizados
+- [x] 18.3 React Hooks - useEffect e Hooks customizados
 - [ ] Context API do React
 - [ ] React Hooks - useState e useContext
 - [ ] React Hooks - useEffect e Hooks customizados
