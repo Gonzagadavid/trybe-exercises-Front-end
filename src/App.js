@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 
 import Posts from './components/Posts';
 import Selector from './components/Selector';
@@ -6,14 +6,12 @@ import { Context } from './components/RedditContext';
 
 const  App = () => {
   const { 
-    selectedSubreddit, postsBySubreddit, isFetching, fetchPosts, refreshSubreddit
+   postsBySubreddit, isFetching, refreshSubreddit, 
   } = useContext(Context);
-
-  useEffect(() => fetchPosts(), [fetchPosts])
 
 
   const renderLastUpdatedAt = () => {
-    const { lastUpdated } = postsBySubreddit[selectedSubreddit];
+    const { lastUpdated } = postsBySubreddit;
 
     if (!lastUpdated) return null;
 
@@ -38,8 +36,8 @@ const  App = () => {
     );
   }
 
-  const { items: posts = [] } = postsBySubreddit[selectedSubreddit];
-  const isEmpty = posts.length === 0;
+  const { items: posts = [] } = postsBySubreddit;
+  const isEmpty = () => posts.length === 0;
 
   return (
     <div>
@@ -49,8 +47,8 @@ const  App = () => {
         {renderRefreshButton()}
       </div>
       {isFetching && <h2>Loading...</h2>}
-      {!isFetching && isEmpty && <h2>Empty.</h2>}
-      {!isFetching && !isEmpty && <Posts />}
+      {!isFetching && isEmpty() && <h2>Empty.</h2>}
+      {!isFetching && !isEmpty() && <Posts />}
     </div>
   );
 }
